@@ -3,7 +3,7 @@ layout: default
 title: Mohammad Obaida
 ---
 
-<div class="blogs" id="blogs">
+<div class="blogs">
   <h1 class="pageTitle">Recent Posts</h1>
   <ul class="posts noList">
     {% for post in paginator.posts %}
