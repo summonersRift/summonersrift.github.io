@@ -1,18 +1,26 @@
 ---
 layout: default
-title: Obaida says HI! 
+title: Mohammad Obaida
 ---
 
-<div class="post">
-	<p class="intro">Thanks for stopping by my page. I am Mohammad Obaida, a Ph. D Candidate at Florida International University, Miami, FLorida. Dr. Jason liu is my academic supervisior. My primary research interest is computer metworks simulation.</p>
-	<p>Current Research Interests: hpc scheduling/placement/co-design, simulation, networking, emulation.</p>
-	<h2>Education</h2>
-	<ul>
-		<li>Ph. d candidate
-                     CS, FIU, MIAMI, FL
-                 </li>
-  		<li>BS in CS, DUET, Bangladesh <a href="http://duet.ac.bd">DUET</a></li>
-  	</ul>
-	<h1 class="pageTitle">About me</h1>
-	<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt=""> 
+<div class="blogs" id="blogs">
+  <h1 class="pageTitle">Recent Posts</h1>
+  <ul class="posts noList">
+    {% for post in paginator.posts %}
+      <li>
+        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+        <p class="description">{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 250 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 250 }}{% endif %}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous button__outline">Newer Posts</a>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next button__outline">Older Posts</a>
+    {% endif %}
+  </div>
 </div>
