@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hi! S
+title: Obaida says HI! 
 ---
 
 <div class="post">
