@@ -16,6 +16,8 @@ navigation:
    url: /index.html
  - title: Blog
    url: /blogs
+ - title: Research
+   url: /research
  - title: Contact
    url: /contact
 
