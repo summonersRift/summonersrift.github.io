@@ -3,7 +3,7 @@ layout: default
 title: Obaida Research and Publications
 ---
 
-<div class="home" id ="home">
+<div id ="research">
   <h2>Papers published</h2>
   <ol>
       <li> Parformance Prediction Toolkit, PADS 2016
