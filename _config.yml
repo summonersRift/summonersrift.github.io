@@ -3,8 +3,8 @@ description: PhD Candidate, Florida International University, Miami, FL
 
 url: https://summonersrift.github.com.io
 baseurl: ""
-paginate_path: "blogs/page:num/"
-permalink: blogs/:title/
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
 
 markdown: kramdown
 highlighter: rouge
@@ -14,8 +14,10 @@ paginate: 5
 navigation:
  - title: Home
    url: /index.html
- - title: Blog
+ - title: Blogs
    url: /blogs
+ - title: RandomPosts
+   url: /index_posts.html
  - title: Research
    url: /research
  - title: Contact
