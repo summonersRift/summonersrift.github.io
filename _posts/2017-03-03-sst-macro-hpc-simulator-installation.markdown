@@ -49,7 +49,7 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave 
 
 {% endhighlight  %}
 
-#### Configure~/.bashrc OR env file
+#### Configure ~/.bashrc OR env file
 
 
 {% highlight bash %}
@@ -69,7 +69,7 @@ export LD_LIBRARY_PATH=$BOOST_HOME/lib:$SST_MACRO_HOME/lib:$MPIHOME/lib:$LD_LIBR
 
 Now, source .bashrc
 {% highlight bash %}
-source <i>.bashrc</i>:
+source ~/.bashrc
 {% endhighlight %}
 
 
@@ -106,12 +106,10 @@ cd /local/scratch/src/sst-elements-library-6.1.0
 ./configure --prefix=$SST_ELEMENTS_HOME --with-sst-core=$SST_CORE_HOME
 make all
 make install
-{% endhighlight %}
 
-#### Test sst installation
-{% highlight bash %}
+# Test sst installation
 sst --version
-#Should see the sst version 6.1.0
+# Should see the sst version 6.1.0
 sst /local/scratch/src/sst-elements-library-6.1.0/src/sst/elements/simpleElementExample/tests/test_simpleRNGComponent_mersenne.py
 {% endhighlight %}
 
@@ -119,7 +117,7 @@ sst /local/scratch/src/sst-elements-library-6.1.0/src/sst/elements/simpleElement
 
 
 #### sst-macro installation
-There is a bug with the --with-sst flag, we need to ignore that. Developers think macro would work with default parameters.
+There is a bug with the _--with-sst flag_, we need to ignore that. Developers think macro would work with default parameters.
  
 {% highlight bash %}
 cd /local/scratch/src
@@ -129,11 +127,9 @@ cd sst-macro
 mkdir build 
 cd build
 ../configure --prefix=$SST_MACRO_HOME --disable-regex CC=$MPICC CXX=$MPICXX
-# Ubuntu Bug [as mentioned in the documentation] 
+# Ubuntu Bug [as mentioned in the documentation] , you might need
 #   LDFLAGS="-Wl,-no-as-needed" 
-# Doesnt work[BUG]:
-#   --with-sst-core=$SST_CORE_HOME
-# Make with sst-core:
+# Doesnt work[BUG], c++ issue:
 #   --with-sst-core=$SST_CORE_HOME
 
 make
