@@ -14,10 +14,8 @@ paginate: 5
 navigation:
  - title: Home
    url: /index.html
- - title: Blogs
+ - title: Blog
    url: /blogs
- - title: RandomPosts
-   url: /articles
  - title: Research
    url: /research
  - title: Contact
