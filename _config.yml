@@ -17,7 +17,7 @@ navigation:
  - title: Blogs
    url: /blogs
  - title: RandomPosts
-   url: /index_posts.html
+   url: /articles
  - title: Research
    url: /research
  - title: Contact
