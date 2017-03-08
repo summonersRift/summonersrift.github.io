@@ -18,6 +18,6 @@ title: Mohammad Obaida: Blogs
 
 
    <p>
-      Thats all. Help someone if you find anything helpful here. 
+      Thats all. Help someone if you find anything helpful here. </p>
 
 </div>
