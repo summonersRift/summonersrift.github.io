@@ -5,7 +5,8 @@ title: Obaida Research and Publications
 
 <div id ="research">
 
-<h2> Selected Publications</h2>
+<p>
+ <h2> Selected Publications</h2>
   <ol>
       <li> [CP02] Kishwar Ahmed, <b>Mohammad Obaida</b>, Jason Liu, Stephan Eidenbenz, Nandakishore Santhi, Guillaume Chapuis, An Integrated Interconnection Network Model for Large-Scale Performance Prediction, Proceedings of the 2016 annual ACM Conference on SIGSIM Principles of Advanced Discrete Simulation, pp 177-187, ACM SIGSIM PADS, May 15, 2016.
       </li>
@@ -16,12 +17,7 @@ title: Obaida Research and Publications
       <li> [Jnl04] <b>Mohammad Abu Obaida</b>, Md. Jakir Hossain, Momotaz Begum and Md. Shahin Alam. Article: Multilingual OCR (MOCR): An Approach to Classify Words to Languages. International Journal of Computer Applications 32(1):46-53, October 2011.
       </li>
   </ol>
-
-
-</p>
-
-
-<br><br><br>
+</p><br><br>
 
 <h2> Paper Abstracts:</h2>
 
@@ -42,7 +38,7 @@ PrimoGENI provides a GENI aggregate interface through which experimenters can la
 
 
 <p> 
-<h4>[Jnl01]: Random Early Discard (RED-AQM) Performance Analysis in Terms of TCP Variants and Network Parameters: Instability in High-Bandwidth-Delay Network</h4>
+<h4>[Jnl01] Random Early Discard (RED-AQM) Performance Analysis in Terms of TCP Variants and Network Parameters: Instability in High-Bandwidth-Delay Network</h4>
 
 Conventional congestion control methods (e.g. DROP TAIL) discards all received packets after the queue is full moreover results in low-network performance. To address this problem, RED was proposed to improve the performance of TCP connections. As a queue management mechanism, it drops packets in the considered router buffer to adjust the network traffic behavior according to the queue size. In application, TCP Variants (Reno, NewReno, Vegas, Fack and Sack1) show oscillatory curve of packet reception if RED is considered for queuing, besides, some variants out performs in receiving packets over different network parameters that this paper analyzes and finds out. However, an increase in link capacity (with the resulting increase of per-flow bandwidth) will cause significant degradation in TCP’s performance, irrespective of the queuing scheme used. Hence the network is prone to instability with the rise in the number of High-bandwidth-delay product that is also attended to in this paper.
 </p>
