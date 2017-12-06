@@ -25,6 +25,10 @@ title: Obaida Research and Publications
 
 <h2> Paper Abstracts:</h2>
 
+
+
+
+
 <p><h4> [2017 Wintersim] Mohammad Abu Obaida and Jason Liu, Simulation of HPC Job Scheduling and Large-Scale Parallel Workloads, 2017 Winter Simulation Conference (WSC 2017), Las Vegas, NV, December 2017. </h4>
 The paper presents a simulator designed specifically for evaluating
 job scheduling algorithms on large-scale HPC systems.  The simulator
@@ -40,7 +44,9 @@ specific target HPC platforms more accurately.
 </p>
 
 
-
+<p><h4>[2017 SIMUTOOLS] Mohammad Abu Obaida and Jason Liu, On Improving Parallel Real-Time Network Simulation for Hybrid Experimentation of Software Defined Networks, 10th EAI International Conference on Simulation Tools and Techniques (SIMUTOOLS 2017), Hong Kong, September 2017.</h4>
+Real-time network simulation enables simulation to oper- ate in real time, and in doing so allows experiments with simulated, emulated, and real network components acting in concert to test novel network applications or protocols. Real-time simulation can also run in parallel for large-scale network scenarios, in which case network tra c is repre- sented as simulation events passed as messages to remote simulation instances running on di erent machines. We note that substantial overhead exists in parallel real-time simula- tion to support synchronization and communication among distributed instances, which can signi cantly limit the perfor- mance and scalability of the hybrid approach. To overcome these challenges, we propose several techniques for improving the performance of parallel real-time simulation, by elimi- nating parallel synchronization and reducing communication overhead. Our experiments show that the proposed tech- niques can indeed improve the overall performance. In a use case, we demonstrate that our hybrid technique can be readily integrated for studies of software-de ned networks.
+</p>
 
 <p>
 <h4> [2016 ACM SIGSIM PADS] An Integrated Interconnection Network Model for Large-Scale Performance Prediction</h4>
