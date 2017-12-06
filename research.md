@@ -6,15 +6,19 @@ title: Obaida Research and Publications
 <div id ="research">
 
 <p>
- <h2> Selected Publications</h2>
+ <h2> Publications</h2>
   <ol>
-      <li> [CP02] Kishwar Ahmed, <b>Mohammad Obaida</b>, Jason Liu, Stephan Eidenbenz, Nandakishore Santhi, Guillaume Chapuis, An Integrated Interconnection Network Model for Large-Scale Performance Prediction, Proceedings of the 2016 annual ACM Conference on SIGSIM Principles of Advanced Discrete Simulation, pp 177-187, ACM SIGSIM PADS, May 15, 2016.
+      <li><b>[2017 Wintersim]</b> Mohammad Abu Obaida and Jason Liu, Simulation of HPC Job Scheduling and Large-Scale Parallel Workloads, 2017 Winter Simulation Conference (WSC 2017), Las Vegas, NV, December 2017.
       </li>
-      <li> [CP01] Jason Liu, <b>Mohammad Abu Obaida</b>, Fernando Dos Santos, Toward PrimoGENI Constellation for Distributed At-Scale Hybrid Network Test, 2014 Third GENI Research and Educational Experiment Workshop (GREE). March 19, 2016. 
+      <li><b>[2017 SIMUTOOLS]</b> Mohammad Abu Obaida and Jason Liu, On Improving Parallel Real-Time Network Simulation for Hybrid Experimentation of Software Defined Networks, 10th EAI International Conference on Simulation Tools and Techniques (SIMUTOOLS 2017), Hong Kong, September 2017.
       </li>
-      <li> [Jnl01] <b>Mohammad Abu Obaida</b>, Md. Sanaullah Miah and Md. Abu Horaira, Random Early Discard (RED-AQM) Performance Analysis in Terms of TCP Variants and Network Parameters: Instability in High-Bandwidth-Delay Network. International Journal of Computer Applications 27(8):40-44, August 2011.
+      <li><b>[2016 ACM SIGSIM PADS]</b> Kishwar Ahmed, <b>Mohammad Obaida</b>, Jason Liu, Stephan Eidenbenz, Nandakishore Santhi, Guillaume Chapuis, An Integrated Interconnection Network Model for Large-Scale Performance Prediction, Proceedings of the 2016 annual ACM Conference on SIGSIM Principles of Advanced Discrete Simulation, pp 177-187, ACM SIGSIM PADS, May 15, 2016.
       </li>
-      <li> [Jnl04] <b>Mohammad Abu Obaida</b>, Md. Jakir Hossain, Momotaz Begum and Md. Shahin Alam. Article: Multilingual OCR (MOCR): An Approach to Classify Words to Languages. International Journal of Computer Applications 32(1):46-53, October 2011.
+      <li><b>[2014 GREE]</b> Jason Liu, <b>Mohammad Abu Obaida</b>, Fernando Dos Santos, Toward PrimoGENI Constellation for Distributed At-Scale Hybrid Network Test, 2014 Third GENI Research and Educational Experiment Workshop (GREE). March 19, 2014. 
+      </li>
+      <li>[2011 IJCA] <b>Mohammad Abu Obaida</b>, Md. Sanaullah Miah and Md. Abu Horaira, Random Early Discard (RED-AQM) Performance Analysis in Terms of TCP Variants and Network Parameters: Instability in High-Bandwidth-Delay Network. International Journal of Computer Applications 27(8):40-44, August 2011.
+      </li>
+      <li>[2011 IJCA] <b>Mohammad Abu Obaida</b>, Md. Jakir Hossain, Momotaz Begum and Md. Shahin Alam. Article: Multilingual OCR (MOCR): An Approach to Classify Words to Languages. International Journal of Computer Applications 32(1):46-53, October 2011.
       </li>
   </ol>
 </p><br><br>
