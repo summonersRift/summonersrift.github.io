@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PDF to PNG JPG in Ubuntu"
+title:  "Convert PDF to PNG JPG in Ubuntu"
 date:   2017-03-03
 ---
 
