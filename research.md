@@ -8,6 +8,7 @@ title: Obaida Research and Publications
 <p>
  <h2> Publications</h2>
   <ol>
+       <li><b>[2018 ACM SIGSIM PADS-to appear]</b> Mohammad Abu Obaida, Jason Liu, Gopinath Chennupati, Nandakishore Santhi and  Stephan Eidenbenz, Parallel Application Performance Prediction Using Analysis Based Models, 2018 Principles of Advanced Discrete Simulation (PADS), Rome,Italy, May 2018.
       <li><b>[2017 Wintersim]</b> Mohammad Abu Obaida and Jason Liu, Simulation of HPC Job Scheduling and Large-Scale Parallel Workloads, 2017 Winter Simulation Conference (WSC 2017), Las Vegas, NV, December 2017.
       </li>
       <li><b>[2017 SIMUTOOLS]</b> Mohammad Abu Obaida and Jason Liu, On Improving Parallel Real-Time Network Simulation for Hybrid Experimentation of Software Defined Networks, 10th EAI International Conference on Simulation Tools and Techniques (SIMUTOOLS 2017), Hong Kong, September 2017.
