@@ -10,22 +10,22 @@ date:   2018-04-12
 du -aBM 2>/dev/null | sort -nr | head -n 50 | more
 {% endhighlight %}
 
-1. <b>du</b> arguments:
-<b>-a</b> for "all" files and directories. Leave it off for just directories
-<b>-BM</b> to output the sizes in megabyte (M) block sizes (B)
+1. <b>du</b> arguments:<br>
+<b>-a</b> for "all" files and directories. Leave it off for just directories <br>
+<b>-BM</b> to output the sizes in megabyte (M) block sizes (B)<br>
 <b>2>/dev/null</b> - exclude "permission denied" error messages (thanks @Oli)
 
 2. <b>sort</b> arguments:
-<b>-n<-b> for "numeric"
-<b>-r</b> for "reverse" (biggest to smallest)a
+<b>-n</b> for "numeric"<br>
+<b>-r</b> for "reverse" (biggest to smallest)
 
-3. <b>head</b> arguments:
+3. <b>head</b> arguments:<br>
 <b>-n 50</b> for the just top 50 results.
 
-4. Leave off more if using a smaller number
+4. Leave off <b>more</b> if using a smaller number<br>
 <b>Note</b>: Prefix with sudo to include directories that your account does not have permission to access.
 
-Example showing <b>top 10</b> biggest files and directories in /var (including grand total).
+Example showing <b>top 10</b> biggest files and directories in </b>/var</b> (including grand total).
 
 {% highlight bash %}
 cd /var

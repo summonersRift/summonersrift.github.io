@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Convert PDF to PNG JPG in Ubuntu"
-date:   2017-03-03
+date:   2017-03-12
 ---
 
 <p class="intro"><span class="dropcap">I</span>n this post, we will see how to covert PDF files to high quality JPG PNG or any other formats in Ubuntu using ImageMagick.</p>
