@@ -1,5 +1,5 @@
 title: Mohammad Abu Obaida
-description: PhD Candidate, Florida International University, Miami, FL
+description: Ph.D., Florida International University, Miami, FL
 
 url: https://summonersrift.github.com.io
 baseurl: ""
@@ -14,10 +14,12 @@ paginate: 5
 navigation:
  - title: Home
    url: /index.html
- - title: Blog
-   url: /blogs
+ - title: Peojects
+   url: /projects
  - title: Research
    url: /research
+ - title: Blog
+   url: /blogs
  - title: Contact
    url: /contact
 
