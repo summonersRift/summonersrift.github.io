@@ -6,9 +6,10 @@ title: Contact Obaida
 <div id ="contactme">
 
 
-## Contact me
+<h3> Contact me</h3>
 
-<p class="intro">Feel free to shoot me an email. <br>
+<p class="intro">Feel free to shoot me an email. </p>
+
 <form action="http://formspree.io/obaida007@gmail.com" method="POST">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" class="full-width"><br>
