@@ -5,6 +5,8 @@ title: Obaida Research and Publications
 
 <div id ="research">
 
+<p>
+
 ## Publications
 
 1. <b>[2018 ACM SIGSIM PADS-to appear]</b> Mohammad Abu Obaida, Jason Liu, Gopinath Chennupati, Nandakishore Santhi and  Stephan Eidenbenz, Parallel Application Performance Prediction Using Analysis Based Models, 2018 Principles of Advanced Discrete Simulation (PADS), Rome,Italy, May 2018.
@@ -15,6 +17,8 @@ title: Obaida Research and Publications
 6. <b>[2011 IJCA]</b> <b>Mohammad Abu Obaida</b>, Md. Sanaullah Miah and Md. Abu Horaira, Random Early Discard (RED-AQM) Performance Analysis in Terms of TCP Variants and Network Parameters: Instability in High-Bandwidth-Delay Network. International Journal of Computer Applications 27(8):40-44, August 2011.
 7. <b>[2011 IJCA]</b> <b>Mohammad Abu Obaida</b>, Md. Jakir Hossain, Momotaz Begum and Md. Shahin Alam. Article: Multilingual OCR (MOCR): An Approach to Classify Words to Languages. International Journal of Computer Applications 32(1):46-53, October 2011.
 <br><br>
+
+</p>
 
 ## Paper Abstracts:
 
