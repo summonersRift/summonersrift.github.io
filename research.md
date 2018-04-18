@@ -8,7 +8,6 @@ title: Obaida Research and Publications
 <h3> Publications</h3>
 
 
-<p>
 <ol>
   <li><b>[2018 ACM SIGSIM PADS-to appear]</b> Mohammad Abu Obaida, Jason Liu, Gopinath Chennupati, Nandakishore Santhi and  Stephan Eidenbenz, Parallel Application Performance Prediction Using Analysis Based Models, 2018 Principles of Advanced Discrete Simulation (PADS), Rome,Italy, May 2018.
   </li>
@@ -24,7 +23,6 @@ title: Obaida Research and Publications
   </li>
    <li><b>[2011 IJCA]</b> <b>Mohammad Abu Obaida</b>, Md. Jakir Hossain, Momotaz Begum and Md. Shahin Alam. Article: Multilingual OCR (MOCR): An Approach to Classify Words to Languages. International Journal of Computer Applications 32(1):46-53, October 2011.
   </li>
-</p>
 
 <br><br>
 
