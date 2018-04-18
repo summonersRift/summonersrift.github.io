@@ -21,7 +21,7 @@ navigation:
  - title: Blog
    url: /blogs
  - title: Contact
-   url: /contact
+   url: /contactme
 
 social:
    github: summonersrift

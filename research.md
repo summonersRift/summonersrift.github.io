@@ -37,7 +37,7 @@ was developed based on the Performance Prediction Toolkit (PPT), which
 is a parallel discrete-event simulator written in Python for rapid
 assessment and performance prediction of large-scale scientific
 applications on supercomputers.  The proposed job scheduler simulator
-incorporates PPT's application models, and when coupled with the
+incorporates PPTs application models, and when coupled with the
 sufficiently detailed architecture models, can represent more
 realistic job runtime behaviors.  Consequently, the simulator can
 evaluate different job scheduling and task mapping algorithms on the
