@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Linux large file search"
-date:   2016-04-12
+title:  "design tinyurl encode decode python"
+date:   2018-04-19
 ---
 
 <p class="intro"><span class="dropcap">D</span>esign tinyUrl..</p>
