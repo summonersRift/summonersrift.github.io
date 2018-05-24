@@ -9,7 +9,7 @@ title: Obaida Research and Publications
 
 
 <ol>
-  <li><b>[2018 ACM SIGSIM PADS-to appear]</b> Mohammad Abu Obaida, Jason Liu, Gopinath Chennupati, Nandakishore Santhi and  Stephan Eidenbenz, Parallel Application Performance Prediction Using Analysis Based Models, 2018 Principles of Advanced Discrete Simulation (PADS), Rome,Italy, May 2018.
+  <li><b>[2018 ACM SIGSIM PADS]</b> Mohammad Abu Obaida, Jason Liu, Gopinath Chennupati, Nandakishore Santhi and  Stephan Eidenbenz, Parallel Application Performance Prediction Using Analysis Based Models, 2018 Principles of Advanced Discrete Simulation (PADS), Rome,Italy, 23 May 2018.
   </li>
   <li><b>[2017 Wintersim]</b> Mohammad Abu Obaida and Jason Liu, Simulation of HPC Job Scheduling and Large-Scale Parallel Workloads, 2017 Winter Simulation Conference (WSC 2017), Las Vegas, NV, December 2017.
   </li>
@@ -27,6 +27,23 @@ title: Obaida Research and Publications
 <br><br>
 
 <h3> Paper Abstracts:<h3>
+
+<p><h4>[2018 ACM SIGSIM PADS]</b> Mohammad Abu Obaida, Jason Liu, Gopinath Chennupati, Nandakishore Santhi and  Stephan Eidenbenz, Parallel Application Performance Prediction Using Analysis Based Models, 2018 Principles of Advanced Discrete Simulation (PADS), Rome,Italy, 23 May 2018.</h4>
+
+Parallel application performance models provide valuable insight 
+about the performance in real systems. Capable tools providing fast, accurate,  
+and comprehensive prediction and evaluation of high-performance computing (HPC) 
+applications and system architectures have important value.  This paper presents 
+<i>PyPassT</i>, an analysis based modeling framework built on static program analysis 
+and integrated simulation of target HPC architectures.  More specifically, 
+the framework analyzes application source code written in C with OpenACC 
+directives and transforms it into an application model describing its computation 
+and communication behavior (including CPU and GPU workloads, memory accesses, 
+and message-passing transactions).  The application model is then executed 
+on a simulated HPC architecture for performance analysis.  Preliminary experiments 
+demonstrate that the proposed framework can represent the runtime behavior of 
+benchmark applications with good accuracy.
+</p>
 
 
 <p><h4> [2017 Wintersim] Mohammad Abu Obaida and Jason Liu, Simulation of HPC Job Scheduling and Large-Scale Parallel Workloads, 2017 Winter Simulation Conference (WSC 2017), Las Vegas, NV, December 2017. </h4>
@@ -67,4 +84,3 @@ Conventional congestion control methods (e.g. DROP TAIL) discards all received p
 There are immense efforts to design a complete OCR for most of the world’s leading languages, however, multilingual documents either of handwritten or of printed form. As a united attempt, Unicode based OCRs were studied mostly with some positive outcomes, despite the fact that a large character set slows down the recognition significantly. In this paper, we come out with a method to classify words to a language as the word segmentation is complete. For the purpose, we identified the characteristics of writings of several languages and utilized projecting method combined with some other feature extraction methods. In addition, this paper intends a modified statistical approach to correct the skewness before processing a segmented document. The proposed procedure, evaluated for a collection of both handwritten and printed documents, came with excellent outcomes in assigning words to languages.
 </p>
 
-</div>
