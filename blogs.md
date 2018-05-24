@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mohammad Obaida: Blogs
+title: Obaida Blogs
 ---
 
 <div id="blogs">

@@ -10,45 +10,45 @@ date:   2018-04-19
 
 This post is embeds all the cheatsheets for Python libraries for data scientists and machine learning researches.
 
-## Scikit-learn
+### Scikit-learn
 Machine learning library in python
-<iframe src="/assets/files/cheatsheet-python-scikit-learn.pdf" width="100%" height="800rem">
+<iframe src="/assets/files/cheatsheet-python-scikit-learn.pdf" width="100%" height="1000rem">
 This browser does not support PDFs. Please download the PDF to view it: 
 <a href="/assets/files/cheatsheet-python-scikit-learn.pdf">Download PDF</a>
 </iframe>
 
 
-## Pandas
+### Pandas
 Data representation, querying and manipulation library. Popular with data science and machine learning.
-<iframe src="/assets/files/cheatsheet-python-pandas.pdf" width="100%" height="800rem">
+<iframe src="/assets/files/cheatsheet-python-pandas.pdf" width="100%" height="1000rem">
 This browser does not support PDFs. Please download the PDF to view it: 
 <a href="/assets/files/cheatsheet-python-pandas.pdf">Download PDF</a>
 </iframe>
 
 
-## NumPy
+### NumPy
 Numberical data manipulation in Python. Built on fortran libraries.
-<iframe src="/assets/files/cheatsheet-python-numpy" width="100%" height="800rem">
+<iframe src="/assets/files/cheatsheet-python-numpy.pdf" width="100%" height="1000rem">
 This browser does not support PDFs. Please download the PDF to view it: 
-<a href="/assets/files/cheatsheet-python-numpy">Download PDF</a>
+<a href="/assets/files/cheatsheet-python-numpy.pdf">Download PDF</a>
 </iframe>
 
-## SciPy
+### SciPy
 Numberical data manipulation in Python for scientific applications.
-<iframe src="/assets/files/cheatsheet-python-scipy" width="100%" height="800rem">
+<iframe src="/assets/files/cheatsheet-python-scipy.pdf" width="100%" height="1000rem">
 This browser does not support PDFs. Please download the PDF to view it: 
-<a href="/assets/files/cheatsheet-python-scipy">Download PDF</a>
+<a href="/assets/files/cheatsheet-python-scipy.pdf">Download PDF</a>
 </iframe>
 
-## Keras
+### Keras
 Neural Network and advanced machine learning in python, based on tensorflow
-<iframe src="/assets/files/cheatsheet-python-keras.pdf" width="100%" height="800rem">
+<iframe src="/assets/files/cheatsheet-python-keras.pdf" width="100%" height="1000rem">
 This browser does not support PDFs. Please download the PDF to view it: 
 <a href="/assets/files/cheatsheet-python-keras.pdf">Download PDF</a>
 </iframe>
 
 
-## Reference
+### Reference
 The cheatsheets are made by DataCamp.
 
 https://www.datacamp.com/community/data-science-cheatsheets
