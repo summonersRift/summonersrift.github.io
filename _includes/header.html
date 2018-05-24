@@ -5,10 +5,10 @@
             <ul class="noList">
                  {% for link in site.navigation %}{% assign current = nil %}{% if page.url contains link.url %}{% assign current = 'current' %}{% endif %}
                  <li class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-                    <a href="{{ link.url | prepend: site.baseurl }}"><span style="font-size: 1.2em;background:#0A7435">&nbsp;&nbsp;{{ link.title }}&nbsp;&nbsp;</b></a>
+                    <a href="{{ link.url | prepend: site.baseurl }}"><span style="font-size: 1.25em;background:#0A7435">&nbsp;&nbsp;{{ link.title }}&nbsp;&nbsp;</b></a>
                  </li> 
                  {% endfor %}
-                 <li> <a href="https://github.com/summonersrift" target="_blank"><span style="background:#0A7435;font-size:1.2em;">&nbsp;GitHub-Profile&nbsp;</span></a></li>
+                 <li> <a href="https://github.com/summonersrift" target="_blank"><span style="background:#0A7435;font-size:1.25em;">&nbsp;GitHub-Profile&nbsp;</span></a></li>
              </ul>
          </nav>
      </div>
