@@ -5,12 +5,12 @@ title: Mohammad Obaida: Blogs
 
 <div id="blogs">
 
-  <h1>Recent Articles</h1>
+  <h3>Recent Articles</h3>
   <ul class="posts noList">
     {% for post in site.posts %}
       <li>
         <span class="date">{{ post.date | date_to_string }}</span>
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
         <p class="description">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
       </li>
     {% endfor %}

@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Scikit-Learn, SciPy, NumPy, Pandas, Keras cheatsheet pdfs"
+title:  "Sklearn SciPy NumPy Pandas Keras cheatsheet pdfs"
+tags: [trick,usage,python,programming]
 description: ""
 category: tutorial
-date:    2018-05-24
-tags: [trick,usage,python,programming]
+date:   2018-04-19
 ---
-{% include JB/setup %}
 
 
 This post is embeds all the cheatsheets for Python libraries for data scientists and machine learning researches.
@@ -53,4 +52,3 @@ This browser does not support PDFs. Please download the PDF to view it:
 The cheatsheets are made by DataCamp.
 
 https://www.datacamp.com/community/data-science-cheatsheets
-

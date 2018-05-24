@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "design tinyurl encode decode python"
+title:  "Design tinyurl encode decode python"
 date:   2018-04-19
 ---
 
