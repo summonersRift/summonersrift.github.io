@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Pre-order Expression Parsing"
+title:  "Pre-order LISP Expression Parsing"
 date:   2018-06-07
 ---
 
 <p class="intro"><span class="dropcap">E</span>xpression parsing in Python-</p>
-Suppose you are given an expression where operator precedes the operands or a pre-ordering of operations. (* 6 7) means 6*7. 
+Suppose you are given an expression (in language like LISP) where operator precedes the operands or a pre-ordering of operations. (* 6 7) means 6*7. 
 OR something like: (* 5 (+ 2 3)). You are asked to write a program that outputs the result of the expression, 25 for the second case.
 LISP programming language uses this kind of prefix notation for expressiong expressions. 
 For the problem you can assume that the input statement is valid. 
