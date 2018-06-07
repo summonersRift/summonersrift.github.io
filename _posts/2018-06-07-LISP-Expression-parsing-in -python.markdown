@@ -72,32 +72,31 @@ print result
 {% endhighlight %}
 
 
-<h4>Output</h4>—
+<h4>Output— </h4>
 {% highlight python %}
-sh-4.4$ python main.py                                                                                                                                                           
-
-(                                                                                                                                                                                
-+                                                                                                                                                                                
-5                                                                                                                                                                                
-(                                                                                                                                                                                
-*                                                                                                                                                                                
-3                                                                                                                                                                                
-4                                                                                                                                                                                
-2                                                                                                                                                                                
-)                                                                                                                                                                                
---item 2                                                                                                                                                                         
---item 4                                                                                                                                                                         
---item 3                                                                                                                                                                         
---item *                                                                                                                                                                         
---item (                                                                                                                                                                         
-5                                                                                                                                                                                
-)                                                                                                                                                                                
---item 5                                                                                                                                                                         
---item 24                                                                                                                                                                        
---item 5                                                                                                                                                                         
---item +                                                                                                                                                                         
---item (                                                                                                                                                                         
-34          
+sh-4.4$ python main.py
+(
++
+5
+(
+*
+3
+4
+2
+)
+item 2
+item 4
+item 3
+item *
+item (
+5
+)
+item 5
+item 24
+item 5
+item +
+item (
+34
 {% endhighlight %}
 
 
