@@ -11,20 +11,20 @@ The listing is posted as is, in no particular order.
 &#8226; Big4: Google-Alphabet, Facebook,  Microsft, Amazon <br>
 &#8226; RIOT Games<br>
 &#8226; Twitter<br>
-&#8226; NVIDIA<br>
 &#8226; UBER / Lyft<br>
 &#8226; Baidu<br>
 &#8226; Netflix, Twitch<br>
 &#8226; VM Ware <br>
 &#8226; LinkedIn <br>
-&#8226; Samsung Research US
+&#8226; Samsung Research US <br>
+&#8226; Chipmakers: AMD, Intel, Qualcomm, NVIDIA
 
 <b> Fintech-</b><br>
-&#8226;:  Bloomberg LP + Two-Sigma + Tableau
+&#8226;  Bloomberg LP, Two-Sigma, Tableau
 
 <b>Few Others </b><br>
 &#8226; eBay, Paypal, Walmart-Labs<br>
-&#8226; Apple, Cisco, Dell, HP, Intel<br>
+&#8226; Apple, Cisco, Dell, HP<br>
 &#8226; Citrix- / Ultimate-software<br>
 &#8226; Oracle, IBM, Salesforce-CRM, Digital-Ocean-cloud
 
