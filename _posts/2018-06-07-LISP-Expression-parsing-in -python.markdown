@@ -13,19 +13,18 @@ For the problem you can assume that the input statement is valid.
 
 There are many ways to do it.
 
-1. You can split the string by <b>(</b> and then split by <b>)</b>. One by one.
+<b>(Path-1)</b> You can split the string by <b>(</b> and then split by <b>)</b>. One by one.
 Finally you have something like ["* 5","+ 8 7",""]. 
-Now what you ahve to do is, concatenate first item with last to maintain the precedence.
+Now what you have to do is, concatenate first item with last to maintain the precedence.
 Then we can reverse the list, evaluate the first item(pop+evaluate) 
 and concatttenate the result with the next index <b>i+1</b>. Finally we will have our results
 
-
-2. There is even a better way to solve this problem. 
+<b>Path-2</b> There is even a better way to solve this problem. 
 Remember in compiler design or data structures we simply push the operators and operands in the stack.
 When we encounter a matching closing <b>)}]</b> we pop everything until the last <b>({[</b>.
-Check the following code.
+Check the following code. Might have to add spaces in <b>pre-processing</b>.
 
-<h4>Solution</h4>—
+<h4>Solution— </h4>
 {% highlight python %}
 
 text = "( + 5 ( * 3 4 2 ) 5 )".split(" ")
