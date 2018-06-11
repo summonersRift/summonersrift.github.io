@@ -3,7 +3,7 @@ layout: default
 title: Contact Obaida
 ---
 
-<div id ="contactme">
+<div id ="contact">
 
 
 <h3> Contact me</h3>
