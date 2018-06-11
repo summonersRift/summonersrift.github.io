@@ -24,7 +24,7 @@ Remember in compiler design or data structures we simply push the operators and 
 When we encounter a matching closing <b>)}]</b> we pop everything until the last <b>({[</b>.
 Check the following code. Might have to add spaces in <b>pre-processing</b>.
 
-<h4>Solution— </h4>
+<b>Solution— </b>
 {% highlight python %}
 
 text = "( + 5 ( * 3 4 2 ) 5 )".split(" ")
