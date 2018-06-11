@@ -3,7 +3,7 @@ layout: default
 title: Contact Obaida
 ---
 
-<div id ="contact">
+<div id ="contactme">
 
 
 <h3> Contact me</h3>
@@ -21,3 +21,4 @@ title: Contact Obaida
 </form>
 
 <p><small> The form is provided by <a href="http://formspree.io/">Formspree.io</a>.</small></p>
+
