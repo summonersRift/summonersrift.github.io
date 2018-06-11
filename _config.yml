@@ -20,13 +20,11 @@ navigation:
    url: /research
  - title: Blog
    url: /blogs
- - title: ReachOut
-   url: /reachout
  - title: Contact
    url: /contactme
 
 social:
    github: summonersrift
-   email: obaida007@gmail.com
+   email: mobai001@gmail.com
 
 google_analytics: "UA-58263416-1"

@@ -141,7 +141,7 @@ POST STYLING
 	h1, h2, h3, h4, h5, h6, p, ul, ol, dl, .pageTitle {
 		@include span(9 of 12); 
 		float: none;
-		margin: 0 auto 2rem; 
+		margin: 0 auto 1rem; 
 	}
 
 	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -149,12 +149,12 @@ POST STYLING
 	}
 
 	.pageTitle {
-		margin: 2rem auto 1em;
+		margin: 1rem auto 1em;
 	}
 
 	.featuredImage {
 		position: relative;
-		margin-top: 2rem;
+		margin-top: 1rem;
 
 		&:before {
 			background: white;
@@ -223,11 +223,11 @@ CONTACT PAGE STYLING
 ***************/
 
 .contactContent {
-	@include span(6 of 12);
+	@include span(9 of 12);
 }
 
 #contact {
 	form {
-		@include span(6 of 12 last);
+		@include span(9 of 12 last);
 	}
 }
