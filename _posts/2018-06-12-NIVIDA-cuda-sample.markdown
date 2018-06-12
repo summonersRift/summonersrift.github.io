@@ -4,15 +4,14 @@ title:  "NVIDIA CUDA Sample"
 date:   2018-06-12
 ---
 
-<p class="intro"><span class="dropcap">N</span>VIDIA CUDA Practice</p>
-The purpose of this post is to get started with simple CUDA program and add more materials over time.
-Assuming you have NIVIDA cuda toolkit installed, meaning <i>nvcc</i> works)
+<p class="intro"><span class="dropcap">N</span>VIDIA CUDA Practice tutorial</p>
+The purpose of this post is to get started with CUDA programming. I will try to add more materials over time.
+Assuming you have NIVIDA cuda toolkit installed, meaning <i>nvcc</i> works. nvv is like <i>gcc</i> but it compiles cuda kernels.
 
-If you are ready, a library of parallel programs-
+If you are ready, a great library of parallel programs-
 https://www.cs.cmu.edu/%7Escandal/nesl/algorithms.html#sort
 
-<br>
-Cuda specific material<br> 
+Cuda specific material 
 https://www.shodor.org/media/content/petascale/materials/UPModules/matrixMultiplication/moduleDocument.pdf
 
 <b>Sample cuda Code— </b>
@@ -70,15 +69,17 @@ int main(void)
 {% endhighlight %}
 
 
-<b>Run— </b><br>
-&#9658; Run the following command to compile <br>
-<pre>nvcc add.cu -o add_cuda</pre>
+<b>Run— </b>
+{% highlight bash %}
+# Run the following command to compile
+nvcc add.cu -o add_cuda
 
-&#9658; This command to execute <br>
-<pre>./add_cuda</pre>
+# This command to execute
+./add_cuda
 
-&#9658; And this command to profile (clock/runtime) it, bsically how long it takes to run<br>
-<pre>nvprof ./add_cuda</pre>
+# And this command to profile (clock/get runtime) it.
+nvprof ./add_cuda
+{% endhighlight %}
 
 
 <b>References— </b>
