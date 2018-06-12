@@ -8,11 +8,17 @@ date:   2018-06-12
 The purpose of this post is to get started with simple CUDA program and add more materials over time.
 Assuming you have NIVIDA cuda toolkit installed, meaning <i>nvcc</i> works)
 
+If you are ready, a library of parallel programs-
+https://www.cs.cmu.edu/%7Escandal/nesl/algorithms.html#sort
 
-<b>Sample Code— </b>
-The program adds to arrays x and y using CUDA. 
+<br>
+Cuda specific material<br> 
+https://www.shodor.org/media/content/petascale/materials/UPModules/matrixMultiplication/moduleDocument.pdf
+
+<b>Sample cuda Code— </b>
+The following program(<b>add.cu</b>) adds two arrays x and y using CUDA. 
 {% highlight c++ %}
-
+/*filename add.cu*/
 #include <iostream>
 #include <math.h>
 // Kernel function to add the elements of two arrays
@@ -65,16 +71,14 @@ int main(void)
 
 
 <b>Run— </b><br>
-Run the following command to compile <br>
-nvcc add.cu -o add_cuda
+&#9658; Run the following command to compile <br>
+<pre>nvcc add.cu -o add_cuda</pre>
 
-<br>
-This command to execute <br>
-./add_cuda
+&#9658; This command to execute <br>
+<pre>./add_cuda</pre>
 
-<br>
-And this command to profile (clock) it <br>
-nvprof ./add_cuda
+&#9658; And this command to profile (clock/runtime) it, bsically how long it takes to run<br>
+<pre>nvprof ./add_cuda</pre>
 
 
 <b>References— </b>
