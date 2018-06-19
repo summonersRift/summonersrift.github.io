@@ -15,7 +15,7 @@ git checkout 39808f99f0b44654717e9f1a46814816111cb .<br><br>
 git commit -m "particles removed"<br>
 git push<br>
 
-<b>TerminalSample cuda Code— </b>
+<b>Terminal— </b>
 {% highlight bash %}
 #Summary
 git log
