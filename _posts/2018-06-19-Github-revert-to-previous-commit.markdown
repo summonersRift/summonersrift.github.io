@@ -1,24 +1,21 @@
 ---
 layout: post
 title:  "Git revert to previous commit"
-date:   2018-06-12
+date:   2018-06-19
 ---
 
 <p class="intro"><span class="dropcap">G</span>it revert to previous commit</p>
 After several commits to your git repository, if you would like to go back to a previous stable commit--
 
-<b>Check the log to find the desired commit</b>
-git log
-<b>Checkout desired commit (hash) -- dont forget .</b>
-git checkout 39808f99f0b44654717e9f1a46814816111cb .
-<b>Make changes if you want, and commit, then push</b>
-git commit -m "particles removed"
-git push
-
+<b>1. Check the log to find the desired commit</b><br>
+git log<br><br>
+<b>2. Checkout desired commit (hash) -- dont forget .</b><br>
+git checkout 39808f99f0b44654717e9f1a46814816111cb .<br><br>
+<b>3/4. Make changes if you want, and commit, then push</b><br>
+git commit -m "particles removed"<br>
+git push<br>
 
 <b>TerminalSample cuda Code— </b>
-
-The following program(<b>add.cu</b>) adds two arrays x and y using CUDA. 
 {% highlight bash %}
 #Summary
 git log
