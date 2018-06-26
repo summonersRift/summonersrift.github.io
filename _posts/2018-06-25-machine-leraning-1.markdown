@@ -8,17 +8,19 @@ date:   2018-06-25
 Machine learning resources -- <br>
 
 Steps of using machine learning:
-1. a
-2. a
-3. 4
-4. 4
+| Supervised | k-Nearest Neighbors<br> Linear Regression<br>Logictic Regression<br>Support Vector Machines(SVMs)<br> Decision Trees and Random Forests<br>Neural Networks|
+| Unsupervised | Clustering: K-means, Hierarchical Cluster Analysis (HCA), Expectation Maximization<br>Visualization and dimensionality reduction: PCA Principle COmponent analysis, Kernel PCA, Locality,-Linear Embedding(LLE), t-distributed Stochastic Neighbor Embedding(t-SNE)<br> Application Rule Learning: Apriori, Eclat |
 
-Types of Machine learning:
-Supervised | Unsupervised | Applications
 
+Application specific learning algorithms:
+
+Text
+Audio
+Video
+Recommendation
 
 <b>Here Polyfit/ SVR example</b>.<br>
-{% highlight bash %}
+{% highlight python %}
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
