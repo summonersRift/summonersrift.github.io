@@ -164,7 +164,7 @@ static RegisterStandardPasses
 {% endhighlight %}
 
 <b>Sample output—</b>
-<code>
+<pre>
 user@callisto:~/llvm-example/llvm-pass-basicblock/build$ clang-6.0 -S -emit-llvm -Xclang -load -Xclang skeleton/libSkeletonPass.so test.c 
 -->function aedem_block(), no marker insertion
  * Encountered a basic block '', total instructions = 15
@@ -188,4 +188,4 @@ user@callisto:~/llvm-example/llvm-pass-basicblock/build$ clang-6.0 -S -emit-llvm
           moving this call up..
            *  %25 = call i32 @aedem_block(i32 8)
 (failed reverse-i-search)`llm': clang-6.0 -S -emit-^Cvm -Xclang -load -Xclang skeleton/libSkeletonPass.so test.c 
-</code>
+</pre>
