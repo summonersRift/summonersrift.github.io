@@ -5,14 +5,24 @@ date:   2018-06-25
 ---
 
 <p class="intro">Machine Learning...</p>
-Machine learning resources -- <br>
-
 Steps of using machine learning:
+1. Retrieve data.
+1. Clean data.
+1. Identify features or label data.
+1. Split dataset into Test/Cross-Validation/ Test dataset
+1. Train your algorithm using supervised or unsupervised learning on <i>test</i> data.
+1. Adjust model parameters using </i>cross-validation</i>
+1. Test on the test data.
+1. Deploy.
+1. Measure the accuracy or error.
+
 
 <table>
   <tr>
     <th rowspan="10"><span style="font-weight:bold">Supervised Learning</span></th>
-    <th>Linear Regression</th>
+  </tr>
+  <tr>
+    <td>Linear Regression</td>
   </tr>
   <tr>
     <td>Nonlinear multivariate Regression</td>
@@ -57,14 +67,12 @@ Steps of using machine learning:
 </table>
 <!--Table generated using https://www.tablesgenerator.com/html_tables#  -->
 
-<br> <br>
-<b>Ensemble Learning</b> Combining multiple learning or models for better performance.
+<br><b>Ensemble Learning</b> Combining multiple learning or models for better performance.
 Ensemble methods outperform(superior to) individual models by averaging out biases, reducing variance, and are less likely to overfit.
+<br> There's a common line in machine learning which is: "ensemble and get 2%.". This implies that you can build your models as usual and typically expect a small performance boost from ensembling. More on this <a href="https://elitedatascience.com/machine-learning-interview-questions-answers">here</a>.
 
-<br>
-There's a common line in machine learning which is: "ensemble and get 2%.". This implies that you can build your models as usual and typically expect a small performance boost from ensembling. More on this <a href="https://elitedatascience.com/machine-learning-interview-questions-answers">here</a>.
-<br>
-<b>Explain Bagging </b>
+<br><br>
+<b>Explain Bagging </b><br>
 (1) Bagging, or Bootstrap Aggregating, is an ensemble method in which the dataset is first divided into multiple subsets through resampling.<br>
 (2)Then, each subset is used to train a model, and the final predictions are made through voting or averaging the component models.  <br>
 (+) Bagging is performed in <b>parallel</b>.<br>
