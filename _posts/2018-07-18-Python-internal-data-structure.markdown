@@ -27,8 +27,7 @@ date:   2018-07-18
   <li><b>Tuples—</b>Tuples </li>
 </ol>
 
-
-<b>My refernces—</b>
+<p><b>My refernces—</b>
 1. https://www.laurentluce.com/posts/python-list-implementation/
 2. https://www.laurentluce.com/posts/python-list-implementation/
 

@@ -4,20 +4,83 @@ title:  "Machine Learning Part-1"
 date:   2018-06-25
 ---
 
-<p class="intro"><span class="dropcap">M</span>achine Learning...</p>
+<p class="intro">Machine Learning...</p>
 Machine learning resources -- <br>
 
 Steps of using machine learning:
-| Supervised | k-Nearest Neighbors<br> Linear Regression<br>Logictic Regression<br>Support Vector Machines(SVMs)<br> Decision Trees and Random Forests<br>Neural Networks|
-| Unsupervised | Clustering: K-means, Hierarchical Cluster Analysis (HCA), Expectation Maximization<br>Visualization and dimensionality reduction: PCA Principle COmponent analysis, Kernel PCA, Locality,-Linear Embedding(LLE), t-distributed Stochastic Neighbor Embedding(t-SNE)<br> Application Rule Learning: Apriori, Eclat |
+
+<table>
+  <tr>
+    <th rowspan="10"><span style="font-weight:bold">Supervised Learning</span></th>
+    <th>Linear Regression</th>
+  </tr>
+  <tr>
+    <td>Nonlinear multivariate Regression</td>
+  </tr>
+  <tr>
+    <td>Logictic Regression</td>
+  </tr>
+  <tr>
+    <td>Decision Trees</td>
+  </tr>
+  <tr>
+    <td>Support Vector Machines(SVMs) </td>
+  </tr>
+  <tr>
+    <td>Random Forests</td>
+  </tr>
+  <tr>
+    <td>KNN, K-Nearest Neighbors</td>
+  </tr>
+  <tr>
+    <td>Neural Networks</td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="4"><span style="font-weight:bold">Unsupervised Learning</span></td>
+    <td>Clustering: K-means</td>
+  </tr>
+  <tr>
+    <td>Hierarchical Cluster Analysis (HCA)</td>
+  </tr>
+  <tr>
+    <td>Visualization and dimensionality reduction: PCA Principle COmponent analysis, Kernel PCA, Locality,-Linear Embedding(LLE), t-distributed Stochastic Neighbor Embedding(t-SNE)</td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+</table>
+<!--Table generated using https://www.tablesgenerator.com/html_tables#  -->
+
+<br> <br>
+<b>Ensemble Learning</b> Combining multiple learning or models for better performance.
+Ensemble methods outperform(superior to) individual models by averaging out biases, reducing variance, and are less likely to overfit.
+
+<br>
+There's a common line in machine learning which is: "ensemble and get 2%.". This implies that you can build your models as usual and typically expect a small performance boost from ensembling. More on this <a href="https://elitedatascience.com/machine-learning-interview-questions-answers">here</a>.
+<br>
+<b>Explain Bagging </b>
+(1) Bagging, or Bootstrap Aggregating, is an ensemble method in which the dataset is first divided into multiple subsets through resampling.<br>
+(2)Then, each subset is used to train a model, and the final predictions are made through voting or averaging the component models.  <br>
+(+) Bagging is performed in <b>parallel</b>.<br>
+(+) Bagging reduces the variance of the meta learning algorithm. Bagging can be applied to decision tree or other algorithms.<br>
 
 
+<p>
 Application specific learning algorithms:
-
-Text
-Audio
-Video
-Recommendation
+<ul>
+  <li>Text, NLP</li>
+  <li>Image Processing</li>
+  <li>Audio Processing</li>
+  <li>Audio Transcription</li>
+  <li>Video</li>
+  <li>Recommendations</li>
+</ul>
 
 <b>Here Polyfit/ SVR example</b>.<br>
 {% highlight python %}
@@ -160,6 +223,7 @@ Additionally, preemt, lowlatency or the rt kernel wont make your system faster (
 
 Data:
 #Jacobi relaxation Calculation: 2048 x 2048 mesh
+<pre>
     0     0.250000  0.080103
     50    0.004751  3.792906
    100    0.002397  7.241144
@@ -227,3 +291,4 @@ Data:
   3200    0.000076  280.697543
   3250    0.000074  285.746627
   3300    0.000073  290.809013
+</pre>
