@@ -5,19 +5,17 @@ date:   2018-07-11
 ---
 
 <p class="intro">Advanced LLVM for grad students. LLVM is a machine independent intermediate representation of an application source. Program compilers works in passes. We can design very advanced passes using LLVM. LLVM is very popular for performing optimizations.
-There aren't enough examples in the open web if you want to do advanced optimization. Start here—</a>
-
-
-
-A good place to start-- 
+There aren't enough examples in the open web if you want to do advanced optimization. <br>
+<b>REMEMBER—</b> use the LLVM <i>doxygen</i> refernces if thigs get compilcated.
+There are issues with LLVM versions as well. Make sure youa have same version of LLVM, Clang and llc and other tools.
+Useful links—</p>
 1. <a href="https://github.com/abenkhadra/llvm-pass-tutorial">Github Skeleton LLVM pass source code </a>
 1. <a href="https://www.cs.cornell.edu/~asampson/blog/llvm.html">Adrian Sampson's LLVM resource</a>
 
 
-<b>REMEMBER—</b> use the LLVM <i>doxygen</i> refernces if thigs get compilcated.
-There are issues with LLVM versions as well. Make sure youa have same version of LLVM, Clang and llc and other tools. If you are on ubuntu search with <b> sudo apt-cache search llvm | grep 6</b>, then install llvm-6.0 and such.
 {% highlight bash %}
-#install LLVM, Clang, linker and libraries
+#ubuntu: install LLVM, Clang, linker and libraries
+sudo apt-cache search llvm | grep 6
 sudo apt-get install clang-6.0 libclang-6.0-dev libclang-common-6.0-dev libclang1-6.0 clang-tools-6.0 clang-6.0-examples
 sudo apt-get install llvm-6.0 llvm-6.0-dev lld-6.0 llvm-6.0-tools lldb-6.0 liblldb-6.0 libfuzzer-6.0-dev
 
