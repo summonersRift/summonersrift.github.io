@@ -18,6 +18,11 @@ There are issues with LLVM versions as well. Make sure you ahve same version of 
 
 <b>Commands—</b>
 {% highlight bash %}
+
+#install LLVM, Clang, linker and libraries
+sudo apt-get install libclang1-6.0 clang-6.0 clang-6.0-examples clang-tools-6.0 libclang-6.0-dev libclang-common-6.0-dev llvm-6.0 llvm-6.0-dev lld-6.0  libfuzzer-6.0-dev liblldb-6.0 lldb-6.0 llvm-6.0-tools
+
+#run your LLVM pass
 make
 clang-6.0 -S -emit-llvm -Xclang -load -Xclang skeleton/libSkeletonPass.so test.c 
 llc-6.0 test.ll
@@ -63,17 +68,13 @@ namespace {
   struct MyBBPass01 : public BasicBlockPass {
     static char ID;
     MyBBPass01() : BasicBlockPass(ID) {}
-
-
     virtual bool runOnBasicBlock(BasicBlock &BB) {
       Function *myFunc = BB.getParent();
       if (myFunc->getName() == "aedem_block"){
          errs() <<"-->function aedem_block(), no marker insertion\n";
          return true;
       }
-
       //else
-
       errs() << " * Encountered a basic block \'" << BB.getName() 
 	      << "\', total instructions = " << BB.size() << "\n";
       //get first instruction
@@ -95,14 +96,12 @@ namespace {
       //CallInst* callOne;
       //Instruction* newInst = CallInst::Create(myHookFunc, bid, "");
       //fi->getParent()->getInstList().insert(fi->getIterator(), newInst);
-
       //Function *myDummyFunc = mymod->getFunction("dummyfunc");
       //errs()<< "     myDummyFunc="<<myDummyFunc->getName()
       //      <<"\n    body="<<*myDummyFunc<<"\n";
       //Instruction *newInst = CallInst::Create(myDummyFunc, "");
       //
-      
-     //segmentation fault caused by recursive calls
+      //segmentation fault caused by recursive calls
 
       BasicBlock *b = &BB;
       for(BasicBlock::iterator BI = b->begin(), BE = b->end(); BI != BE; ++BI)
@@ -126,20 +125,13 @@ namespace {
       return true;
     }
   };
-
-
-
 }
 
 char MyFunctionPass::ID = 1;
 char MyBBPass01::ID = 2;
-
 //static RegisterPass<MyBBPass> X ("MyBBPass", "test fuction exist", false, false);
-
 //static RegisterSPass  RegisterMyPass(PassManagerBuilder::EP_EarlyAsPossible,
 //               registerSkeletonPass);
-
-
 // Automatically enable the pass.
 // http://adriansampson.net/blog/clangpass.html
 static void registerMyBBPass01(const PassManagerBuilder &,
@@ -150,20 +142,16 @@ static void registerMyBBPass01(const PassManagerBuilder &,
 static RegisterStandardPasses
   RegisterMyPass(PassManagerBuilder::EP_EarlyAsPossible,
                  registerMyBBPass01);
-
-/*
-static void registerSkeletonPass(const PassManagerBuilder &,
+/* static void registerSkeletonPass(const PassManagerBuilder &,
                          legacy::PassManagerBase &PM) {
   PM.add(new SkeletonPass());
 }
 static RegisterStandardPasses
   RegisterMyPass(PassManagerBuilder::EP_EarlyAsPossible,
                  registerSkeletonPass);
-
 */
 {% endhighlight %}
-
-<b>Sample output—</b>
+<b>Terminal output—</b>
 <pre>
 user@callisto:~/llvm-example/llvm-pass-basicblock/build$ clang-6.0 -S -emit-llvm -Xclang -load -Xclang skeleton/libSkeletonPass.so test.c 
 -->function aedem_block(), no marker insertion
