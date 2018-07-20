@@ -4,9 +4,10 @@ title:  "LLVM insert instruction to each basic block"
 date:   2018-07-11
 ---
 
-<p class="intro">Advanced LLVM for grad students..</p>
-LLVM is a machine independent intermediate representation of an application source. Program compilers works in passes. We can design very advanced passes using LLVM. LLVM is very popular for performing optimizations. 
-There arent enough examples in the open web if you want to do advanced optimization. 
+<p class="intro">Advanced LLVM for grad students. LLVM is a machine independent intermediate representation of an application source. Program compilers works in passes. We can design very advanced passes using LLVM. LLVM is very popular for performing optimizations.
+There aren't enough examples in the open web if you want to do advanced optimization. Start here—</a>
+
+
 
 A good place to start-- 
 1. <a href="https://github.com/abenkhadra/llvm-pass-tutorial">Github Skeleton LLVM pass source code </a>
@@ -14,13 +15,13 @@ A good place to start--
 
 
 <b>REMEMBER—</b> use the LLVM <i>doxygen</i> refernces if thigs get compilcated.
-There are issues with LLVM versions as well. Make sure youa have same version of LLVM, Clang and llc and other tools. If you are on ubuntu search with <i>apt-cache search llvm</i>, then install llvm-6.0 and such.
+There are issues with LLVM versions as well. Make sure youa have same version of LLVM, Clang and llc and other tools. If you are on ubuntu search with <b> sudo apt-cache search llvm | grep 6</b>, then install llvm-6.0 and such.
 {% highlight bash %}
 #install LLVM, Clang, linker and libraries
 sudo apt-get install clang-6.0 libclang-6.0-dev libclang-common-6.0-dev libclang1-6.0 clang-tools-6.0 clang-6.0-examples
 sudo apt-get install llvm-6.0 llvm-6.0-dev lld-6.0 llvm-6.0-tools lldb-6.0 liblldb-6.0 libfuzzer-6.0-dev
 
-#Option 1: run your LLVM pass, generate binaries and execute
+#run your LLVM pass, generate binaries and execute a.out
 make
 clang-6.0 -S -emit-llvm -Xclang -load -Xclang skeleton/libSkeletonPass.so test.c 
 llc-6.0 test.ll
@@ -29,7 +30,7 @@ llc-6.0 test.ll
 clang-6.0 test.s
 ./a.out 
 
-#LLVM multi-file example :a
+#LLVM multi-file compilation
 #a) generate all .ll files
 clang-6.0 -S -emit-llvm *.c
 #b) link them into a single one
@@ -45,7 +46,6 @@ clang-6.0 optimised.s
 
 <b>LLVM Pass Source Code— </b>
 {% highlight cpp %}
-
 #include "llvm/Pass.h"
 #include "llvm/IR/Function.h"
 #include "llvm/IR/BasicBlock.h"
@@ -55,10 +55,9 @@ clang-6.0 optimised.s
 #include "llvm/Transforms/IPO/PassManagerBuilder.h"
 
 using namespace llvm;
-
 uint32_t block_uid=1;
-
 Function *AedemFunc;
+
 namespace {
   struct MyFunctionPass : public FunctionPass {
     static char ID;
