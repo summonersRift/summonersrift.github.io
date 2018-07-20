@@ -4,25 +4,23 @@ title:  "LLVM insert instruction to each basic block"
 date:   2018-07-11
 ---
 
-<p class="intro"><span class="dropcap">L</span>LVM for advanced grad students..</p>
+<p class="intro">Advanced LLVM for grad students..</p>
 LLVM is a machine independent intermediate representation of an application source. Program compilers works in passes. We can design very advanced passes using LLVM. LLVM is very popular for performing optimizations. 
-There arent enough examples in the open web if you want to do some advanced stuf. 
+There arent enough examples in the open web if you want to do advanced optimization. 
 
 A good place to start-- 
-1. https://github.com/abenkhadra/llvm-pass-tutorial
-2. https://www.cs.cornell.edu/~asampson/blog/llvm.html
+1. <a href="https://github.com/abenkhadra/llvm-pass-tutorial">Github Skeleton LLVM pass source code </a>
+1. <a href="https://www.cs.cornell.edu/~asampson/blog/llvm.html">Adrian Sampson's LLVM resource</a>
 
 
 <b>REMEMBER—</b> use the LLVM <i>doxygen</i> refernces if thigs get compilcated.
-There are issues with LLVM versions as well. Make sure you ahve same version of LLVM, Clang and llc and other tools. If you are on ubuntu search with <i>apt-cache search llvm</i>, then install llvm-6.0 and such.
-
-<b>Commands—</b>
+There are issues with LLVM versions as well. Make sure youa have same version of LLVM, Clang and llc and other tools. If you are on ubuntu search with <i>apt-cache search llvm</i>, then install llvm-6.0 and such.
 {% highlight bash %}
-
 #install LLVM, Clang, linker and libraries
-sudo apt-get install libclang1-6.0 clang-6.0 clang-6.0-examples clang-tools-6.0 libclang-6.0-dev libclang-common-6.0-dev llvm-6.0 llvm-6.0-dev lld-6.0  libfuzzer-6.0-dev liblldb-6.0 lldb-6.0 llvm-6.0-tools
+sudo apt-get install clang-6.0 libclang-6.0-dev libclang-common-6.0-dev libclang1-6.0 clang-tools-6.0 clang-6.0-examples
+sudo apt-get install llvm-6.0 llvm-6.0-dev lld-6.0 llvm-6.0-tools lldb-6.0 liblldb-6.0 libfuzzer-6.0-dev
 
-#run your LLVM pass
+#Option 1: run your LLVM pass, generate binaries and execute
 make
 clang-6.0 -S -emit-llvm -Xclang -load -Xclang skeleton/libSkeletonPass.so test.c 
 llc-6.0 test.ll
@@ -30,10 +28,22 @@ rm test a.out  test.s
 llc-6.0 test.ll
 clang-6.0 test.s
 ./a.out 
+
+#LLVM multi-file example :a
+#a) generate all .ll files
+clang-6.0 -S -emit-llvm *.c
+#b) link them into a single one
+llvm-link-6 -S -v -o single.ll *.ll
+# (Optional) Optimise your code
+opt-6.0 -S -O3 -aa -basicaaa -tbaa -licm single.ll -o optimised.ll
+#c) Generate assembly (generates a optimised.s file)
+llc-6.0 optimised.ll
+#d) Create executable (named a.out)
+clang-6.0 optimised.s
 {% endhighlight %}
 
 
-<b>Source Code of the Pass(es)— </b>
+<b>LLVM Pass Source Code— </b>
 {% highlight cpp %}
 
 #include "llvm/Pass.h"
