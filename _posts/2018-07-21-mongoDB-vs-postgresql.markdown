@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MongoDB vs PostgreSQL"
-date:   2018-07-221
+date:   2018-07-21
 ---
 
 <p class="intro">MongoDB is PostgreSQL is relational database like MySQL.</p>
