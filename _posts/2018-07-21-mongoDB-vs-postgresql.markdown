@@ -76,8 +76,9 @@ The following table presents the various SQL statements and the corresponding Mo
 <h3>Create and Alter</h3>
 <table border="1">
   <thead valign="bottom">
-    <tr><th>SQL Schema Statements</th>
-    <th>MongoDB Schema Statements</th>
+    <tr>
+      <th>SQL Schema Statements</th>
+      <th>MongoDB Schema Statements</th>
     </tr>
     </thead>
   <tbody valign="top">

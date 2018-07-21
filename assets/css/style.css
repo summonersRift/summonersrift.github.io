@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300, 400, 800);
     @import url(http: //fonts.googleapis.com/css?family=PT+Serif:400, 700, 400italic, 700italic);
     .button, .button-secondary, .button-tertiary, .button__outline {
-    background-color: #2e8b57;
+    background-color: #111111;
     display: inline-block;
     position: relative;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -42,11 +42,11 @@
 }
 .button__outline {
     background-color: transparent;
-    border: 3px solid #2e8b57;
-    color: #2e8b57;
+    border: 3px solid #111111;
+    color: #111111;
 }
 .button__outline:hover {
-    background-color: #2e8b57;
+    background-color: #111111;
     color: #fff;
 }
 label {
@@ -63,7 +63,7 @@ input[type=text], input[type=email], input[type=phone], input[type=password], in
     margin-bottom: .5rem;
 }
 input[type=text]:focus, input[type=email]:focus, input[type=phone]:focus, input[type=password]:focus, input[type=number]:focus, input[type=search]:focus, textarea:focus {
-    border: 1px solid #2e8b57;
+    border: 1px solid #111111;
 }
 input[type=text].full-width, input[type=email].full-width, input[type=phone].full-width, input[type=password].full-width, input[type=number].full-width, input[type=search].full-width, textarea.full-width {
     width: 100%}
@@ -287,11 +287,11 @@ body p, body ul {
     margin: 0 0 2rem;
 }
 ::-moz-selection {
-    background: #2e8b57;
+    background: #111111;
     color: white;
 }
 ::selection {
-    background: #2e8b57;
+    background: #111111;
     color: white;
 }
 img, video, audio, iframe, object {
@@ -308,7 +308,7 @@ img, video, audio, iframe, object {
     clear: both;
 }
 a {
-    color: #2e8b57;
+    color: #111111;
 }
 a:hover {
     color: #1b5233;
@@ -326,7 +326,7 @@ a:hover {
 .nav-collapse ul li {
     width: 100%;
     display: block;
-    background: #2e8b57;
+    background: #111111;
     border-bottom: 2px solid #349e63;
 }
 .nav-collapse ul li a {
@@ -358,7 +358,7 @@ a:hover {
     float: right;
     line-height: 2em;
     margin-top: .5em;
-    background-color: #2e8b57;
+    background-color: #111111;
     border-radius: 4px;
     padding: 0 .5em;
     color: white;
@@ -394,14 +394,15 @@ dd {
     padding-top: 1em;
 }
 .header {
-    background-color: #2e8b57;
-    background-image: url("../img/van-gogh-olive-trees-moma.jpg");
+    background-color: #111111;
     background-size: cover;
     background-position: center center;
     color: white;
     padding: 0;
     height: 3em;
 }
+/*background-image: url("../img/van-gogh-olive-trees-moma.jpg");
+*/
 .header .container {
     padding: 0;
     max-width: 100%;
@@ -443,7 +444,7 @@ dd {
     content: "";
     position: absolute;
     top: -1.25em;
-    background: #2e8b57;
+    background: #111111;
     display: block;
     height: 2px;
     width: 150px;
@@ -453,7 +454,7 @@ dd {
     content: "";
     position: absolute;
     bottom: -1.25em;
-    background: #2e8b57;
+    background: #111111;
     display: block;
     height: 2px;
     width: 150px;
@@ -486,7 +487,7 @@ dd {
     margin-bottom: 1rem;
 }
 .post .dropcap {
-    color: #2e8b57;
+    color: #111111;
     margin-right: .45rem;
 }
 .post .featuredImage {
@@ -595,7 +596,7 @@ dd {
     width: 100%;
     height: 100%}
 .footer-links ul li a svg .outer-shape {
-    fill: #2e8b57;
+    fill: #111111;
 }
 .footer-links ul li a svg .inner-shape {
     fill: white;
