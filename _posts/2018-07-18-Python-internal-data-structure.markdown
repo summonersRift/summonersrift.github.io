@@ -16,7 +16,7 @@ date:   2018-07-18
         <li><a href="https://www.laurentluce.com/posts/python-list-implementation/">Detailed reference</a></li>
       </ul>
 
-  </li>
+  </li><br>
   <li><b>Dictionaries—</b>Implmented using hash tables. Steps in dictionary appending
       <ul>
         <li><b>hash(value)</b>: Find the hash of the value using any hash function such as <i>%52</i> for strings represented as their ascii value.  </li>
@@ -24,14 +24,10 @@ date:   2018-07-18
         <li><b>Collision</b>: When a address has the value. Use a collision resolve method. Standard is <i>open addressing</i>. It could be a lined list, or better a BST on that particular value. </li>
         <li><b>Growing</b>: When the total entries are over 2/3 of the array’s capacity. dict_resize() is called to allocate a larger array. This function also <b>copies</b> the old table entries to the new table. To reduce the number of resize steps and increase sparseness it is . The new table size needs to be greater than 24 and it is calculated by shifting the current size 1 bit left until it is greater than 24. It ends up being 32 e.g. 8 -> 16 -> 32. Read more <a href="https://www.laurentluce.com/posts/python-dictionary-implementation/">here</a>. TO summarize a new table of size 32 is allocated. Old table entries are inserted into the new table using the new mask value which is 31.</li>
       </ul>
-  <li><b>Tuples—</b>Tuples </li>
-</ol>
-
-<p><b>My refernces—</b>
-1. https://www.laurentluce.com/posts/python-list-implementation/
-2. https://www.laurentluce.com/posts/python-list-implementation/
+  <li><b>Tuples—</b>Tuples </li> </ol>
 
 
+<br><br>
 <b>List  object C structure—</b>
 {% highlight c %}
 typedef struct {
@@ -42,5 +38,9 @@ typedef struct {
 {% endhighlight %}
 
 
-<b>Sample—</b>
-<pre>wow </pre>
+<br><br>
+<p><b>My refernces—</b>
+1. https://www.laurentluce.com/posts/python-list-implementation/<br>
+2. https://www.laurentluce.com/posts/python-list-implementation/<br>
+
+
