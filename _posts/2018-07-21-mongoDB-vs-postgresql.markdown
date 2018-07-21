@@ -302,11 +302,8 @@ The following table presents the various SQL statements and the corresponding Mo
        { age: { $gt: 25, $lte: 50 } }
     )
     </pre>
-    
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>,
-    <a href="../operators/#_S_gt" title="$gt"><tt>$gt</tt></a>, and <a href="../operators/#_S_lte" title="$lte"><tt>$lte</tt></a> for
-    more information.</td>
+
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -358,18 +355,14 @@ The following table presents the various SQL statements and the corresponding Mo
     
     </td>
     </tr>
-    <tr><td><pre>SELECT COUNT(*)
-    FROM users
-    </pre>
+    <tr>
+    <td><pre>SELECT COUNT(*)
+      FROM users </pre>
     
     </td>
-    <td><pre>db.users.count()
-    </pre>
-    
-    <p><em>or</em></p>
-    <pre>db.users.find().count()
-    </pre>
-    
+    <td> 
+      <pre>db.users.count() </pre>
+      <pre>db.users.find().count() </pre>
     </td>
     <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
     and <a href="../method/cursor.count/#cursor.count" title="cursor.count"><tt>count()</tt></a> for
@@ -383,7 +376,6 @@ The following table presents the various SQL statements and the corresponding Mo
     <td><pre>db.users.count( { user_id: { $exists: true } } )
     </pre>
     
-    <p><em>or</em></p>
     <pre>db.users.find( { user_id: { $exists: true } } ).count()
     </pre>
     
@@ -391,39 +383,29 @@ The following table presents the various SQL statements and the corresponding Mo
     </tr>
     <tr><td><pre>SELECT COUNT(*)
     FROM users
-    WHERE age &gt; 30
-    </pre>
-    
+    WHERE age &gt; 30 </pre>
     </td>
-    <td><pre>db.users.count( { age: { $gt: 30 } } )
-    </pre>
-    
-    <p><em>or</em></p>
-    <pre>db.users.find( { age: { $gt: 30 } } ).count()
-    </pre>
-    
+
+    <td><pre>db.users.count( { age: { $gt: 30 } } ) </pre>
+       <pre>db.users.find( { age: { $gt: 30 } } ).count() </pre>
     </td>
     </tr>
     <tr><td><pre>SELECT DISTINCT(status)
-    FROM users
-    </pre>
+    FROM users </pre>
     
     </td>
-    <td><pre>db.users.distinct( "status" )
+    <td>
+      <pre>db.users.distinct( "status" )
     </pre>
     
     </td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
-    LIMIT 1
-    </pre>
+    LIMIT 1 </pre>
     
     </td>
-    <td><pre>db.users.findOne()
-    </pre>
-    
-    <p><em>or</em></p>
+    <td><pre>db.users.findOne() </pre>
     <pre>db.users.find().limit(1)
     </pre>
     
@@ -433,12 +415,10 @@ The following table presents the various SQL statements and the corresponding Mo
     <tr><td><pre>SELECT *
     FROM users
     LIMIT 5
-    SKIP 10
-    </pre>
+    SKIP 10 </pre>
     
     </td>
-    <td><pre>db.users.find().limit(5).skip(10)
-    </pre>
+    <td><pre>db.users.find().limit(5).skip(10) </pre>
     
     </td>
     <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>,
@@ -448,13 +428,9 @@ The following table presents the various SQL statements and the corresponding Mo
     </tr>
     <tr><td><pre>EXPLAIN SELECT *
     FROM users
-    WHERE status = "A"
-    </pre>
-    
+    WHERE status = "A" </pre>
     </td>
-    <td><pre>db.users.find( { status: "A" } ).explain()
-    </pre>
-    
+    <td><pre>db.users.find( { status: "A" } ).explain() </pre>
     </td>
     </tr>
   </tbody>
@@ -538,18 +514,19 @@ The following table presents the various SQL statements and the corresponding Mo
     </tr>
   </thead>
     <tbody valign="top">
-    <tr><td><pre>DELETE FROM users
-    WHERE status = "D" </pre>
-    </td>
-    <td><pre>db.users.remove( { status: "D" } ) </pre>
+    <tr>
+      <td><pre>DELETE FROM users
+        WHERE status = "D" </pre>
+      </td>
+    <td>
+      <pre>db.users.remove( { status: "D" } ) </pre>
     </td>
     </tr>
 
-    <tr><td><pre>DELETE FROM users
-    </pre>
+    <tr><td><pre>DELETE FROM users </pre>
     </td>
-    <td><pre>db.users.remove( )
-    </pre>
+    <td>
+      <pre>db.users.remove( ) </pre>
     </td>
     </tr>
     </tbody>
