@@ -156,7 +156,6 @@ The following table presents the various SQL statements and the corresponding Mo
   <thead valign="bottom">
     <tr><th>SQL SELECT Statements</th>
     <th>MongoDB find() Statements</th>
-    <th>Reference</th>
     </tr>
   </thead>
   <tbody valign="top">
@@ -509,7 +508,6 @@ The following table presents the various SQL statements and the corresponding Mo
   <thead valign="bottom">
     <tr><th>SQL INSERT Statements</th>
     <th>MongoDB insert() Statements</th>
-    <th>Reference</th>
     </tr>
   </thead>
   <tbody valign="top">
