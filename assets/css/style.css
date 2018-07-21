@@ -406,6 +406,7 @@ dd {
 .header .container {
     padding: 0;
     max-width: 100%;
+    max-width: 10%;
     margin-left: auto;
     margin-right: auto;
 }
