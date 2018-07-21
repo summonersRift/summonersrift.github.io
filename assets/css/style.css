@@ -399,14 +399,13 @@ dd {
     background-position: center center;
     color: white;
     padding: 0;
-    height: 3em;
+    height: 171.632px;
 }
 /*background-image: url("../img/van-gogh-olive-trees-moma.jpg");
 */
 .header .container {
     padding: 0;
     max-width: 100%;
-    max-width: 10%;
     margin-left: auto;
     margin-right: auto;
 }

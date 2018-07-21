@@ -4,13 +4,11 @@ title:  "MongoDB vs PostgreSQL"
 date:   2018-07-21
 ---
 
-<p class="intro">MongoDB is PostgreSQL is relational database like MySQL.</p>
+<p class="intro">MongoDB is classified as a NoSQL database program, it uses JSON-like documents with schemas. PostgreSQL is a relational database like MySQL.</p>
 
 
 <ul>
-  <li> https://www.postgresql.org/docs/10/static/index.html
-  </li>
-  <li>
+  <li> <a href="https://www.postgresql.org/docs/10/static/index.html">https://www.postgresql.org/docs/10/static/index.html</a>
   </li>
 </ul>
 <h3> SQL vs MongoDB Terminology and Concepts</h3>
