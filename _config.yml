@@ -12,7 +12,7 @@ gems: [jekyll-paginate]
 paginate: 5
 
 navigation:
- - title: Home
+ - title: Mohammad Abu Obaida  
    url: /index.html
  - title: Projects
    url: /projects
@@ -20,8 +20,6 @@ navigation:
    url: /research
  - title: Blog
    url: /blogs
- - title: Contact
-   url: /contactme
 
 social:
    github: summonersrift

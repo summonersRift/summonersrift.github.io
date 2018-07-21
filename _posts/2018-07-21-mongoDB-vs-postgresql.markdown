@@ -7,6 +7,12 @@ date:   2018-07-21
 <p class="intro">MongoDB is PostgreSQL is relational database like MySQL.</p>
 
 
+<ul>
+  <li> https://www.postgresql.org/docs/10/static/index.html
+  </li>
+  <li>
+  </li>
+</ul>
 <h3> SQL vs MongoDB Terminology and Concepts</h3>
 
 <table border="1">
@@ -451,11 +457,40 @@ The following table presents the various SQL statements and the corresponding Mo
     </tr>
     </tbody>
 </table>
+<br>
+<p>
 
+<h3>The Path of a Query in PostgresSQL</h3>
+Taken from the <a href="https://www.postgresql.org/docs/10/static/query-path.html">Postgres 10 documentation</a>.
+Here we give a short overview of the stages a query has to pass in order to obtain a result.
+
+<ol>
+<li> A <b>connection</b> from an application program to the PostgreSQL server has to be established. The application program transmits a query to the server and waits to receive the results sent back by the server.
+</li>
+
+<li> The <b>parser stage</b> checks the query transmitted by the application program for correct syntax and creates a query tree.
+</li>
+
+<li> The rewrite system takes the query tree created by the parser stage and looks for any rules (stored in the system catalogs) to apply to the query tree. It performs the transformations given in the rule bodies.  
+<br> One application of the rewrite system is in the realization of views. Whenever a query against a view (i.e., a virtual table) is made, the rewrite system rewrites the user's query to a query that accesses the base tables given in the view definition instead.
+</li>
+
+<li> The <b>planner/optimizer</b> takes the (rewritten) query tree and creates a query plan that will be the input to the executor.
+<br> It does so by first creating all possible paths leading to the same result. For example if there is an index on a relation to be scanned, there are two paths for the scan. One possibility is a simple sequential scan and the other possibility is to use the index. Next the cost for the execution of each path is estimated and the cheapest path is chosen. The cheapest path is expanded into a complete plan that the executor can use.
+</li>
+
+<li> The <b>executor</b> recursively steps through the plan tree and retrieves rows in the way represented by the plan. The executor makes use of the storage system while scanning relations, performs sorts and joins, evaluates qualifications and finally hands back the rows derived.
+</li>
+</ol>
+
+Here is a illustrative examplanation of the PostgreSQL query lifecycle:
+<a href="http://patshaughnessy.net/2014/10/13/following-a-select-statement-through-postgres-internals">http://patshaughnessy.net/2014/10/13/following-a-select-statement-through-postgres-internals</a>
 
 
 <p><br>
-<b>Reference—</b><br>
-1. <a href="https://gist.github.com/aponxi/4380516">https://gist.github.com/aponxi/4380516</a><br>
-
-
+<b>References—</b><br>a
+<ol>
+  <li><a href="https://gist.github.com/aponxi/4380516">https://gist.github.com/aponxi/4380516</a> </li>
+  <li><a href="https://www.postgresql.org/docs/10/static/index.html">Postgresql 10 documentation</a> </li>
+  <li><a href="http://patshaughnessy.net/2014/10/13/following-a-select-statement-through-postgres-internals">PostgreSQL query life cycle</a> </li>
+</ol>

@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Python internal data staructures"
+title:  "Python internal data structures"
 date:   2018-07-18
 ---
 
-<p class="intro">Python has different implementations, <i>CPython</i> is the most popular one. </p>
+<p class="intro">Python has different implementations, <i>CPython</i> and Python-JIT are popular ones. </p>
+
 <ol>
   <li><b>List—</b> Lists are implemented as C like arrays in consecutive memory blocks.
       <ul>
