@@ -81,70 +81,46 @@ The following table presents the various SQL statements and the corresponding Mo
     </tr>
     </thead>
   <tbody valign="top">
-    <tr><td><pre>CREATE TABLE users (
+    <tr>
+      <td><pre>CREATE TABLE users (
         id MEDIUMINT NOT NULL
             AUTO_INCREMENT,
         user_id Varchar(30),
         age Number,
         status char(1),
         PRIMARY KEY (id)
-    )
-    </pre>
-    
-    </td>
+     ) </pre> </td>
     <td><p>Implicitly created on first <a href="../method/db.collection.insert/#db.collection.insert" title="db.collection.insert"><tt>insert</tt></a> operation. The primary key <tt>_id</tt> is
     automatically added if <tt>_id</tt> field is not specified.</p>
     <pre>db.users.insert( {
         user_id: "abc123",
         age: 55,
         status: "A"
-     } )
-    </pre>
-    
+     } ) </pre>
     <p>However, you can also explicitly create a collection:</p>
-    <pre>db.createCollection("users")
-    </pre>
-    
-    </td>
+    <pre>db.createCollection("users") </pre> </td>
     </tr>
     <tr><td><pre>ALTER TABLE users
-    ADD join_date DATETIME
-    </pre>
-    
-    </td>
+    ADD join_date DATETIME </pre> </td>
     <td>Collections do not describe or enforce the structure of the
     constituent documents. See the <a href="http://www.mongodb.org/display/DOCS/Schema+Design" rel="nofollow">Schema Design</a> wiki page for more information.</td>
     </tr>
     <tr><td><pre>ALTER TABLE users
-    DROP COLUMN join_date
-    </pre>
-    
-    </td>
+    DROP COLUMN join_date </pre> </td>
     <td>Collections do not describe or enforce the structure of the
     constituent documents. See the <a href="http://www.mongodb.org/display/DOCS/Schema+Design" rel="nofollow">Schema Design</a> wiki page for more information.</td>
     </tr>
     <tr><td><pre>CREATE INDEX idx_user_id_asc
-    ON users(user_id)
-    </pre>
-    
-    </td>
-    <td><pre>db.users.ensureIndex( { user_id: 1 } )
-    </pre>
-    
-    </td>
+    ON users(user_id) </pre> </td>
+    <td><pre>db.users.ensureIndex( { user_id: 1 } ) </pre> </td>
     </tr>
     <tr><td><pre>CREATE INDEX
            idx_user_id_asc_age_desc
-    ON users(user_id, age DESC) </pre>
-    
-    </td>
-    <td><pre>db.users.ensureIndex( { user_id: 1, age: -1 } ) </pre>
-    
-    </td>
+    ON users(user_id, age DESC) </pre> </td>
+      <td><pre>db.users.ensureIndex( { user_id: 1, age: -1 } ) </pre></td>
     </tr>
-    <tr><td><pre>DROP TABLE users </pre>
-    
-    </td>
+    <tr>
+      <td><pre>DROP TABLE users </pre> </td>
     <td><pre>db.users.drop() </pre>
     </td>
     </tr>
@@ -161,10 +137,8 @@ The following table presents the various SQL statements and the corresponding Mo
   <tbody valign="top">
     <tr><td><pre>SELECT *
     FROM users </pre>
-    
     </td>
-    <td><pre>db.users.find() </pre>
-    </td>
+    <td><pre>db.users.find() </pre> </td>
     </tr>
     <tr><td><pre>SELECT id, user_id, status
     FROM users </pre>
@@ -177,15 +151,11 @@ The following table presents the various SQL statements and the corresponding Mo
     </tr>
     <tr><td><pre>SELECT user_id, status
     FROM users
-    </pre>
-    
-    </td>
+    </pre> </td>
     <td><pre>db.users.find(
         { },
         { user_id: 1, status: 1, _id: 0 }
-    )
-    </pre>
-    </td>
+    ) </pre> </td>
     </tr>
     <tr>
         <td><pre>SELECT *
@@ -195,8 +165,7 @@ The following table presents the various SQL statements and the corresponding Mo
         </td>
         <td><pre>db.users.find(
             { status: "A" }
-        ) </pre>
-        </td>
+        ) </pre> </td>
     </tr>
     <tr>
         <td><pre>SELECT user_id, status
@@ -227,14 +196,12 @@ The following table presents the various SQL statements and the corresponding Mo
     WHERE status = "A"
     AND age = 50
     </pre>
-    
     </td>
     <td><pre>db.users.find(
         { status: "A",
           age: 50 }
     )
     </pre>
-    
     </td>
     </tr>
     <tr><td><pre>SELECT *
@@ -242,40 +209,32 @@ The following table presents the various SQL statements and the corresponding Mo
     WHERE status = "A"
     OR age = 50
     </pre>
-    
     </td>
     <td><pre>db.users.find(
         { $or: [ { status: "A" } ,
                  { age: 50 } ] }
-    )
-    </pre>
-    
+    ) </pre>
     </td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
     WHERE age &gt; 25
     </pre>
-    
     </td>
     <td><pre>db.users.find(
         { age: { $gt: 25 } }
-    )
-    </pre>
-    
+    ) </pre>
     </td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
     WHERE age &lt; 25
     </pre>
-    
     </td>
     <td><pre>db.users.find(
        { age: { $lt: 25 } }
     )
     </pre>
-    
     </td>
     </tr>
     <tr><td><pre>SELECT *
@@ -283,39 +242,33 @@ The following table presents the various SQL statements and the corresponding Mo
     WHERE age &gt; 25
     AND   age &lt;= 50
     </pre>
-    
     </td>
     <td><pre>db.users.find(
        { age: { $gt: 25, $lte: 50 } }
     )
     </pre>
     </td>
-
     </tr>
     <tr><td><pre>SELECT *
     FROM users
     WHERE user_id like "%bc%"
     </pre>
-    
     </td>
     <td><pre>db.users.find(
        { user_id: /bc/ }
     )
     </pre>
-    
     </td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
     WHERE user_id like "bc%"
     </pre>
-    
     </td>
     <td><pre>db.users.find(
        { user_id: /^bc/ }
     )
     </pre>
-    
     </td>
     </tr>
     <tr><td><pre>SELECT *
@@ -323,11 +276,9 @@ The following table presents the various SQL statements and the corresponding Mo
     WHERE status = "A"
     ORDER BY user_id ASC
     </pre>
-    
     </td>
     <td><pre>db.users.find( { status: "A" } ).sort( { user_id: 1 } )
     </pre>
-    
     </td>
     </tr>
     <tr><td><pre>SELECT *
@@ -335,56 +286,44 @@ The following table presents the various SQL statements and the corresponding Mo
     WHERE status = "A"
     ORDER BY user_id DESC
     </pre>
-    
     </td>
     <td><pre>db.users.find( { status: "A" } ).sort( { user_id: -1 } )
     </pre>
-    
     </td>
     </tr>
     <tr>
     <td><pre>SELECT COUNT(*)
       FROM users </pre>
-    
     </td>
     <td> 
       <pre>db.users.count() </pre>
       <pre>db.users.find().count() </pre>
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../method/cursor.count/#cursor.count" title="cursor.count"><tt>count()</tt></a> for
-    more information.</td>
     </tr>
     <tr><td><pre>SELECT COUNT(user_id)
     FROM users
     </pre>
-    
     </td>
     <td><pre>db.users.count( { user_id: { $exists: true } } )
     </pre>
-    
     <pre>db.users.find( { user_id: { $exists: true } } ).count()
     </pre>
-    
     </td>
     </tr>
     <tr><td><pre>SELECT COUNT(*)
     FROM users
     WHERE age &gt; 30 </pre>
     </td>
-
     <td><pre>db.users.count( { age: { $gt: 30 } } ) </pre>
        <pre>db.users.find( { age: { $gt: 30 } } ).count() </pre>
     </td>
     </tr>
     <tr><td><pre>SELECT DISTINCT(status)
     FROM users </pre>
-    
     </td>
     <td>
       <pre>db.users.distinct( "status" )
     </pre>
-    
     </td>
     </tr>
     <tr>
