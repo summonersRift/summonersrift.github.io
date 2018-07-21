@@ -60,16 +60,17 @@ date:   2018-07-21
 <h3>Examples</h3>
 The following table presents the various SQL statements and the corresponding MongoDB statements. The examples in the table assume the following conditions:
 
-The SQL examples assume a table named users.
+1. The SQL examples assume a table named users.
+1. The MongoDB examples assume a collection named users that contain documents of the following prototype:
 
-The MongoDB examples assume a collection named users that contain documents of the following prototype:
-
+<pre>
 {
   _id: ObjectID("509a8fb2f3f4948bd2f983a0"),
   user_id: "abc123",
   age: 55,
   status: 'A'
 }
+</pre>
 
 
 <h3>Create and Alter</h3>
@@ -77,7 +78,6 @@ The MongoDB examples assume a collection named users that contain documents of t
   <thead valign="bottom">
     <tr><th>SQL Schema Statements</th>
     <th>MongoDB Schema Statements</th>
-    <th>Reference</th>
     </tr>
     </thead>
   <tbody valign="top">
@@ -106,10 +106,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See
-    <a href="../method/db.collection.insert/#db.collection.insert" title="db.collection.insert"><tt>insert()</tt></a> and
-    <a href="../method/db.createCollection/#db.createCollection" title="db.createCollection"><tt>createCollection()</tt></a>
-    for more information.</td>
     </tr>
     <tr><td><pre>ALTER TABLE users
     ADD join_date DATETIME
@@ -118,9 +114,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </td>
     <td>Collections do not describe or enforce the structure of the
     constituent documents. See the <a href="http://www.mongodb.org/display/DOCS/Schema+Design" rel="nofollow">Schema Design</a> wiki page for more information.</td>
-    <td>See <a href="../method/db.collection.update/#db.collection.update" title="db.collection.update"><tt>update()</tt></a> and
-    <a href="../operators/#_S_set" title="$set"><tt>$set</tt></a> for more information on changing the structure
-    of documents in a collection.</td>
     </tr>
     <tr><td><pre>ALTER TABLE users
     DROP COLUMN join_date
@@ -129,9 +122,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </td>
     <td>Collections do not describe or enforce the structure of the
     constituent documents. See the <a href="http://www.mongodb.org/display/DOCS/Schema+Design" rel="nofollow">Schema Design</a> wiki page for more information.</td>
-    <td>See <a href="../method/db.collection.update/#db.collection.update" title="db.collection.update"><tt>update()</tt></a> and
-    <a href="../operators/#_S_set" title="$set"><tt>$set</tt></a> for more information on changing the structure
-    of documents in a collection.</td>
     </tr>
     <tr><td><pre>CREATE INDEX idx_user_id_asc
     ON users(user_id)
@@ -142,8 +132,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.ensureIndex/#db.collection.ensureIndex" title="db.collection.ensureIndex"><tt>ensureIndex()</tt></a>
-    and <a href="../../core/indexes/"><em>indexes</em></a> for more information.</td>
     </tr>
     <tr><td><pre>CREATE INDEX
            idx_user_id_asc_age_desc
@@ -181,8 +169,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    for more information.</td>
     </tr>
     <tr><td><pre>SELECT id, user_id, status
     FROM users
@@ -196,8 +182,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    for more information.</td>
     </tr>
     <tr><td><pre>SELECT user_id, status
     FROM users
@@ -211,8 +195,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -226,8 +208,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    for more information.</td>
     </tr>
     <tr><td><pre>SELECT user_id, status
     FROM users
@@ -242,8 +222,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -257,8 +235,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../operators/#_S_ne" title="$ne"><tt>$ne</tt></a> for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -274,8 +250,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../operators/#_S_and" title="$and"><tt>$and</tt></a> for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -291,8 +265,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../operators/#_S_or" title="$or"><tt>$or</tt></a> for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -306,8 +278,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../operators/#_S_gt" title="$gt"><tt>$gt</tt></a> for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -321,8 +291,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../operators/#_S_lt" title="$lt"><tt>$lt</tt></a> for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -353,8 +321,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../operators/#_S_regex" title="$regex"><tt>$regex</tt></a> for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -368,8 +334,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../operators/#_S_regex" title="$regex"><tt>$regex</tt></a> for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -382,9 +346,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../method/cursor.sort/#cursor.sort" title="cursor.sort"><tt>sort()</tt></a>
-    for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -397,9 +358,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../method/cursor.sort/#cursor.sort" title="cursor.sort"><tt>sort()</tt></a>
-    for more information.</td>
     </tr>
     <tr><td><pre>SELECT COUNT(*)
     FROM users
@@ -431,9 +389,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>,
-    <a href="../method/cursor.count/#cursor.count" title="cursor.count"><tt>count()</tt></a>, and
-    <a href="../operators/#_S_exists" title="$exists"><tt>$exists</tt></a> for more information.</td>
     </tr>
     <tr><td><pre>SELECT COUNT(*)
     FROM users
@@ -449,9 +404,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>,
-    <a href="../method/cursor.count/#cursor.count" title="cursor.count"><tt>count()</tt></a>, and
-    <a href="../operators/#_S_gt" title="$gt"><tt>$gt</tt></a> for more information.</td>
     </tr>
     <tr><td><pre>SELECT DISTINCT(status)
     FROM users
@@ -462,9 +414,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../method/db.collection.distinct/#db.collection.distinct" title="db.collection.distinct"><tt>distinct()</tt></a>
-    for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -481,9 +430,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     
     </td>
     <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>,
-    <a href="../method/db.collection.findOne/#db.collection.findOne" title="db.collection.findOne"><tt>findOne()</tt></a>,
-    and <a href="../method/cursor.limit/#cursor.limit" title="cursor.limit"><tt>limit()</tt></a>
-    for more information.</td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -511,9 +457,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>
-    and <a href="../method/cursor.explain/#cursor.explain" title="cursor.explain"><tt>explain()</tt></a>
-    for more information.</td>
     </tr>
   </tbody>
 </table>
@@ -541,9 +484,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.update/#db.collection.update" title="db.collection.update"><tt>update()</tt></a>,
-    <a href="../operators/#_S_gt" title="$gt"><tt>$gt</tt></a>, and <a href="../operators/#_S_set" title="$set"><tt>$set</tt></a> for more
-    information.</td>
     </tr>
     <tr><td><pre>UPDATE users
     SET age = age + 3
@@ -559,9 +499,6 @@ The MongoDB examples assume a collection named users that contain documents of t
     </pre>
     
     </td>
-    <td>See <a href="../method/db.collection.update/#db.collection.update" title="db.collection.update"><tt>update()</tt></a>,
-    <a href="../operators/#_S_inc" title="$inc"><tt>$inc</tt></a>, and <a href="../operators/#_S_set" title="$set"><tt>$set</tt></a> for more
-    information.</td>
     </tr>
   </tbody>
 </table>
@@ -576,9 +513,7 @@ The MongoDB examples assume a collection named users that contain documents of t
     </tr>
   </thead>
   <tbody valign="top">
-    <tr><td><pre>INSERT INTO users(user_id,
-                      age,
-                      status)
+    <tr><td><pre>INSERT INTO users(user_id, age, status)
     VALUES ("bcd001",
             45,
             "A")
