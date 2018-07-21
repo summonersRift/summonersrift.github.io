@@ -160,27 +160,20 @@ The following table presents the various SQL statements and the corresponding Mo
   </thead>
   <tbody valign="top">
     <tr><td><pre>SELECT *
-    FROM users
-    </pre>
+    FROM users </pre>
     
     </td>
-    <td><pre>db.users.find()
-    </pre>
-    
+    <td><pre>db.users.find() </pre>
     </td>
     </tr>
     <tr><td><pre>SELECT id, user_id, status
-    FROM users
-    </pre>
-    
+    FROM users </pre>
     </td>
-    <td><pre>db.users.find(
-        { },
-        { user_id: 1, status: 1 }
-    )
-    </pre>
-    
-    </td>
+        <td><pre>db.users.find(
+            { },
+            { user_id: 1, status: 1 }
+        ) </pre>
+        </td>
     </tr>
     <tr><td><pre>SELECT user_id, status
     FROM users
@@ -192,48 +185,42 @@ The following table presents the various SQL statements and the corresponding Mo
         { user_id: 1, status: 1, _id: 0 }
     )
     </pre>
-    
     </td>
     </tr>
-    <tr><td><pre>SELECT *
-    FROM users
-    WHERE status = "A"
-    </pre>
-    
-    </td>
-    <td><pre>db.users.find(
-        { status: "A" }
-    )
-    </pre>
-    
-    </td>
+    <tr>
+        <td><pre>SELECT *
+        FROM users
+        WHERE status = "A"
+        </pre>
+        </td>
+        <td><pre>db.users.find(
+            { status: "A" }
+        ) </pre>
+        </td>
     </tr>
-    <tr><td><pre>SELECT user_id, status
-    FROM users
-    WHERE status = "A"
-    </pre>
-    
-    </td>
-    <td><pre>db.users.find(
-        { status: "A" },
-        { user_id: 1, status: 1, _id: 0 }
-    )
-    </pre>
-    
-    </td>
+    <tr>
+        <td><pre>SELECT user_id, status
+        FROM users
+        WHERE status = "A"
+        </pre>
+        
+        </td>
+        <td><pre>db.users.find(
+            { status: "A" },
+            { user_id: 1, status: 1, _id: 0 }
+        ) </pre>
+        </td>
     </tr>
-    <tr><td><pre>SELECT *
-    FROM users
-    WHERE status != "A"
-    </pre>
-    
-    </td>
-    <td><pre>db.users.find(
-        { status: { $ne: "A" } }
-    )
-    </pre>
-    
-    </td>
+        <tr>
+        <td><pre>SELECT *
+        FROM users
+        WHERE status != "A"
+        </pre>
+        </td>
+        <td><pre>db.users.find(
+            { status: { $ne: "A" } }
+        ) </pre>
+        </td>
     </tr>
     <tr><td><pre>SELECT *
     FROM users
@@ -400,31 +387,24 @@ The following table presents the various SQL statements and the corresponding Mo
     
     </td>
     </tr>
-    <tr><td><pre>SELECT *
-    FROM users
-    LIMIT 1 </pre>
-    
-    </td>
-    <td><pre>db.users.findOne() </pre>
-    <pre>db.users.find().limit(1)
-    </pre>
-    
-    </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>,
+    <tr>
+        <td><pre>SELECT *
+        FROM users
+        LIMIT 1 </pre>
+        </td>
+        <td><pre>db.users.findOne() </pre>
+        <pre>db.users.find().limit(1)
+        </pre>
+        </td>
     </tr>
-    <tr><td><pre>SELECT *
-    FROM users
-    LIMIT 5
-    SKIP 10 </pre>
-    
-    </td>
-    <td><pre>db.users.find().limit(5).skip(10) </pre>
-    
-    </td>
-    <td>See <a href="../method/db.collection.find/#db.collection.find" title="db.collection.find"><tt>find()</tt></a>,
-    <a href="../method/cursor.limit/#cursor.limit" title="cursor.limit"><tt>limit()</tt></a>, and
-    <a href="../method/cursor.skip/#cursor.skip" title="cursor.skip"><tt>skip()</tt></a> for
-    more information.</td>
+    <tr>
+        <td><pre>SELECT *
+        FROM users
+        LIMIT 5
+        SKIP 10 </pre>
+        </td>
+        <td><pre>db.users.find().limit(5).skip(10) </pre>
+        </td>
     </tr>
     <tr><td><pre>EXPLAIN SELECT *
     FROM users
