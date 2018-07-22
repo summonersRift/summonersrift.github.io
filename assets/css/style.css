@@ -537,6 +537,23 @@ dd {
     width: 100%;
     line-height: 1.4;
 }
+
+
+/*obaida for circle image*/
+.img-circle {
+    border-radius: 50%;
+}
+code {
+    background:#D0D0D0;
+}
+.contactcard {
+    background:#A9CCE3;
+    text-align: center;
+    width:60%;
+}
+
+
+
 .postNav .prev.image, .postNav .next.image {
     text-decoration: none;
     color: white;
