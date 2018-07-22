@@ -14,11 +14,11 @@ paginate: 5
 navigation:
  - title: Mohammad Abu Obaida  
    url: /index.html
- - title: Projects
+ - title: PROJECTS
    url: /projects
- - title: Research
+ - title: RESEARCH
    url: /research
- - title: Blog
+ - title: BLOG
    url: /blogs
  - title: GitHub
    url: https://github.com/summonersrift
