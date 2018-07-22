@@ -20,6 +20,8 @@ navigation:
    url: /research
  - title: Blog
    url: /blogs
+ - title: GitHub
+   url: https://github.com/summonersrift
 
 social:
    github: summonersrift

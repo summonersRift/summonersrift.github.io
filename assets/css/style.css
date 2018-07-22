@@ -547,9 +547,15 @@ code {
     background:#D0D0D0;
 }
 .contactcard {
-    background:#A9CCE3;
+    background:#5e866d;
     text-align: center;
-    width:60%;
+    width:85%;
+}
+
+.formembed{
+   width: 75%
+   text-align:center;
+   margin-left:12.5%;
 }
 
 
