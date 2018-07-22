@@ -12,6 +12,8 @@ gems: [jekyll-paginate]
 paginate: 5
 
 navigation:
+ - title: <img class="img-circle" src="/assets/img/profile_picture_2016.jpg" alt=""/>
+   url: /index.html
  - title: Mohammad Abu Obaida  
    url: /index.html
  - title: PROJECTS
