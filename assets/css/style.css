@@ -547,17 +547,16 @@ code {
     background:#D0D0D0;
 }
 .contactcard {
-    background:#5e866d;
+    background:#effdff;
     text-align: center;
-    width:85%;
+    width:90%;
 }
 
 .formembed{
-   width: 75%
    text-align:center;
-   margin-left:12.5%;
+   margin-left:15%;
+   margin-right:15%;
 }
-
 
 
 .postNav .prev.image, .postNav .next.image {
