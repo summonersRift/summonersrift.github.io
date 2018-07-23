@@ -563,6 +563,14 @@ code {
    margin-left:15%;
    margin-right:15%;
 }
+.lifirst{
+    font-size:1.5em;
+}
+.liothers{
+    font-size:1em;
+}
+
+
 
 
 .postNav .prev.image, .postNav .next.image {
