@@ -311,7 +311,9 @@ Job 2 finished
 </pre>
 So we see that this time the start and finish logs of both the jobs were present. So thread synchronization took place by the use of Mutex.
 
-Semaphore pthread example
+### Semaphore pthread example
+
+{% highlight c %}
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -361,7 +363,7 @@ int main(void) {
 {% endhighlight %}
 
 
-###My references
+### My references
 1. Read more about Mutex/Semaphore https://sysplay.in/blog/linux-kernel-internals/2015/06/concurrency-management-in-linux-kernel/
 
 
