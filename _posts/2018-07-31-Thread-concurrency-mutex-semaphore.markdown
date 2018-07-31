@@ -242,6 +242,7 @@ The first function above releases the lock and the second function destroys the 
 
 Mutexes are used for thread synchronization-complete example
 
+{% highlight c %}
 #include<stdio.h>
 #include<string.h>
 #include<pthread.h>
@@ -360,7 +361,7 @@ int main(void) {
 {% endhighlight %}
 
 
-<b>My references</b><br>
+###My references
 1. Read more about Mutex/Semaphore https://sysplay.in/blog/linux-kernel-internals/2015/06/concurrency-management-in-linux-kernel/
 
 
