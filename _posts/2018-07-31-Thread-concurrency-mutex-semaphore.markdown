@@ -250,6 +250,7 @@ A Mutex is a lock that we set before using a shared resource and release after u
 A mutex is initialized and then a lock is achieved by calling the following two functions:
 
 <pre>
+{% highlight c %}
 /*initialize a mutex*/
 int pthread_mutex_init(pthread_mutex_t *restrict mutex, const pthread_mutexattr_t *restrict attr);
 
@@ -262,7 +263,7 @@ int pthread_mutex_unlock(pthread_mutex_t *mutex);
 
 /*This function destroys the lock so that it cannot be used anywhere in future.*/
 int pthread_mutex_destroy(pthread_mutex_t *mutex);
-
+</pre>
 
 ##### Mutex Thread Synchronization Example
 
