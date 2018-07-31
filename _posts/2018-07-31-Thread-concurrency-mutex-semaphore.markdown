@@ -121,6 +121,10 @@ int main(int argc, char * argv[]){ //Argument to be passed as command line argum
 Kernel threads are same as user space threads in many aspects, but one of the biggest difference is that they exist in the kernel space and execute in a privileged mode and have full access to the kernel data structures. These are basically used to implement background tasks inside the kernel. The task can be handling of asynchronous events or waiting for an event to occur. Device drivers utilize the services of kernel threads to handle such tasks. For example, the ksoftirqd/0 thread is used to implement the Soft IRQs in kernel. The khubdkernel thread monitors the usb hubs and helps in configuring  usb devices during hot-plugging.
 <br>APIs for creating the Kernel thread
 <br>Below is the API for creating the thread:
+{% highlight c %}
+//#include <kthread.h>
+//kthread_create(int (*function)(void *data), void *data, const char name[], ...)
+{% endhighlight %}
 
 
 <b>Parameters:</b>
@@ -131,14 +135,12 @@ Retuns: Pointer to a structure of type task_struct
 Below is an example code which creates a kernel thread:
 
 {% highlight c %}
-//#include <kthread.h>
-//kthread_create(int (*function)(void *data), void *data, const char name[], ...)
-
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/delay.h>
 
 static struct task_struct *thread_st;
+
 // Function executed by kernel thread
 static int thread_fn(void *unused)
 {
@@ -151,6 +153,7 @@ static int thread_fn(void *unused)
     do_exit(0);
     return 0;
 }
+
 // Module Initialization
 static int __init init_thread(void)
 {
@@ -163,6 +166,7 @@ static int __init init_thread(void)
         printk(KERN_INFO "Thread creation failed\n");
     return 0;
 }
+
 // Module Exit
 static void __exit cleanup_thread(void)
 {
