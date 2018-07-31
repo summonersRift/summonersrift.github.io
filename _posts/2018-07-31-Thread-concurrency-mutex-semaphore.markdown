@@ -17,8 +17,6 @@ In the user space, threads are created using the POSIX APIs and are known as pth
 Having said that, why do we require threads? Need for the multiple threads arises, when we need to achieve the parallelism within the process. To give you the simple example, while working on the word processor, if we enable the spell and grammar check, as we key in the words, you will see red/green lines appear, if we type something syntactically/grammatically incorrect. This can most probably be implemented as threads.
 <br><br>
 The above material comes from here: <a href="https://sysplay.in/blog/linux-kernel-internals/2015/04/kernel-threads/">sysplay.in</a>
-
-<br>
 <br>
 Just as a process is identified through a process ID, a thread is identified by a thread ID. Suppose there is a case where a link list contains data for different threads. Every node in the list contains a thread ID and the corresponding data. Now whenever a thread tries to fetch its data from linked list, it first gets its own ID by calling ?pthread_self()? and then it calls the ?pthread_equal()? on every node to see if the node contains data for it or not.
 <br>
@@ -250,7 +248,6 @@ A Mutex is a lock that we set before using a shared resource and release after u
 A mutex is initialized and then a lock is achieved by calling the following two functions:
 
 <pre>
-{% highlight c %}
 /*initialize a mutex*/
 int pthread_mutex_init(pthread_mutex_t *restrict mutex, const pthread_mutexattr_t *restrict attr);
 
@@ -263,7 +260,7 @@ int pthread_mutex_unlock(pthread_mutex_t *mutex);
 
 /*This function destroys the lock so that it cannot be used anywhere in future.*/
 int pthread_mutex_destroy(pthread_mutex_t *mutex);
-</pre>
+{% endhighlight %}
 
 ##### Mutex Thread Synchronization Example
 
@@ -317,7 +314,6 @@ int main(void) {
     return 0;
 }
 {% endhighlight %}
-
 
 In the code above :
 * A mutex is initialized in the beginning of the main function.
