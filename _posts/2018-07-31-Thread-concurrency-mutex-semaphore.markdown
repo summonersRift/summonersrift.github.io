@@ -205,10 +205,10 @@ Thread Running
 </pre>
 As seen, running a thread is a two step process ? First create a thread and wake it up using wake_up_process(). However, kernel provides an API, which performs both these steps in one go as shown below:
 
-<pre>
+{% highlight c %}
 #include <kthread.h>
 kthread_run(int (*function)(void *data), void *data, const char name[], ...)
-</pre>
+{% endhighlight %}
 
 <b>Parameters</b>:<br>
 function ? The function that the thread has to execute
@@ -342,7 +342,6 @@ void threadfunc() {
 }
 
 int main(void) {
-    
     // initialize semaphore, only to be used with threads in this process, set value to 1
     sem_init(&semaphore, 0, 1);
     
