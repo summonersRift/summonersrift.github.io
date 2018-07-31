@@ -549,9 +549,9 @@ dd {
    object-fit: cover;
    object-position: center right;
 }
-code {
+/*code {
     background:#D0D0D0;
-}
+}*/
 .contactcard {
     background:#f0fff4;
     text-align: center;
