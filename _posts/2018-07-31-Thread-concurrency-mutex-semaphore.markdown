@@ -24,6 +24,7 @@ Just as a process is identified through a process ID, a thread is identified by 
 
 
 <h3>POSIX User Space Threads</h3>
+
 #include<pthread.h>
 int pthread_create(pthread_t *restrict tidp, const pthread_attr_t *restrict attr, void *(*start_rtn)(void), void *restrict arg)
 
@@ -80,10 +81,11 @@ First thread processing
 Thread created successfully
 Second thread processing
 </pre>
-Tips
+
+<b>Tips</b><br>
  pthread_join(thread_id) for main to wait for the worker thread to finish.
  
-Pthread Sample 2:
+<b>Pthread Sample 2</b>
 {% highlight c %}
 #include<stdio.h>
 #include<string.h>
@@ -120,15 +122,19 @@ Kernel threads are same as user space threads in many aspects, but one of the bi
 APIs for creating the Kernel thread
 Below is the API for creating the thread:
 
-{% highlight c %}
+<pre>
 #include <kthread.h>
 kthread_create(int (*function)(void *data), void *data, const char name[], ...)
-Parameters:
+</pre>
+
+<b>Parameters:</b>
 function ? The function that the thread has to execute
 data ? The ?data? to be passed to the function
 name ? The name by which the process will be recognized in the kernel
 Retuns: Pointer to a structure of type task_struct
 Below is an example code which creates a kernel thread:
+
+{% highlight c %}
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/delay.h>
@@ -201,14 +207,14 @@ As seen, running a thread is a two step process ? First create a thread and wake
 kthread_run(int (*function)(void *data), void *data, const char name[], ...)
 </pre>
 
-<b>Parameters<b>:<br>
+<b>Parameters</b>:<br>
 function ? The function that the thread has to execute
 data ? The ?data? to be passed to the function
 name ? The name by which the process will be recognized in the kernel
 Returns: Pointer to a structure of type task_struct
 So, just replace the kthread_create() and wake_up_process() calls in above code with kthread_run and you will notice that thread starts running immediately.
 
---><b>"mutex"</b> is the actual low-level synchronizing primitive. You can take a mutex and then release it, and only one thread can take it at any single time (hence it is a synchronizing primitive). A recursive mutex is one which can be taken by the same thread multiple times, and then it needs to be released as many times by the same thread before others can take it.
+<b>"mutex"</b> is the actual low-level synchronizing primitive. You can take a mutex and then release it, and only one thread can take it at any single time (hence it is a synchronizing primitive). A recursive mutex is one which can be taken by the same thread multiple times, and then it needs to be released as many times by the same thread before others can take it.
 A "lock" here is just a C++ wrapper class that takes a mutex in its constructor and releases it at the destructor. It is useful for establishing synchronizing for C++ scopes.
 A condition variable is a more advanced / high-level form of synchronizing primitive which combines a lock with a "signaling" mechanism. It is used when threads need to wait for a resource to become available. A thread can "wait" on a CV and then the resource producer can "signal" the variable, in which case the threads who wait for the CV get notified and can continue execution. A mutex is combined with CV to avoid the race condition where a thread starts to wait on a CV at the same time another thread wants to signal it; then it is not controllable whether the signal is delivered or gets lost.
 By- Antti Huima  https://stackoverflow.com/questions/1055398/differences-between-conditional-variables-mutexes-and-locks
