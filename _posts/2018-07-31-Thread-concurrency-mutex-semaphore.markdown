@@ -4,29 +4,35 @@ title:  "Thread concurrency mutex semaphore"
 date:   2018-07-31
 ---
 
-<p class="intro">aPython has different implementations, <i>CPython</i> and Python-JIT are popular ones. </p>
-
-
+<p class="intro">Threads are lightweight processes that share the same address space(of a parent process), therefore can context-switch really fast. Process is an instance of a proram that is being executed. Processes are generally made up of threads. There are <b>kernel</b> and <b>user</b> threads in unix that are called <b>kthread</b> and <b>pthread</b>. 
 <br><br>
+<b>Mutex</b>, only the thread that locked or acquired the mutex can unlock it. In the case of a semaphore, a thread waiting on a semaphore can be signaled by a different thread. Some operating system supports using mutex & semaphores between process. 
+</p>
 
 <h3>Understanding Threads</h3>
 Threads, also known as light weight processes are the basic unit of CPU initialization. So, why do we call them as light weight processes? One of the reason is that the context switch between the threads takes much lesser time as compared to processes, which results from the fact that all the threads within the process share the same address space, so you don?t need to switch the address space. 
-<br>
--->In the user space, threads are created using the POSIX APIs and are known as pthreads. Some of the advantages of the thread, is that since all the threads within the processes share the same address space, the communication between the threads is far easier and less time consuming as compared to processes. And usually is done through the global variables. This approach has one disadvantage though. It leads to several concurrency issues and require the synchronization mechanisms to handle the same.
-<br>
+<br><br>
+In the user space, threads are created using the POSIX APIs and are known as pthreads. Some of the advantages of the thread, is that since all the threads within the processes share the same address space, the communication between the threads is far easier and less time consuming as compared to processes. And usually is done through the global variables. This approach has one disadvantage though. It leads to several concurrency issues and require the synchronization mechanisms to handle the same.
+<br><br>
 Having said that, why do we require threads? Need for the multiple threads arises, when we need to achieve the parallelism within the process. To give you the simple example, while working on the word processor, if we enable the spell and grammar check, as we key in the words, you will see red/green lines appear, if we type something syntactically/grammatically incorrect. This can most probably be implemented as threads.
+<br><br>
+The above material comes from here: <a href="https://sysplay.in/blog/linux-kernel-internals/2015/04/kernel-threads/">sysplay.in</a>
+
 <br>
-The above material comes from here: https://sysplay.in/blog/linux-kernel-internals/2015/04/kernel-threads/
+<br>
 Just as a process is identified through a process ID, a thread is identified by a thread ID. Suppose there is a case where a link list contains data for different threads. Every node in the list contains a thread ID and the corresponding data. Now whenever a thread tries to fetch its data from linked list, it first gets its own ID by calling ?pthread_self()? and then it calls the ?pthread_equal()? on every node to see if the node contains data for it or not.
-<br> * A process ID is unique across the system where as a thread ID is unique only in context of a single process.
-<br> * A process ID is an integer value but the thread ID is not necessarily an integer value. It could well be a structure
-<br> * A process ID can be printed very easily while a thread ID is not easy to print.
+<br>
+ * A process ID is unique across the system where as a thread ID is unique only in context of a single process.
+ * A process ID is an integer value but the thread ID is not necessarily an integer value. It could well be a structure
+ * A process ID can be printed very easily while a thread ID is not easy to print.
 
 
-<h3>POSIX User Space Threads</h3>
+<h4>POSIX User Space Threads Example</h4>
 
+{% highlight c %}
 #include<pthread.h>
 int pthread_create(pthread_t *restrict tidp, const pthread_attr_t *restrict attr, void *(*start_rtn)(void), void *restrict arg)
+{% endhighlight %}
 
 
 {% highlight c %}
@@ -82,9 +88,9 @@ Thread created successfully
 Second thread processing
 </pre>
 
-<b>Tips</b><br>
- pthread_join(thread_id) for main to wait for the worker thread to finish.
- 
+<b>Tips</b>: pthread_join(thread_id) for main to wait for the worker thread to finish.
+
+<br> 
 <b>Pthread Sample 2</b>
 {% highlight c %}
 #include<stdio.h>
@@ -115,23 +121,24 @@ int main(int argc, char * argv[]){ //Argument to be passed as command line argum
 }
 {% endhighlight %}
 
-
-
-<h3>Kernel Threads</h3>
+<br>
+### Kernel Threads
 Kernel threads are same as user space threads in many aspects, but one of the biggest difference is that they exist in the kernel space and execute in a privileged mode and have full access to the kernel data structures. These are basically used to implement background tasks inside the kernel. The task can be handling of asynchronous events or waiting for an event to occur. Device drivers utilize the services of kernel threads to handle such tasks. For example, the ksoftirqd/0 thread is used to implement the Soft IRQs in kernel. The khubdkernel thread monitors the usb hubs and helps in configuring  usb devices during hot-plugging.
 <br>APIs for creating the Kernel thread
 <br>Below is the API for creating the thread:
+
 {% highlight c %}
 //#include <kthread.h>
 //kthread_create(int (*function)(void *data), void *data, const char name[], ...)
 {% endhighlight %}
 
 
-<b>Parameters:</b>
-function ? The function that the thread has to execute
-data ? The ?data? to be passed to the function
-name ? The name by which the process will be recognized in the kernel
-Retuns: Pointer to a structure of type task_struct
+##### Parameters
+* function: The function that the thread has to execute
+* data:  The data? to be passed to the function
+* name: The name by which the process will be recognized in the kernel
+* Retuns: Pointer to a structure of type task_struct
+
 Below is an example code which creates a kernel thread:
 
 {% highlight c %}
@@ -197,12 +204,14 @@ static struct task_struct *thread_st;
 {% endhighlight %}
 
 As you might notice, wake_up_process() takes pointer to task_struct as an argument, which in turn is returned from kthread_create(). Below is the output:<br>
+
 <pre>
 Thread Created successfully
 Thread Running
 Thread Running
 ...
 </pre>
+
 As seen, running a thread is a two step process ? First create a thread and wake it up using wake_up_process(). However, kernel provides an API, which performs both these steps in one go as shown below:
 
 {% highlight c %}
@@ -225,10 +234,10 @@ By- Antti Huima  https://stackoverflow.com/questions/1055398/differences-between
 <b>Read more at:</b><br>
 https://www.thegeekstuff.com/2012/05/c-mutex-examples/?refcom
 
-<b>Mutex</b>: <br>
+#### Mutex
 A Mutex is a lock that we set before using a shared resource and release after using it. When the lock is set, no other thread can access the locked region of code. So we see that even if thread 2 is scheduled while thread 1 was not done accessing the shared resource and the code is locked by thread 1 using mutexes then thread 2 cannot even access that region of code. So this ensures a synchronized access of shared resources in the code.
 
-<b>Internally it works as follows</b>:<br>
+<b>Internally mutex works as follows</b>:<br>
 
 1. Suppose one thread has locked a region of code using mutex and is executing that piece of code.
 2. Now if scheduler decides to do a context switch, then all the other threads which are ready to execute the same region are unblocked.
@@ -237,19 +246,25 @@ A Mutex is a lock that we set before using a shared resource and release after u
 5. Mutex lock will only be released by the thread who locked it.
 6. So this ensures that once a thread has locked a piece of code then no other thread can execute the same region until it is unlocked by the thread who locked it.
 7. Hence, this system ensures synchronization among the threads while working on shared resources.
-A mutex is initialized and then a lock is achieved by calling the following two functions :
 
+A mutex is initialized and then a lock is achieved by calling the following two functions:
+
+<pre>
+/*initialize a mutex*/
 int pthread_mutex_init(pthread_mutex_t *restrict mutex, const pthread_mutexattr_t *restrict attr);
+
+/*lock critical code section with the following lock*/
 int pthread_mutex_lock(pthread_mutex_t *mutex);
-The first function initializes a mutex and through second function any critical region in the code can be locked.
 
-The mutex can be unlocked and destroyed by calling following functions :
-
+/*the mutex can be unlocked or the lock can be released like following*/
 int pthread_mutex_unlock(pthread_mutex_t *mutex);
-int pthread_mutex_destroy(pthread_mutex_t *mutex);
-The first function above releases the lock and the second function destroys the lock so that it cannot be used anywhere in future.
 
-Mutexes are used for thread synchronization-complete example
+
+/*This function destroys the lock so that it cannot be used anywhere in future.*/
+int pthread_mutex_destroy(pthread_mutex_t *mutex);
+
+
+##### Mutex Thread Synchronization Example
 
 {% highlight c %}
 #include<stdio.h>
@@ -304,7 +319,6 @@ int main(void) {
 
 
 In the code above :
-
 * A mutex is initialized in the beginning of the main function.
 * The same mutex is locked in the ?doSomeThing()? function while using the shared resource ?counter?
 * At the end of the function ?doSomeThing()? the same mutex is unlocked.
@@ -318,7 +332,8 @@ Job 1 finished
 Job 2 started
 Job 2 finished
 </pre>
-So we see that this time the start and finish logs of both the jobs were present. So thread synchronization took place by the use of Mutex.
+So we see that this time the start and finish logs of both the jobs were present. So thread synchronization took place by the use of Mutex.<br>
+
 
 ### Semaphore pthread example
 
@@ -372,7 +387,8 @@ int main(void) {
 
 
 ### My references
-1. Read more about Mutex/Semaphore https://sysplay.in/blog/linux-kernel-internals/2015/06/concurrency-management-in-linux-kernel/
+1. Read more about Mutex/Semaphore on <a href="https://sysplay.in/blog/linux-kernel-internals/2015/06/concurrency-management-in-linux-kernel/">sysplay.in</a>
+2. Mutex Example on the <a href="https://www.thegeekstuff.com/2012/05/c-mutex-examples/?refcom">thegeekstuff.com</a>
 
 
 
