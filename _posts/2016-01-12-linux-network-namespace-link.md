@@ -1,11 +1,6 @@
 ---
 published: true
 ---
----
-layout: post
-title:  "Linux Network Namespace network"
-date:   2016-01-12
----
 
 Linux network namespaces 
 In this post we will create two linux network namespaces that can handle packets and establish communication among themselves(t1 and t2) using the kernel **ip_forward**.
@@ -13,7 +8,7 @@ In this post we will create two linux network namespaces that can handle packets
 
 The network looks like the following--
 
-  **t1**----<link1>----**kernel**----<link2>----**t2**
+  **t1** ---- link1 ---- **kernel** ---- link2 ----**t2**
   
 
 Clean up the interfaces from any previous experiments--
