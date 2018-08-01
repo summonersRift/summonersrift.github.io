@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Programming Garbage Distance"
-date:   2014-12-15
+date:   2017-01-01
 ---
 
 
@@ -72,3 +72,5 @@ if __name__=="__main__":
          ]
    print minimumGarbageDistance(lot)
 {% endhighlight %}
+
+Cheers!
