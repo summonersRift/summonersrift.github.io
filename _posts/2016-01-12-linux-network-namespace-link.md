@@ -1,11 +1,18 @@
 ---
-published: false
+published: true
 ---
-## Linux Network Namespace
+---
+layout: post
+title:  "Linux Network Namespace network"
+date:   2016-01-12
+---
 
+Linux network namespaces 
 In this post we will create two linux network namespaces that can handle packets and establish communication among themselves(t1 and t2) using the kernel **ip_forward**.
 
+
 The network looks like the following--
+
   **t1**----<link1>----**kernel**----<link2>----**t2**
   
 
@@ -22,12 +29,15 @@ sudo ip link del eth-t2
 
 Create new link with hwaddr, ip addresss, network namespaces.
 {% highlight bash %}
+#creating namespaces t1 and t2
+sudo ip netns add t1
+sudo ip netns add t2
+
+#creating link1 and link2
 sudo ip link add t1-eth0 type veth peer name eth-t1
 sleep 1
 sudo ip link add t2-eth0 type veth peer name eth-t2
 sleep 1
-sudo ip netns add t1
-sudo ip netns add t2
 
 #assign the newly created interfaces to the hosts/namespaces
 sudo ip link set t1-eth0 netns t1
