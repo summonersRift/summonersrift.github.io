@@ -5,7 +5,7 @@ date:   2017-01-01
 ---
 
 
-<p class="intro">There is a robot that collects garbage from a 2-D map. Assume a 2D-map of size <b>m x n</b>, where m is number of rows and n is number of columns. A robot starts at top-left position and tries to find the shortest distance to a garbage. A cell with garbage has a value 9. There are obstacles on the map that is marked as 0, meaning robot cant visit or pass through that cell. For all other values the cell is accesible. Find the shortest distance to the garbage, in terms of moves needed to get to the garbage.</p>
+<p class="intro">There is a robot that collects garbage from a 2-D map of size <b>m x n</b>, where m is number of rows and n is number of columns. A robot starts at top-left (0,0) cell of the map and tries to find the shortest distance to a garbage. A cell with garbage has a value 9. There are obstacles on the map that is marked as 0, meaning robot cant visit or pass through that cell. For all other values the cell is accesible. Find the shortest distance to the garbage, in terms of moves needed to get to the garbage.</p>
 
 #### Conditions
 * You cant modify the original map.
@@ -23,47 +23,30 @@ date:   2017-01-01
 {% highlight c linenos%}
 def minimumGarbageDistance(lot):
     nodes = [[0, 0, -1]] #x,y, distance
-    checked = set([])
+    checked = set()
     m = len(lot)
     n = len(lot[0])
 
     while nodes:
         node = nodes.pop(0)
         x, y, d = node
-        uid = n*x + y
-
-        if uid in checked:
-            continue
-        checked.add(uid)
-
-        newd = d+1
-        if lot[x][y] == 9:
-            return newd
-
-        #add right
-        if y+1 < n:
-            uid = n*x + (y+1)
-            if (uid not in checked) and (lot[x][y+1] !=0 ):
-                nodes.append([x, y+1, newd])
-        #add left
-        if y-1 >= 0:
-            uid = n*x + (y-1)
-            if uid not in checked and (lot[x][y-1] !=0 ):
-                nodes.append([x, y-1, newd])
-        #add bottom
-        if x+1 < m:
-            uid = n*(x+1) + y
-            if uid not in checked and (lot[x+1][y] !=0 ):
-                nodes.append([x+1, y, newd])
-        #add top
-        if x-1 >=0:
-            uid = n*(x-1) + y
-            if uid not in checked and (lot[x-1][y] !=0 ):
-                nodes.append([x-1, y, newd])
+        
+        if 0<=x<m and 0<=y<n:
+            uid = n*x + y
+            if uid not in checked:
+                checked.add(uid)
+                newd = d + 1
+                if lot[x][y] == 9: #garbage
+                    return newd
+                elif lot[x][y] == 1:  #flat landscape
+                    nodes.append([x, y+1, newd])
+                    nodes.append([x, y-1, newd])
+                    nodes.append([x+1, y, newd])
+                    nodes.append([x-1, y, newd])
+                #else obstacle or 0
     return -1
 
-#test driver program 
-if __name__=="__main__":
+if __name__=="__main__":   #test driver program 
    lot = [
             [1,1,1,1],
             [1,1,1,1],
@@ -71,6 +54,14 @@ if __name__=="__main__":
             [1,1,9,1]
          ]
    print minimumGarbageDistance(lot)
+
 {% endhighlight %}
 
+
+<p class="intro"><b>Problem</b>: If you have multiple such robots or 1 robot and multiple ghosts, find who gets to the garbage first. You are given with a player coordinate and multiple ghosts coordinate inside the map. </p>
+Implement: findWinner (lot, player, ghosts) <br> 
+Output: returns True if player gets to the garbage or False when ghost gets to the garbage first.
+<br>
+Do it in O(mn)
+<br><br>
 Cheers!
