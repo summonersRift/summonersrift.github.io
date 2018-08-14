@@ -64,8 +64,9 @@ LinkedIn helps a great deal in getting interviews.
 - Can't solve it? Think of a brute-force solution.
   - How can you eliminate /reduce total execution?
 
-**Practice demo interview with peers on Pramp or similar sites.
-Your programming practice, Leetcode, data structures will come handy now.**
+_Practice demo interview with peers on Pramp or similar sites.
+Your programming practice, Leetcode, data structures will come handy now._
+
 
 #### Failed phone interview?
 So, you failed a phone interview. Maybe you didn’t quite solve the problem or the solution is not optimal. So the interviewer decided you need more time, MORE PRACTICE. Next-
@@ -96,29 +97,29 @@ Here is how it makes you stronger-
 - Make a plan to go through the essential DS, Algo
 - https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/
 - Solve Leetcode TOP INTERVIEW QUESTIONS(140 approx.), Do Easy, Medium, before anything else.
+- Listed in order of importance.
 
 #### String / Array
 1. Anagram/ Palindrome, from linked list or string.
-1. String search, KMP Search and Boyer-Moore Search
-1. Reverse an array without affecting special characters
+1. String search, [KMP Search](https://www.youtube.com/watch?v=GTJr8OvyEVQ) and Boyer-Moore Search.
+1. Reverse an array/string without affecting special characters
 1. All Possible Palindromic Partitions
 1. Count triplets with sum smaller than a given value
 1. Convert array into Zig-Zag fashion
 1. Generate all possible sorted arrays from alternate elements of two given sorted arrays
-1. Pythagorean Triplet in an array
 1. Length of the largest subarray with contiguous elements
 1. Find the smallest positive integer value that cannot be represented as sum of any subset of a given array
 1. Smallest subarray with sum greater than a given value
 1.  Stock Buy Sell to Maximize Profit
 
 #### Linked List
-1. Insertion/Deletion of a node in Linked List (under some constraints)
-  1. Insert
+- Insertion/Deletion of a node in Linked List 
+  1. Insert with some constraints
   1. Delete certain matching value
   1. Reverse entire list or part of the linked list
-    1. Check if a list is palindrome*
-  1. Find loops
-1. Two Pointer
+    1. Check if a linked list is _palindrome_ without extra space.
+  1. Find loops and fix loops.
+- Two Pointer
   1. Compare two strings represented as linked lists
   1. Add Two Numbers Represented By Linked Lists
   1. Merge two sorted Linked List.
@@ -127,19 +128,19 @@ Here is how it makes you stronger-
 - Tree Traversal 
   1. BFS, DFS recursively
   1. BFS, DFS iteratively
-  1. Inorder,Preorder, Post-order traversal.
+  1. Inorder,Preorder, Post-order traversal
 - DFS Applications
   1. Check whether a binary tree is a full binary tree or not
   1. Lowest Common Ancestor in a Binary Search Tree
-  1. Find Minimum Depth of a Binary Tree.
+  1. Find Minimum Depth of a Binary Tree
   1. Maximum Path Sum in a Binary Tree
-1. Addition, deletion of nodes in BST.
-1. Check if a given array can represent Preorder Traversal of Binary Search Tree
-1. Bottom View Binary Tree
-1. Print Nodes in Top View of Binary Tree
-1. Remove nodes on root to leaf paths of length < K
-1. Check if a binary tree is subtree of another binary tree
-1. Reverse alternate levels of a perfect binary tree
+  1. Diameter of a Binary Tree
+- More Problems
+  1. Addition, deletion of nodes in BST, Binary Heap
+  1. Check if a given array can represent Preorder Traversal of Binary Search Tree
+  1. Remove nodes on root to leaf paths of length < K
+  1. Check if a binary tree is subtree of another binary tree
+  1. Reverse alternate levels of a perfect binary tree
 
 #### Sorting And Searching
 - Searching
@@ -173,12 +174,6 @@ Here is how it makes you stronger-
 1. 0-1 Knapsack Problem
 1. Boolean Parenthesization Problem
 
-#### Prepare / Number Theory
-1. Modular Exponentiation
-1. Modular multiplicative inverse
-1. Primality Test | Set 2 (Fermat Method)
-1. Basic and Extended Euclidean algorithms
-1. Chinese remainder theorem
 
 #### Prepare / BIT Manipulation
 1. Count total set bits
@@ -193,6 +188,14 @@ Here is how it makes you stronger-
 1. Rotate bits of a number
 1. Count number of bits to be flipped to convert A to B
 1. Find Next Sparse Number
+
+#### Prepare / Number Theory
+1. Modular Exponentiation
+1. Modular multiplicative inverse
+1. Primality Test, 
+1. Basic and Extended Euclidean algorithms
+1. Chinese remainder theorem
+
 
 ### Hell Yeah, Onsite Call! 
 - Time to learn system design.
@@ -210,10 +213,11 @@ Here is how it makes you stronger-
 
 ### Failed Onsite??
 - Were they looking for a particular skill set/language proficiency?
-  - You don't get hired, if you don't know it. GET OVER IT.
-- Keep applying, keep interviewing. Don't give up.
+  - You don't get hired, if you don't know it. 
+  - GET OVER IT. 
+- Keep applying, keep interviewing. DONT GIVE UP.
   - The process itself is the biggest test.
 - Made Mistakes?
-  - Go back a couple of slides, Dealing with failures
+  - Go back a couple of slides, Dealing with failures.
 
 ## Phone-Onsite-Fail-Repeat
