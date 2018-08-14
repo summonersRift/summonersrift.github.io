@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## Landing your dream job
 I have interviewed at almost 10 of the top companies. The interview structure varies greatly by company. For example apple 
@@ -96,6 +96,7 @@ Here is how it makes you stronger-
 - Solve Leetcode TOP INTERVIEW QUESTIONS(140 approx.), Do Easy, Medium, before anything else.
 
 #### String / Array
+1. Anagram/ Palindrome, from linked list or string.
 1. String search, KMP Search and Boyer-Moore Search
 1. Reverse an array without affecting special characters
 1.  All Possible Palindromic Partitions
