@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 System Design interviews are less about getting lucky and more about actually doing the hard work of attaining knowledge. Performance in these interviews depends on the following 2 factors—
 - Your knowledge — gained either through studying or practical experience.
@@ -7,7 +7,7 @@ System Design interviews are less about getting lucky and more about actually do
 - When companies ask design questions, they want to evaluate your design skills and experience in designing large scale distributed systems
 - How well you do in such interviews often dictates hiring level/ salary.
 
-Note Most of the contents are a compilation of the references in some way.
+_Note_: Most of the contents in this port are a compilation of the references.
 
 
 
@@ -25,23 +25,22 @@ Note Most of the contents are a compilation of the references in some way.
         * Are we designing the client/server interaction or backend architecture or both (answer: we want to understand the interaction between client/server but we will focus on how to scale the backend).
         * How many total users are there (answer: we expect to reach 200 Million users in the first year).
         * How many daily active users are there (100 million users sign-in everyday)
-    2. System can be hypothetical, may consider basic functionalities. Say no video at this point.
+    2. System can be hypothetical, may consider basic functionalities. Say twitter dont need to support videos at this point.
 2. API/Functionality definition
     1. postTweet(uid, time, location, tweet...)
-        1. celebTweet(uid, time, location, tweet...)
+    1. celebTweet(uid, time, location, tweet...)
     2. generateTimeline(uid, time)
-    3. recordLove
-    4. 
-3. Hardware/Resource requirement
-    1. number of tweets/updates.
-    2. storage requirement
-    3. caching requirement
-    4. latency requirement
+    3. recordLove(uid, tweet_id)
+3. Hardware/Resource requirement: Show ur interviewer you understand the scale
+    1. Number of tweets/updates.
+    2. Storage requirement
+    3. Caching requirement
+    4. Latency requirement, say we want the _timeline_ to generate fast
     5. BW requirement
-    6. network IO
-    7. firewall
+    6. Network IO
+    7. Firewall
 4. Data Model
-    1. user
+    1. User
     2. Tweet
     3. userFollows
     4. FavoriteTweets
@@ -58,9 +57,9 @@ Note Most of the contents are a compilation of the references in some way.
 #### Scalability
 
 - Read is cheap write is expensive. 10ms for a disk seek. 
-- Batch writes for faster writing.
-- writes--> disk seek. only 100seeks /second or 10ms per seek
-- reads--> 250ns to read 1 MB
+- Batch writes, for faster writing.
+- Writes --> disk seek. only 100seeks /second or 10ms per seek
+- Reads--> 250ns to read 1 MB
 - To learn more on these numbers [Click Here](http://highscalability.com/numbers-everyone-should-know)
 
 
