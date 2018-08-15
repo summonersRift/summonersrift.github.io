@@ -98,6 +98,10 @@ public class VLC implements MediaPackage {
 {% endhighlight %}
 
 
+### Funny guy TechLead on Design Patterns
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=WV2Ed1QTst8
+" target="_blank"><img src="http://img.youtube.com/vi/WV2Ed1QTst8/0.jpg" 
+alt="Techlead Desig nPattern" width="240" height="180" border="10" /></a>
 
 ### References:
 1. https://hackernoon.com/anatomy-of-a-system-design-interview-4cb57d75a53f
@@ -106,3 +110,4 @@ public class VLC implements MediaPackage {
 1. System Design Overall https://www.interviewbit.com/courses/system-design/
 1. Uber design: https://sakib.ninja/experimenting-uber-like-application-architecture/
 1. [Grokking System Design Interview](https://www.educative.io/collection/5668639101419520/5649050225344512)
+
