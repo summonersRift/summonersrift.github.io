@@ -103,6 +103,10 @@ public class VLC implements MediaPackage {
 " target="_blank"><img src="http://img.youtube.com/vi/WV2Ed1QTst8/0.jpg" 
 alt="Techlead Design Pattern" width="480" height="360" border="2" /></a>
 
+### Simple twitter design
+https://www.hiredintech.com/lecture_materials/twitter_problem_system_design.png![Simple twitter system design from HiredInTech.com](https://www.hiredintech.com/lecture_materials/twitter_problem_system_design.png)
+
+
 ### References:
 1. [Anatomy of a system design interview](https://hackernoon.com/anatomy-of-a-system-design-interview-4cb57d75a53f).
 1. [A compilation of lots of resources and systems](https://github.com/donnemartin/system-design-primer).
