@@ -104,10 +104,9 @@ public class VLC implements MediaPackage {
 alt="Techlead Desig nPattern" width="240" height="180" border="10" /></a>
 
 ### References:
-1. https://hackernoon.com/anatomy-of-a-system-design-interview-4cb57d75a53f
-1. Numbers about scalability http://highscalability.com/numbers-everyone-should-know
-1. Vending Machine Design https://javarevisited.blogspot.com/2016/06/design-vending-machine-in-java.html
-1. System Design Overall https://www.interviewbit.com/courses/system-design/
-1. Uber design: https://sakib.ninja/experimenting-uber-like-application-architecture/
-1. [Grokking System Design Interview](https://www.educative.io/collection/5668639101419520/5649050225344512)
-
+1. [Anatomy of a ssystem design interview](https://hackernoon.com/anatomy-of-a-system-design-interview-4cb57d75a53f).
+1. [Numbers about scalability](http://highscalability.com/numbers-everyone-should-know).
+1. [Vending Machine w/ Design Pattern in Java](https://javarevisited.blogspot.com/2016/06/design-vending-machine-in-java.html).
+1. [System Design Overall discussion](https://www.interviewbit.com/courses/system-design/). 
+1. [Uber-like ride sharing design](https://sakib.ninja/experimenting-uber-like-application-architecture/). 
+1. [Grokking System Design Interview](https://www.educative.io/collection/5668639101419520/5649050225344512).
