@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Top tech companies in US"
-date:   2018-05-10
+title: Top tech companies in US
+date: {}
+published: false
 ---
 
 <p class="intro"><span class="dropcap">T</span>op tech companies to work for</p>
