@@ -101,7 +101,7 @@ public class VLC implements MediaPackage {
 ### Funny guy TechLead on Design Patterns
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=WV2Ed1QTst8
 " target="_blank"><img src="http://img.youtube.com/vi/WV2Ed1QTst8/0.jpg" 
-alt="Techlead Desig nPattern" width="240" height="180" border="10" /></a>
+alt="Techlead Design Pattern" width="480" height="360" border="2" /></a>
 
 ### References:
 1. [Anatomy of a system design interview](https://hackernoon.com/anatomy-of-a-system-design-interview-4cb57d75a53f).
