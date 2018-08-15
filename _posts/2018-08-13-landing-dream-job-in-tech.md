@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-I have interviewed at almost 10 of the top tech companies. The interview structure varies greatly by company. For example apple focuses a lot on the programming language internals. Big 4 companies have similar interview structure. The first thing to do is start solving leetcode "TOP INTERVIEW QUESTIONS" from the beginning.
+I have interviewed at almost 10 of the top tech companies. The interview structure varies greatly by company. For example apple focuses a lot on the programming language internals. Big 4 companies have similar interview structure. The first thing to do is start solving leetcode "[TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/)" from the beginning.
 
 
 ### Resume
@@ -33,28 +33,17 @@ Your goal is to get as many interview calls possible that are relevant to your b
 
 A brief list of top tech companies to work for in the US. Following is a laundry list of great tech companies in US.
 
-- Big4
-  - Google-Alphabet
-  - Amazon
-  - Facebook
-  - Microsft
+- Big4: Google, Amazon, Facebook, Microsft
 - RIOT Games
-- Twitter
+- Twitter, Snapchat
 - UBER / Lyft / Aurora / Tesla
 - Baidu
 - Netflix, Twitch
 - VM Ware
 - LinkedIn
 - Samsung Research US
-- Chipmakers
-  - AMD
-  - Intel
-  - Qualcomm
-  - NVIDIA
-- Fintech
-  - Bloomberg LP 
-  - Two-Sigma
-  - Tableau
+- Chipmakers: Intel, AMD, Qualcomm, NVIDIA
+- Fintech: Bloomberg LP, Two-Sigma, Tableau
 - Few Others
   - eBay, Paypal, Square
   - Walmart-Labs
@@ -64,8 +53,7 @@ A brief list of top tech companies to work for in the US. Following is a laundry
 - High growth Companies
   - Hubspot, Rackspace
   - Palantir, Spotify, 
-  - Zillow
-  - Airbnb, Snapchat
+  - Zillow, Airbnb
   - Box, Dropbox, Medium, Quora
 - Settled-in the business
   - Adobe, Alibaba, Deloitte, Epic, Fitbit, Yahoo, Yelp
@@ -254,7 +242,7 @@ Here is how it makes you stronger-
   1. Top leetcode problems in last 2 years
   1. Glassdoor reported problems ordered by date(latest/most recent)
 
-Organize your thoughts on a board during the interview by [Doug Acuri](https://medium.freecodecamp.org/how-to-organize-your-thoughts-on-the-whiteboard-and-crush-your-technical-interview-b668de4e6941)
+Organize your thoughts on a board during the interview by [Doug Arcuri](https://medium.freecodecamp.org/how-to-organize-your-thoughts-on-the-whiteboard-and-crush-your-technical-interview-b668de4e6941)
 
 ![Organizing thought on white board...](https://cdn-images-1.medium.com/max/1600/1*V1fHAZ0qczSzvL1q-4p-AQ.png)
 
