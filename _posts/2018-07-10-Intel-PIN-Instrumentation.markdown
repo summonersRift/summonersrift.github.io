@@ -8,6 +8,21 @@ published: true
 </p>
 
 
+Install the following libraries to run PIN examples or an error might occur.
+{% highlight cpp %}
+sudo apt-get install gcc-multilib g++-multilib
+{% endhighlight %}
+
+
+### Execution
+{% highlight cpp %}
+cd ~/pin-3.7/source/tools/ManualExamples
+make all TARGET=ia32
+make proccount.test TARGET=intel64
+
+../../../pin -t obj-intel64/proccount.so -- ~/thesis/aedem/laplace2d64int proccount.cpp Makefile
+{% endhighlight %}
+
 ### Code
 {% highlight cpp %}
 /* compile----
@@ -49,7 +64,12 @@ void insert_node(int call_num){//, char *block_uid) {   //insert link at the fir
    //strcpy(copy_block_uid, block_uid);
 
    struct node *link = (struct node*) malloc(sizeof(struct node));
-   link->uid = call_num; 
+   link->uid = call_num;   904  vim pinatrace.cpp
+  905  make pinatrace.test TARGET=intel64
+  906  ../../../pin -t obj-intel64/pinatrace.so -- /home/mobai001/llvm/llvm-pass-tutorial/build/jacobi.out pinatrace.cpp Makefile
+  907  ls
+  908  vim inscount.out 
+
    link->total = icount; //global variable instuction count
    //point it to old first node
    if (head){
@@ -293,10 +313,151 @@ int main(int argc, char * argv[])
 
 {% endhighlight %}
 
-### Execution
-{% highlight cpp %}
-cd ~/pin-3.7/source/tools/ManualExamples
-make proccount.test TARGET=intel64
-../../../pin -t obj-intel64/proccount.so -- ~/thesis/aedem/laplace2d64int proccount.cpp Makefile
 
+## Example 2
+Trace a programs memory accesses and specific function calls with parameters. 
+{% highlight bash %}
+vim pinatrace.cpp
+make pinatrace.test TARGET=intel64
+../../../pin -t obj-intel64/pinatrace.so -- /home/mobai001/llvm/llvm-pass-tutorial/build/jacobi.out pinatrace.cpp Makefile
+vim inscount.out 
 {% endhighlight %}
+
+
+### Code
+{% highlight cpp %}
+/*This file contains an ISA-portable PIN tool for tracing memory accesses. */
+
+#include <stdio.h>
+#include "pin.H"
+
+FILE * trace;
+
+// Print a memory read record
+VOID RecordMemRead(VOID * ip, VOID * addr)
+{
+    fprintf(trace,"%p: R %p\n", ip, addr);
+}
+
+// Print a memory write record
+VOID RecordMemWrite(VOID * ip, VOID * addr)
+{
+    fprintf(trace,"%p: W %p\n", ip, addr);
+}
+
+VOID RecordBlockStart(char *name, int num)
+{
+    fprintf(trace,"bid=%d\n", num);
+}
+
+VOID RecordKernelStart(char *name, int num)
+{
+    fprintf(trace,"kid=%d\n", num);
+}
+
+// Is called for every instruction and instruments reads and writes
+VOID Instruction(INS ins, VOID *v)
+{
+    // Instruments memory accesses using a predicated call, i.e.
+    // the instrumentation is called iff the instruction will actually be executed.
+    //
+    // On the IA-32 and Intel(R) 64 architectures conditional moves and REP 
+    // prefixed instructions appear as predicated instructions in Pin.
+    UINT32 memOperands = INS_MemoryOperandCount(ins);
+
+    // Iterate over each memory operand of the instruction.
+    for (UINT32 memOp = 0; memOp < memOperands; memOp++)
+    {
+        if (INS_MemoryOperandIsRead(ins, memOp))
+        {
+            INS_InsertPredicatedCall(
+                ins, IPOINT_BEFORE, (AFUNPTR)RecordMemRead,
+                IARG_INST_PTR,
+                IARG_MEMORYOP_EA, memOp,
+                IARG_END);
+        }
+        // Note that in some architectures a single memory operand can be 
+        // both read and written (for instance incl (%eax) on IA-32)
+        // In that case we instrument it once for read and once for write.
+        if (INS_MemoryOperandIsWritten(ins, memOp))
+        {
+            INS_InsertPredicatedCall(
+                ins, IPOINT_BEFORE, (AFUNPTR)RecordMemWrite,
+                IARG_INST_PTR,
+                IARG_MEMORYOP_EA, memOp,
+                IARG_END);
+        }
+    }
+}
+
+VOID Fini(INT32 code, VOID *v)
+{
+    fprintf(trace, "#eof\n");
+    fclose(trace);
+}
+
+// Pin calls this function every time a new rtn is executed
+VOID Routine(RTN rtn, VOID *v)
+{
+    RTN_Open(rtn);
+    if (RTN_Name(rtn).compare("aedem_block") == 0) { //check routine name is aedem_block
+      //RTN_InsertCall(rtn, IPOINT_BEFORE, (AFUNPTR)aedem_block_detected, IARG_PTR, &(rc->_rtnCount), IARG_END);
+      /*https://stackoverflow.com/questions/7896581/intel-pin-rtn-insertcall-multiple-function-arguments*/
+      RTN_InsertCall(rtn, IPOINT_BEFORE, (AFUNPTR) RecordBlockStart, 
+                IARG_ADDRINT, "aedem_block", IARG_FUNCARG_ENTRYPOINT_VALUE, 
+                    0, IARG_END);
+    }
+    else if (RTN_Name(rtn).compare("aedem_kernel") == 0) { //check routine name is aedem_block
+      //RTN_InsertCall(rtn, IPOINT_BEFORE, (AFUNPTR)aedem_block_detected, IARG_PTR, &(rc->_rtnCount), IARG_END);
+      /*https://stackoverflow.com/questions/7896581/intel-pin-rtn-insertcall-multiple-function-arguments*/
+      RTN_InsertCall(rtn, IPOINT_BEFORE, (AFUNPTR) RecordKernelStart, 
+                IARG_ADDRINT, "aedem_kernel", IARG_FUNCARG_ENTRYPOINT_VALUE, 
+                    0, IARG_END);
+    }
+    RTN_Close(rtn);
+}
+
+
+/* ===================================================================== */
+/* Print Help Message                                                    */
+/* ===================================================================== */
+   
+INT32 Usage()
+{
+    PIN_ERROR( "This Pintool prints a trace of memory addresses\n" 
+              + KNOB_BASE::StringKnobSummary() + "\n");
+    return -1;
+}
+
+/* ===================================================================== */
+/* Main                                                                  */
+/* ===================================================================== */
+
+int main(int argc, char *argv[])
+{
+    // Initialize symbol table code, needed for rtn instrumentation
+    PIN_InitSymbols();
+
+    //Initialize PIN
+    if (PIN_Init(argc, argv)) return Usage();
+
+    //setup trace file
+    trace = fopen("pinatrace.out", "w");
+
+    // Register Instruction to be called to instrument instructions
+    INS_AddInstrumentFunction(Instruction, 0);
+
+    // Register Routine to be called to instrument rtn
+    RTN_AddInstrumentFunction(Routine, 0);
+
+    // Register Fini to be called when the application exits
+    PIN_AddFiniFunction(Fini, 0);
+
+    // Never returns
+    PIN_StartProgram();
+    
+    return 0;
+}
+{% endhighlight %}
+
+
