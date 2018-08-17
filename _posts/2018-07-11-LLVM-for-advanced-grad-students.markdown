@@ -24,8 +24,11 @@ sudo apt-get install cmake
 #getting a skeleton pass builder source codeto start with
 cd ~
 mkdir llvm
-git clone https://github.com/abenkhadra/llvm-pass-tutorial
-cd llvm/llvm-pass-tutorial
+cd llvm
+git clone https://github.com/summonersrift/llvm-pass-tutorial
+#summonersrift is my username
+#git clone https://github.com/abenkhadra/llvm-pass-tutorial
+cd llvm-pass-tutorial
 mkdir build
 cd build
 cmake ..
