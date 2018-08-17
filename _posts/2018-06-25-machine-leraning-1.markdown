@@ -1,11 +1,10 @@
 ---
 layout: post
 title: Machine Learning Part-1
-date: {}
 published: true
 ---
 
-<p class="intro">Machine Learning...</p>
+<p class="intro">Machine Learning is cool because for the first time we can create something that can mimic human activities, intelligence. Just like children learn anything really fast, similarly machine learning is advancing at a rapid pace now-a-days. Commercial interest is machine learning is driving the aggresively driving the innovation on many frontier now-a-days that are solving real-world problems. This is just the beginning of artificial intelligence in general. The future in 50 years will be exciting where humans will be enhanced with artificially intelligent chips and machines will start to co-exist. Long way for us to get there. But we must start somewhere.</p>
 Steps of using machine learning:
 1. Retrieve data.
 1. Clean data.
