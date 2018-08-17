@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Machine Learning Part-1"
-date:   2018-06-25
+title: Machine Learning Part-1
+date: {}
+published: true
 ---
 
 <p class="intro">Machine Learning...</p>
@@ -15,6 +16,12 @@ Steps of using machine learning:
 1. Test on the test data.
 1. Deploy.
 1. Measure the accuracy or error.
+
+#### Useful References
+1. [41 Essential Machine Learning Interview Questions &amp; answers by Roger Huang](https://www.springboard.com/blog/machine-learning-interview-questions/).
+1. [A great Glossary from AnalyticsVidya](https://www.analyticsvidhya.com/glossary-of-common-statistics-and-machine-learning-terms/). They have so many great intro posts.
+1. [A Good intro writeup](https://github.com/ShuaiW/ml-interview).
+1. [Slides on ML from a course taught on edx by Columbia](https://courses.edx.org/asset-v1:ColumbiaX+CSMM.101x+1T2017+type@asset+block@AI_edx_ml_5.1intro.pdf).
 
 
 <table>
