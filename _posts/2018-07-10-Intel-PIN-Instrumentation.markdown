@@ -128,6 +128,7 @@ VOID Instruction(INS ins, VOID *v) {
    //   rcount += 1;
    //}
 
+    //insert a call before evert memory read
     if (INS_Opcode(ins) == XED_ICLASS_MOV &&
         INS_IsMemoryRead(ins) &&
         INS_OperandIsReg(ins, 0) &&
@@ -140,6 +141,7 @@ VOID Instruction(INS ins, VOID *v) {
                        IARG_MEMORYREAD_EA,
                        IARG_END);
     }
+    //insert a call before evert memory write
     else if (INS_Opcode(ins) == XED_ICLASS_MOV &&
         INS_IsMemoryWrite(ins) &&
         INS_OperandIsReg(ins, 1) &&
@@ -334,24 +336,20 @@ vim inscount.out
 FILE * trace;
 
 // Print a memory read record
-VOID RecordMemRead(VOID * ip, VOID * addr)
-{
+VOID RecordMemRead(VOID * ip, VOID * addr){
     fprintf(trace,"%p: R %p\n", ip, addr);
 }
 
 // Print a memory write record
-VOID RecordMemWrite(VOID * ip, VOID * addr)
-{
+VOID RecordMemWrite(VOID * ip, VOID * addr){
     fprintf(trace,"%p: W %p\n", ip, addr);
 }
 
-VOID RecordBlockStart(char *name, int num)
-{
+VOID RecordBlockStart(char *name, int num){
     fprintf(trace,"bid=%d\n", num);
 }
 
-VOID RecordKernelStart(char *name, int num)
-{
+VOID RecordKernelStart(char *name, int num){
     fprintf(trace,"kid=%d\n", num);
 }
 
@@ -360,16 +358,13 @@ VOID Instruction(INS ins, VOID *v)
 {
     // Instruments memory accesses using a predicated call, i.e.
     // the instrumentation is called iff the instruction will actually be executed.
-    //
     // On the IA-32 and Intel(R) 64 architectures conditional moves and REP 
     // prefixed instructions appear as predicated instructions in Pin.
     UINT32 memOperands = INS_MemoryOperandCount(ins);
 
     // Iterate over each memory operand of the instruction.
-    for (UINT32 memOp = 0; memOp < memOperands; memOp++)
-    {
-        if (INS_MemoryOperandIsRead(ins, memOp))
-        {
+    for (UINT32 memOp = 0; memOp < memOperands; memOp++) {
+        if (INS_MemoryOperandIsRead(ins, memOp)) {
             INS_InsertPredicatedCall(
                 ins, IPOINT_BEFORE, (AFUNPTR)RecordMemRead,
                 IARG_INST_PTR,
@@ -379,8 +374,7 @@ VOID Instruction(INS ins, VOID *v)
         // Note that in some architectures a single memory operand can be 
         // both read and written (for instance incl (%eax) on IA-32)
         // In that case we instrument it once for read and once for write.
-        if (INS_MemoryOperandIsWritten(ins, memOp))
-        {
+        if (INS_MemoryOperandIsWritten(ins, memOp)) {
             INS_InsertPredicatedCall(
                 ins, IPOINT_BEFORE, (AFUNPTR)RecordMemWrite,
                 IARG_INST_PTR,
@@ -390,15 +384,13 @@ VOID Instruction(INS ins, VOID *v)
     }
 }
 
-VOID Fini(INT32 code, VOID *v)
-{
+VOID Fini(INT32 code, VOID *v){
     fprintf(trace, "#eof\n");
     fclose(trace);
 }
 
 // Pin calls this function every time a new rtn is executed
-VOID Routine(RTN rtn, VOID *v)
-{
+VOID Routine(RTN rtn, VOID *v){
     RTN_Open(rtn);
     if (RTN_Name(rtn).compare("aedem_block") == 0) { //check routine name is aedem_block
       //RTN_InsertCall(rtn, IPOINT_BEFORE, (AFUNPTR)aedem_block_detected, IARG_PTR, &(rc->_rtnCount), IARG_END);
@@ -418,20 +410,13 @@ VOID Routine(RTN rtn, VOID *v)
 }
 
 
-/* ===================================================================== */
-/* Print Help Message                                                    */
-/* ===================================================================== */
-   
-INT32 Usage()
-{
-    PIN_ERROR( "This Pintool prints a trace of memory addresses\n" 
+/* Print Help Message */
+INT32 Usage(){
+    PIN_ERROR( "This Pintool prints a trace of memory addresses with a basic block uid\n" 
               + KNOB_BASE::StringKnobSummary() + "\n");
     return -1;
 }
 
-/* ===================================================================== */
-/* Main                                                                  */
-/* ===================================================================== */
 
 int main(int argc, char *argv[])
 {
