@@ -1,12 +1,22 @@
 ---
 published: true
 ---
-I have interviewed at almost 10 of the top tech companies. The interview structure varies greatly by company. For example apple focuses a lot on the programming language internals. Big 4 companies have similar interview structure. The first thing to do is start solving leetcode "[TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/)" from the beginning.
+I have interviewed at almost 10 of the top tech companies. The interview structure varies greatly by company. For example apple, samsung focuses a lot on the programming language internals. Big 4 companies have similar interview structure. The very **first thing to do** get started with your job hunt is to **start solving leetcode**, "[LEETCODE TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/)" from the beginning.
 
-### Step-0: What problems to solve
-- [TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/): ~140 problems, start with easy and then do the medium and try some hard ones as well.
-- Clear basic data structures 101: String, LinkedLists, Tree, Graph, Sorting, Serching, Dynamic and Recursive programming etc.
-- Learn one language very well such that you dont require stackoverflow for solving basic problems.
+### Step-0: How Do I Get Started?
+- By solving [Leetcode TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/): 145 total problems, start with **easy** problems and then solve the **medium** and finally try to solve some hard ones.
+  - Solve Problems in random order, don't solve problems by topic. 
+  - This helps your adaptivity.
+  - Think brute force first.
+  - (Think) Alternative ways to solve a problem.
+  - Find the optimal solution and learn that solution.
+  - If a problem bothers you too much (for hours), leave it for later. Move on.
+- Clear your basic data structures 101: String, LinkedLists, Tree, Trie, Graph, Sorting, Serching, Dynamic and Recursive programming etc.
+- Learn one language very well i.e. you dont require stackoverflow for solving basic problems.
+- Make a cheatsheet and go through it once a week. Cheatsheet can be on a goodgle doc for the language/algorithm specifics you need to know in order to solve problems.
+- Dont limit yourself to a book at the beginning. Follow the previous steps before getting into books. 
+- Book1 (I love it): Elements of Programming Interviews in Java/C++/Python by Adnan Aziz et.al. Get the book in the lanaugage you are most comfortable in.
+- Book2: Cracking the Coding Interview by Gayle McDowell Laakmann
 
 
 ### Step 1: Resume
@@ -110,15 +120,15 @@ So, you failed a phone interview. Maybe you didn’t quite solve the problem or 
 
 #### Step +1: Dealing with Failure
 <pre>
-                    it makes you stronger. ”
+                      it makes you stronger. ”
 “If something doesn’t break you, 
 </pre>
 
 Always remember this.
 
 Here is how it makes you stronger-
-- In someway or the other
-- Every problem they asked, learn optimal solution to it.
+- In someway or the other.
+- Every problem you are asked, learn optimal solution to it.
 - Learn OPTIMAL solution to similar problems.
 - Try NOT to make the same mistake again.
 
@@ -226,7 +236,7 @@ Here is how it makes you stronger-
 1. Chinese remainder theorem
 
 
-### Step n-1 : Last Boss, Hell Yeah, Onsite Call! 
+### Step n-1 : Finally, Onsite Call(n)! 
 - Time to learn system design.
   1. Design twitter, tinyurl, messenger,...
   1. GoF Design Patterns
