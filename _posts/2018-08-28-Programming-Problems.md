@@ -6,7 +6,6 @@ In this post, I will list and briefly discuss some important programming problem
 ![MIT Advanced algorithm data structure illustration](https://courses.csail.mit.edu/6.851/fall17/illus.png)
 
 
-
 #### Tree, BST
 - Find the size or depth of the binary tree.
   - Find leaves and internal nodes.
@@ -58,6 +57,8 @@ Linked list goes really well with recursion.
 - Find and possibly remove the duplicate number from a given integer array? Can you do it w/o using library. 
 - Find 3-SUM where sum of any 3 numbers in a list of numbers equals to K. Do it in O(n^2).
 - Quicksort in place.
+- Implement merge sort, bucket sort, 
+- Given an array containing both negative and positive integers. Find the contiguous sub-array with maximum sum. [KADANE's algorithm](https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0).
 
 
 
@@ -66,26 +67,11 @@ Linked list goes really well with recursion.
   - Follow-up: Can we do it without using extra memory?
   - Can we do it 1 pass?
 
+#### Miscellaneous
+- How do you check if two rectangles overlap with each other?
 
-
-
-Miscellaneous Coding Interview Questions
-Apart from data structure-based questions, most of the programming job interviews also ask algorithm, design, bit manipulation, and general logic-based questions, which I’ll describe in this section.
-
-It’s important that you practice these concepts because sometimes they become tricky to solve in the actual interview. Having practiced them before not only makes you familiar with them, but also gives you more confidence in explaining the solution to the interviewer.
-
-How is a bubble sort algorithm implemented? (solution)
-How is an iterative quicksort algorithm implemented? (solution)
-How do you implement an insertion sort algorithm? (solution)
-How is a merge sort algorithm implemented? (solution)
-How do you implement a bucket sort algorithm? (solution)
-How do you implement a counting sort algorithm? (solution)
-How is a radix sort algorithm implemented? (solution)
-How do you swap two numbers without using the third variable? (solution)
-How do you check if two rectangles overlap with each other? (solution)
-How do you design a vending machine? (solution)
-
-
+#### System design
+- How do you design a vending machine?
 
 
 
@@ -96,4 +82,4 @@ How do you design a vending machine? (solution)
 #### Referecnes
 1. [MIT Advanced Algorithms](https://courses.csail.mit.edu/6.851/fall17/)
 1. [https://simpleprogrammer.com/programming-interview-questions/](https://simpleprogrammer.com/programming-interview-questions/)
-1.
+1. [https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/](https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/)
