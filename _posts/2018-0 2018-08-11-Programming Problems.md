@@ -30,7 +30,8 @@ published: true
 - If a list contains some numbers exactly twice except for one number, find the number that occurs once. 
   - Use bitwise operation to solve in O(n) time and O(1) space complexity.
   - can uyse python set with add/remove, but would be O(n) time and space complexity.
-
+- Swapping two numbers without using a temporary memory or variable.
+- Merge some intervals. Merging [[1-5], [4-6],[3-9], [8-14], [10-12], [16-19]] returns [[1-9], [8-14], [16-19]].
 
 
 ![Python Data Structures](/https://devopedia.org/images/article/41/4737.1513052765.jpg)
