@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-## Some Important Programming Examples
+In this post, I will list and briefly discuss some important programming problems specially for an interview.
 
 ![MIT Advanced algorithm data structure illustration](https://courses.csail.mit.edu/6.851/fall17/illus.png)
 
@@ -32,6 +32,12 @@ published: true
   - can uyse python set with add/remove, but would be O(n) time and space complexity.
 - Swapping two numbers without using a temporary memory or variable.
 - Merge some intervals. Merging [[1-5], [4-6],[3-9], [8-14], [10-12], [16-19]] returns [[1-9], [8-14], [16-19]].
+  - Follow-up: How to find a number that occurs the most in these intervals. 
+
+### Matrix:
+- How to rorate a NxN image that is represented as a 2D array of integers in memory?
+  - Follow-up: Can we do it without using extra memory?
+  - Can we do it 1 pass?
 
 
 ![Python Data Structures](/https://devopedia.org/images/article/41/4737.1513052765.jpg)
