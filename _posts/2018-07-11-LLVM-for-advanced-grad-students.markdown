@@ -4,7 +4,11 @@ title: LLVM insert instruction to each basic block
 published: true
 ---
 
-![LLVM LOGO](https://llvm.org/img/LLVM-Logo-Derivative-1.png){: .post .featuredImage}
+<figure>
+	<img src="https://llvm.org/img/DragonMedium.png" alt="LLVM LOGO"> 
+	<figcaption>LLVM Dragon</figcaption>
+</figure>
+
 
 This is an advanced LLVM pass for grad students. LLVM is a machine independent intermediate representation of an application source. Program compilers works in passes. We can design very advanced passes using LLVM. LLVM is very popular for performing optimizations.
 There aren't enough examples in the open web if you want to do advanced optimization. <br>
@@ -211,3 +215,9 @@ user@callisto:~/llvm-example/llvm-pass-basicblock/build$ clang-6.0 -S -emit-llvm
            *  %25 = call i32 @aedem_block(i32 8)
 (failed reverse-i-search)`llm': clang-6.0 -S -emit-^Cvm -Xclang -load -Xclang skeleton/libSkeletonPass.so test.c 
 </pre>
+  
+
+<figure>
+	<img src="https://llvm.org/img/LLVM-Logo-Derivative-1.png" alt="LLVM LOGO"> 
+	<figcaption></figcaption>
+</figure>
