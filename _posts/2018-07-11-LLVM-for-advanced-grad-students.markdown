@@ -4,11 +4,17 @@ title: LLVM insert instruction to each basic block
 published: true
 ---
 
-<p class="intro">Advanced LLVM for grad students. LLVM is a machine independent intermediate representation of an application source. Program compilers works in passes. We can design very advanced passes using LLVM. LLVM is very popular for performing optimizations.
+![LLVM LOGO]({{site.baseurl}}/https://llvm.org/img/DragonMedium.png)
+
+This is an advanced LLVM pass for grad students. LLVM is a machine independent intermediate representation of an application source. Program compilers works in passes. We can design very advanced passes using LLVM. LLVM is very popular for performing optimizations.
 There aren't enough examples in the open web if you want to do advanced optimization. <br>
+
 <b>REMEMBER—</b> use the LLVM <i>doxygen</i> references if things get compilcated.
 There are issues with LLVM versions. Make sure you have same version of LLVM, Clang and llc and other tools.<br>
-Useful links—</p>
+  
+
+
+**Useful links**—
 1. <a href="https://github.com/abenkhadra/llvm-pass-tutorial">Github Skeleton LLVM pass source code </a>
 1. <a href="https://www.cs.cornell.edu/~asampson/blog/llvm.html">Adrian Sampson's LLVM resource</a>
 1. <a href="https://stackoverflow.com/questions/9148890/how-to-make-clang-compile-to-llvm-ir">StackOverflow Post to on multi-file compilation</a>
