@@ -20,7 +20,7 @@ SFO/MIA
 1. Write a function that can decide whether a word is in a dictionary or not. Return True/False. Assume that the dictionary is implemented in any data structure of your choice. **Followup**: Did you implement it using a efficient data structure? Can we reduce the total space required? Write an algorithm to do range searches such as finding all the words between two words _hello_ and _world_? SEA
 1. Write a method to store numbers that are coming from a data stream to some data structure. Write anither function to query how many numbers in that data structure that are smaller than a given value _X_. Try to do it in O(log n)time. SEA/MIA
 1. Write BFS/DFS. SEA/AUS/MIA
-1. You are given some intervals[(2,6),(4,7), (5,9)]. Return the number that appears in most number of intervals. In this case that number would be 4 or 5 because they appear in all three intervals.
+1. You are given some intervals[(2,6),(4,7), (5,9)]. Return the number that appears in most number of intervals. In this case that number would be 4 or 5 because they appear in all three intervals. SFO/SEA/MIA.
 
 
 
