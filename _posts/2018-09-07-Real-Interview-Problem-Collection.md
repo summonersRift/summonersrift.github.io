@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Real interview problems tend to differ from standard leetcode/hackerrank/glassdoor problems. The interviewer tries to change the assumption of the problems, or restrict the memory of computation. Sometimes they change the input or constraints to make it look difficult. But generally the problem you are given can be solved in the time you are allotted, say 15 minutes. That's all you will get, so you have to plan accordingly; make best use of your time.
 
@@ -14,9 +14,11 @@ Real interview problems tend to differ from standard leetcode/hackerrank/glassdo
 1. Write a function that can decide whether a word is in a dictionary or not. Return True/False. Assume that the dictionary is implemented in any data structure of your choice. **Followup**: Did you implement it using a efficient data structure? Can we reduce the total space required? Write an algorithm to do range searches such as finding all the words between two words _hello_ and _world_? SEA
 1. Write a method to store numbers that are coming from a data stream to some data structure. Write anither function to query how many numbers in that data structure that are smaller than a given value _X_. Try to do it in O(log n)time. SEA/MIA
 1. Write BFS/DFS. SEA/AUS/MIA
-1. 
+1. You are given some intervals[(2,6),(4,7), (5,9)]. Return the number that appears in most number of intervals. In this case that number would be 4 or 5 because they appear in all three intervals.
+
+
+
 
 #### System Design
 1. Design TinyURL such as bit.ly. URL shortening
 1. Design Advertisement System : Write API to find analytics such as users between a certain age group.
-
