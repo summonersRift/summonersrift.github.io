@@ -238,8 +238,8 @@ Here is how it makes you stronger-
 
 ### Step n-1 : Finally, Onsite Call(n)! 
 - Time to learn system design.
-  1. Design twitter, tinyurl, messenger,...
-  1. GoF Design Patterns
+  1. Design twitter, tinyurl, messenger,... [EDICATIVE.IO - Grokking the system design Interview](https://www.educative.io/collection/5668639101419520/5649050225344512)
+  1. [GoF Design Patterns](http://java-design-patterns.com/patterns/)
   1. Focus on building scalable, load balanced system
   1. Low latency applications
     1. Caching, CDN
