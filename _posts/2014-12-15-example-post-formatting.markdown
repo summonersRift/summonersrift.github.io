@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Post Formatting in Jakyll
+title: ''
 date: {}
 published: true
 ---
