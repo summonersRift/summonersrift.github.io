@@ -84,9 +84,9 @@ Add linenos at the beginning after the name of programming language if you want 
 example: ruby, bash, etc.
 
 <pre>
-{%highlight python linenos%}
-print "code goes here"
-{% endhighlight %}
+//{%highlight python linenos%}
+//print "code goes here"
+//{% endhighlight %}
 </pre>
  endcomment %}
 
