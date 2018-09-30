@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## Installing Jupyter Notebook Ubuntu 18 64 bit	
 
