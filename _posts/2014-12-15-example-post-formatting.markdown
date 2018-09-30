@@ -83,12 +83,11 @@ Jekyll also offers powerful support for code snippets:
 Add linenos at the beginning after the name of programming language if you want to include line number.
 example: ruby, bash, etc.
 
-<pre>
-//{%highlight python linenos%}
-//print "code goes here"
-//{% endhighlight %}
-</pre>
- endcomment %}
+{% highlight python linenos%}
+#highlight python linenos
+#enclose opening and closing in {% %}
+#endhighlight
+{% endhighlight %}
 
 {% highlight ruby linenos%}
 def print_hi(name)
