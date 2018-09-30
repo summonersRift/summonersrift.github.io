@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Post Formatting in Jakyll"
-date:   2014-12-15
+title: Post Formatting in Jakyll
+date: {}
+published: true
 ---
 
 <p class="intro"><span class="dropcap">T</span>his post talks about formatting and markup in jekyll. This is the intro paragraph of a post.</p>
@@ -21,6 +22,35 @@ date:   2014-12-15
 <blockquote>This is an example blockquote in jekyll.</blockquote>
 
 This is normal text without paragraph. 
+
+{% highlight linenos%}
+
+## Unordered List
+* List Item
+* Longer List Item
+  * Nested List Item
+  * Nested Item
+* List Item
+
+## Ordered List
+1. List Item
+2. Longer List Item
+    1. Nested OL Item (4--spaces)
+    2. Another Nested Item
+3. List Item
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+{% endhighlight %}
 
 
 ## Unordered List
@@ -55,13 +85,23 @@ You'll find this post in your `_posts` directory - edit this post and re-build (
 Jekyll also offers powerful support for code snippets:
 Add linenos at the beginning after the name of programming language if you want to include line number.
 example: ruby, bash, etc.
-
-{% highlight ruby linenos%}
+{% highlight c linenos%}
+{% highlight c linenos%}
 def print_hi(name)
   puts "Hi, #{name}"
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+{% endhighlight %}
+
+Gets you the following
+{% highlight ruby linenos%}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Obaida')
+#=> prints 'Hi, Obaida' to STDOUT.
 {% endhighlight %}
 
 
@@ -69,7 +109,3 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com
-
-
-
-
