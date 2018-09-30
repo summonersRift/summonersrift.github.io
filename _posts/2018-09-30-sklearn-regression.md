@@ -1,10 +1,8 @@
 ---
 published: true
 ---
-## Regression in Python sklearn
-
+### Regression in Python sklearn
 Lets get started with installing the required python packages. I am on a ubuntu 18.04 x86_64 system. If you dont have the libraries installed yet, here are the commands--
-
 
 #### Installation of packages
 {% highlight bash %}
@@ -17,7 +15,7 @@ sudo pip install pandas
 #sudo apt-get install python-pandas python-sklearn
 {% endhighlight %}
 
-#### To install jupyter
+#### To install jupyter IPython-Notebook ipynb
 {% highlight bash %}
 apt-get -y install ipython ipython-notebook
 sudo apt-get -y install ipython ipython-notebook
@@ -27,5 +25,7 @@ sudo pip install jupyter
 cd /practice/python
 #opens --  http://localhost:8888/tree
 jupyter notebook
-
 {% endhighlight %}
+
+
+
