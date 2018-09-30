@@ -84,9 +84,9 @@ Add linenos at the beginning after the name of programming language if you want 
 example: ruby, bash, etc.
 
 {% highlight python linenos%}
-#highlight python linenos
-#enclose opening and closing in {% %}
-#endhighlight
+#{-%-highlight python linenos
+#clear the dashes and 
+#endhighlight-%-}
 {% endhighlight %}
 
 {% highlight ruby linenos%}
