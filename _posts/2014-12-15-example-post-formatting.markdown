@@ -81,9 +81,9 @@ You'll find this post in your `_posts` directory - edit this post and re-build (
 ## Code Snippets:
 Jekyll also offers powerful support for code snippets:
 Add linenos at the beginning after the name of programming language if you want to include line number.
-example: ruby, bash, etc.
+example: ruby, bash, cpp, etc.
 
-{% highlight python linenos%}
+{% highlight python%}
 #{-%- highlight python -%-}
 #clear all the dashes.
 #{-%- endhighlight -%-}
