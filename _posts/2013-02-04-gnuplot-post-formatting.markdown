@@ -16,7 +16,8 @@ set yrange [*:*]
 set xrange [*:*]     # to get a smart range
 
 #set ytics nomirror  # to disable mirroring on second y axis
-unset mytics         # disable minor ytics
+unset mytics         # disable minor yticsa
+{{ " "10^{%L}" " }}
 set format y {{ "\'% 10^L "\'}}
 
 
