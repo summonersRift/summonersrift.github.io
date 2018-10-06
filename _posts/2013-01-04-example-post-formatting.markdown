@@ -4,6 +4,14 @@ published: true
 
 <p class="intro"><span class="dropcap">T</span>his post talks about formatting and markup in jekyll. This is the intro paragraph of a post.</p>
 
+#### CODE
+
+{{ "{% highlight bash" }}%} <br><br>
+code goes here<br><br>
+{{ "{% endhighlight" }}%}
+
+
+
 # Heading 1
 
 ## Heading 2
