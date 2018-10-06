@@ -14,8 +14,11 @@ set output "jacobi-real-vs-aedem-resource-usage.pdf"
 set log xy           #set logscale at the same time
 set yrange [*:*]
 set xrange [*:*]     # to get a smart range
+
 #set ytics nomirror  # to disable mirroring on second y axis
 unset mytics         # disable minor ytics
+set format y {{ "{% 10^L " }}%}
+
 
 set xtics (64,128,256,512,1024,2048,4098,8192,16384,32768) nomirror #xtics at scecific numbers
 
