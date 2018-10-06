@@ -17,8 +17,6 @@ set xrange [*:*]     # to get a smart range
 
 #set ytics nomirror  # to disable mirroring on second y axis
 unset mytics         # disable minor yticsa
-{{ " "10^{%L}" " }}
-set format y {{ "\'% 10^L "\'}}
 
 
 set xtics (64,128,256,512,1024,2048,4098,8192,16384,32768) nomirror #xtics at scecific numbers
@@ -34,5 +32,8 @@ plot "jacobi-original.dat" using 1:2 with linespoints pt 2 dt '.' title "real",\
 
 {% endhighlight %}
 
+<p>
 
-<blockquote> {% highlight bash%} code goes here {% endhighlight %} </blockquote>
+{{ "{% highlight bash" }}%}
+code goes here
+{{ "{% endhighlight" }}%}
