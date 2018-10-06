@@ -4,6 +4,11 @@ published: true
 
 Lets look at some gnuplot examples.
 
+<figure>
+    <img src="/assets/img/touring.jpg" alt=""> 
+    <figcaption>Gnuplot generated figure</figcaption>
+</figure>
+
 #### Code
 {% highlight bash%}
 set terminal pdf enhanced linewidth 2
@@ -31,3 +36,13 @@ plot "jacobi-original.dat" using 1:2 with linespoints pt 2 dt '.' title "real",\
 
 {% endhighlight %}
 
+#### Plotting
+* dt dashtype
+  * dt '.'
+  * dt 2
+* pt poittype
+  * pt 1-25
+* ps pointsize
+  * ps float-size
+* lc line-color
+  * lc rgb "black"
