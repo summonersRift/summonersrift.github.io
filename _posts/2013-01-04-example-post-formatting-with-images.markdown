@@ -4,7 +4,22 @@ published: true
 
 <p class="intro"><span class="dropcap">T</span>his post talks about formatting and markup in jekyll. This is the intro paragraph of a post.</p>
 
-#### CODE
+<figure>
+	<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt=""> 
+	<figcaption>Fig1. - This is an example figcaption</figcaption>
+</figure>
+
+{% highlight html %}
+<figure>
+	<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt=""> 
+	<figcaption>Fig1. - This is an example figcaption</figcaption>
+</figure>
+{% endhighlight %}
+
+Kaperij lanterne rouge musette rund um koln bruges thor smash.  Nyvelocity pyrenees vande velde merckx. 
+
+
+#### Code Snippet
 
 {{ "{% highlight bash" }}%} <br><br>
 code goes here<br><br>
@@ -110,3 +125,14 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com
+
+
+
+Simple Image:<br>
+<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt="">
+
+<br>Code:
+{% highlight html %}
+<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt="">
+{% endhighlight %}
+
