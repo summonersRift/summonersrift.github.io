@@ -5,7 +5,7 @@ published: true
 Lets look at some gnuplot examples.
 
 <figure>
-    <img src="/assets/img/touring.jpg" alt=""> 
+    <img src="/assets/img/gnuplot-practice.png" alt=""> 
     <figcaption>Gnuplot generated figure</figcaption>
 </figure>
 
