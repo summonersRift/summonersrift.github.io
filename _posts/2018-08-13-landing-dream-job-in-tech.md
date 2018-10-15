@@ -1,7 +1,19 @@
 ---
 published: true
 ---
-I have interviewed at almost 10 of the top tech companies. The interview structure varies greatly by company. For example apple, samsung focuses a lot on the programming language internals. Big 4 companies have similar interview structure. The very **first thing to do** get started with your job hunt is to **start solving leetcode**, "[LEETCODE TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/)" from the beginning.
+
+I have interviewed at most of the big names in tech in the US. I will be joining Amazon starting January 2019, I have also received offers from a social media giant, several startups. In this post I will share my experience and how you can be a winner. The interview structure varies greatly by company. For example, my Apple and Samsung interviewers focused mostly on Java/C++ internals, which was tedious at times. Fortunately, <b>big 4 (Amzon, Facebook,Google, Microsoft)</b> companies have similar interview structure. 
+
+The very **first thing to do** when you get started with job hunt is to **start solving leetcode**, "[LEETCODE TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/)" from the beginning. I mentioned it in ALL CAPS, because this is the single most important resource in my opinion. Stick to my guide, I believe you wont be disappointed.
+
+<figure>
+    <img src="/assets/img/tech-logos.jpg" alt="">
+    <figcaption>Some of the top tech companies.</figcaption>
+</figure>
+
+
+<blockquote>It took me little less than 4 months to prepare, apply and land an offer.  I am not the brightest mind in the room, so you may be able to do it even faster. Believe in yourself. Cheers!</blockquote>
+
 
 ### Step-0: How Do I Get Started?
 - By solving [Leetcode TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/): 145 total problems, start with **easy** problems and then solve the **medium** and finally try to solve some hard ones.
@@ -46,7 +58,7 @@ Your goal is to get as many interview calls possible that are relevant to your b
 - Apply through LinkedIn EasyApply.
 - Use IndeedPrime, stella.ai, leap.ai and similar tools. 
 
-A brief list of top tech companies to work for in the US. Following is a laundry list of great tech companies in US.
+A brief list of top tech companies to work for in the US. Following is a laundry list of big tech companies in US, in no porticular order.
 
 - Big4: Google, Amazon, Facebook, Microsft
 - Twitter, Snapchat, LinkedIn
