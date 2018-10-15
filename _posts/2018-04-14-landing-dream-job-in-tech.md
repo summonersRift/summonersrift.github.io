@@ -1,7 +1,16 @@
 ---
 published: true
 ---
-I have interviewed at almost 10 of the top tech companies. The interview structure varies greatly by company. For example apple focuses a lot on the programming language internals. Big 4 companies have similar interview structure. The first thing to do is start solving leetcode "TOP INTERVIEW QUESTIONS" from the beginning.
+<figure>
+    <img src="/assets/img/tech-logos.jpg" alt="">
+    <figcaption>Some of the top tech companies.</figcaption>
+</figure>
+
+
+I have interviewed at most of the big names in tech in US. I am joining Amazon starting January 2019, I have also received offers from a social media giant, several startups. In this post I will share my experience and how you can be a winner. The interview structure varies greatly by company. For example, my Apple and Samsung interviewers focused mostly on Java/C++ internals, which was tedious at times. Fortunately, <b>big 4 (Amzon, Facebook,Google, Microsoft)</b> companies have similar interview structure. The first thing to get started is to start solving leetcode "TOP INTERVIEW QUESTIONS" (this is in all CAPS for a reson) from the beginning. Stick to my guide, you wont be disappointed.
+
+
+<blockquote>It took me little less than 4 months to prepare, apply and land an offer.  I am not the brightest mind in the room, so you may be able to do it even faster. Believe in yourself. Cheers!</blockquote>
 
 
 ### Resume
