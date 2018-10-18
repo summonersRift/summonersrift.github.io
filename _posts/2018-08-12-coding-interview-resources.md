@@ -3,10 +3,9 @@ published: true
 ---
 
 <figure>
-	<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt=""> 
-	<figcaption>Fig1. - This is an example figcaption</figcaption>
+	<img src="{{ '/assets/img/einstein_coding_interview.jpg' | prepend: site.baseurl }}" alt=""> 
+	<figcaption>Believe in yourself.</figcaption>
 </figure>
-
 
 
 #### Resources
@@ -21,6 +20,12 @@ published: true
 * Graph shortest path
 * Dynamic: breaking OPTIMAL(N) = fn {X + OPTIMAL(N-1)}
   * fn can be min/max or anything else
+
+<figure>
+	<img src="{{ '/assets/img/matrix_hallway.jpg ' | prepend: site.baseurl }}" alt=""> 
+	<figcaption>You are the master architech of your coding interview.</figcaption>
+</figure>
+
 
 
 
