@@ -23,16 +23,13 @@ published: true
 
 <figure>
 	<img src="{{ '/assets/img/matrix_hallway.jpg ' | prepend: site.baseurl }}" alt=""> 
-	<figcaption>You are the master architech of your coding interview.</figcaption>
+	<figcaption>You are the master architect of your coding interview.</figcaption>
 </figure>
 
+<blockquote>Things in your control are how you prepare and tackle follow up questions. Decision will be made by the interviewers, no reason beating yourself up if you dont make it this time. You will, next time. Cheers!</blockquote>
 
-
-
-<blockquote>Cheers!</blockquote>
-
-
-{% highlight html %}
+### My Python Cheatsheet of everything
+{% highlight python%}
 Question: Lambda sort by second value of a list
 >>> a = [[1,2], [0,1], [4,3], [4,5], [3,1]]
 >>> a = sorted(a, key = lambda x:x[1])
@@ -57,7 +54,6 @@ bob: 1
 alan: 2
 danny: 3
 carl: 40
-
 
 Question: ASCII <---> char
 >>> ord('a') 
@@ -373,8 +369,8 @@ iii. for key, value in dict.iteritems(): …
 iv.  for item in dict.items():   #python3 and faster than iter items
 
 
-List
-One of the most important data structures in Python is the list. Lists are very flexible and have many built-in control functions.
+
+--> List : one of the most important data structures in Python is the list. Lists are very flexible and have many built-in control functions.
 
 >>> [0]*8
 [0, 0, 0, 0, 0, 0, 0, 0]
@@ -456,7 +452,7 @@ A = [d for d in xrange(5) if d%2 == 0]
 
 
 
-Files
+##### Files
 Open:
 thisfile = open(“datadirectory/file.txt”, “r”)  # r, w → read,write
 
