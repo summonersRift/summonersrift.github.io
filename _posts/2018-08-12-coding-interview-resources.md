@@ -8,33 +8,37 @@ published: true
 </figure>
 
 
-#### Resources
-1. [MIT CSAIL Hacking a google interview ][hacking-a-google-interview]
-2. [Leetcode Top interview problems][leetcode-top-interview-problems] My favorite list of problems to get yourself in shape.
+### Resources
+1. [MIT CSAIL - Hacking a google interview ][hacking-a-google-interview]
+2. [Leetcode - Top interview problems][leetcode-top-interview-problems]: my favorite list of problems to become a ninja. In otherwors words, this gets you in shape.
     1. Another Nested Item
-3. [Pramp peet-to-peer interview][join-pramp] I took quite a few peer-to-peer interviews on pramp. Its a platform where you interview a peer for 30 minutes and then they interview you. Half of the time they are bette than you and rest of the times the interviewers dont have much experience. Regardless they have great question, followup material and a nice framework that gives you a good exposure to what the phone interviews are like.
-4. [MIT Eric Grimson Recursion Class][eric-grimson-recursion] A very simple resource on recursion and DP.
-5. [Palantir System Design Interview Guide][palantir-system-design-interview]: A brief talk what companies expect of a candidate in a system design interview.
-6. [Palantir The Coding Interview Steps][palantir-coding-interview] Sidenote: The Einstein photo in this post comes from this post.
+3. [Pramp - peet-to-peer interview][join-pramp] I took quite a few peer-to-peer interviews on pramp. Its a platform where you interview a peer for 30 minutes and then they interview you. Half of the time they are bette than you and rest of the times the interviewers dont have much experience. Regardless they have great question, followup material and a nice framework that gives you a good exposure to what the phone interviews are like.
+4. [Eric Grimson, MIT,  Recursion Class][eric-grimson-recursion]: a very useful resource on recursion.
+6. [Palantir - The Coding Interview Steps][palantir-coding-interview] sidenote: The Einstein photo in this post comes from this post.
+7. On System Design 
+   1. [Palantir - System Design Interview Guide][palantir-system-design-interview]: a brief blog. What companies expect of a candidate in a system design interview.
+   2. [Grokking the System Design Interview][grokking-system-design] : an online course on system design. Includes all major systems. 80$, life-time  access, totally worth it.
+   3. [Twitter system design on Hackernoon by Fahimul Haq][twitter-system-design]
+   4. [Uber system design][uber-system-design]
+   5. [My System design post][obaida-system-design]
 
-#### Approaching an Interview, Step by Step
+### Approaching an Interview, Step by Step
 1. **Make sure you understand the problem**: ask clarifying questions, until you understand the problem. If you are not clear from the description ask the interviewer to give you a test case. What happens is that interviewers generally start with a test case then talk about the problem.
-2. Think of a  _bruteforce_ solution (Think loud): Talk about the your understanding of the problem, how you are approaching it. And that you will try a optimal if you are not sure you can pull the optimal off right away.
+2. Think of a  _bruteforce_ solution (think loud): Talk about the your understanding of the problem, how you are approaching it. And that you will try a optimal if you are not sure you can pull the optimal off right away.
 3. Dont code until you and the interviewer have agreed on the solution or approach.
 4. Pick a language. Code the agreed solution. TIme to show your ninja skillsTalk about what you are doing or trying to achieve when you are coding a specific part.
 5. Find _optimal_ solution if you can. Eliminate boundary cases.
 6. Walk through a test case to convice your interviewer that the solution works. 
 
-Some good practices:
+#### Some good practices:
 * You can assume simple helper functions are available and you will code it later if time allows.
 
-
-* Don't
-  * Don't Start coding right away.
-
+#### Don't
+* Don't Start coding right away.
 
 
-#### Topics
+
+### Topics
 * Tree and Tries: know basic implementations
 * String Searching
 * Graph shortest path
@@ -494,3 +498,7 @@ os.path.isfile(fname)  → returns True or False
 [join-pramp]:    https://www.pramp.com/invt/B6qyardYOdh9MWbG5mV9
 [palantir-system-design-interview]:    https://www.palantir.com/how-to-ace-a-systems-design-interview/
 [palantir-coding-interview]:    https://www.palantir.com/the-coding-interview/
+[grokking-system-design]:    https://www.educative.io/collection/5668639101419520/5649050225344512
+[twitter-system-design]:    https://hackernoon.com/anatomy-of-a-system-design-interview-4cb57d75a53f
+[uber-system-design]:    https://sakib.ninja/experimenting-uber-like-application-architecture/
+[obaida-system-design]:    https://summonersrift.github.io/blog/System-Design/
