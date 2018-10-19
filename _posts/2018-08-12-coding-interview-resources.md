@@ -10,9 +10,29 @@ published: true
 
 #### Resources
 1. [MIT CSAIL Hacking a google interview ][hacking-a-google-interview]
-2. [Leetcode Top interview problems][leetcode-top-interview-problems] My favorite list of programs to get yourself in shape.
+2. [Leetcode Top interview problems][leetcode-top-interview-problems] My favorite list of problems to get yourself in shape.
     1. Another Nested Item
-3. [MIT Eric Grimson Recursion Class][eric-grimson-recursion] A very simple resource on recursion and DP.
+3. [Pramp peet-to-peer interview][join-pramp] I took quite a few peer-to-peer interviews on pramp. Its a platform where you interview a peer for 30 minutes and then they interview you. Half of the time they are bette than you and rest of the times the interviewers dont have much experience. Regardless they have great question, followup material and a nice framework that gives you a good exposure to what the phone interviews are like.
+4. [MIT Eric Grimson Recursion Class][eric-grimson-recursion] A very simple resource on recursion and DP.
+5. [Palantir System Design Interview Guide][palantir-system-design-interview]: A brief talk what companies expect of a candidate in a system design interview.
+6. [Palantir The Coding Interview Steps][palantir-coding-interview] Sidenote: The Einstein photo in this post comes from this post.
+
+#### Approaching an Interview, Step by Step
+1. **Make sure you understand the problem**: ask clarifying questions, until you understand the problem. If you are not clear from the description ask the interviewer to give you a test case. What happens is that interviewers generally start with a test case then talk about the problem.
+2. Think of a  _bruteforce_ solution (Think loud): Talk about the your understanding of the problem, how you are approaching it. And that you will try a optimal if you are not sure you can pull the optimal off right away.
+3. Dont code until you and the interviewer have agreed on the solution or approach.
+4. Pick a language. Code the agreed solution. TIme to show your ninja skillsTalk about what you are doing or trying to achieve when you are coding a specific part.
+5. Find _optimal_ solution if you can. Eliminate boundary cases.
+6. Walk through a test case to convice your interviewer that the solution works. 
+
+Some good practices:
+* You can assume simple helper functions are available and you will code it later if time allows.
+
+
+* Don't
+  * Don't Start coding right away.
+
+
 
 #### Topics
 * Tree and Tries: know basic implementations
@@ -471,4 +491,6 @@ os.path.isfile(fname)  → returns True or False
 [hacking-a-google-interview]:    http://courses.csail.mit.edu/iap/interview/materials.php
 [eric-grimson-recursion]:    https://www.youtube.com/watch?v=WPSeyjX1-4s
 [leetcode-top-interview-problems]:    https://leetcode.com/problemset/top-interview-questions/
-
+[join-pramp]:    https://www.pramp.com/invt/B6qyardYOdh9MWbG5mV9
+[palantir-system-design-interview]:    https://www.palantir.com/how-to-ace-a-systems-design-interview/
+[palantir-coding-interview]:    https://www.palantir.com/the-coding-interview/
