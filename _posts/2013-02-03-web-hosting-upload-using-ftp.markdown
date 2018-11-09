@@ -5,8 +5,8 @@ published: true
 Upload files from local directory to a remote hosting server using ftp
 
 <figure>
-    <img src="/assets/img/BlueHost-FTP-Access" alt=""> 
-    <figcaption>FTP (c)BlueHost</figcaption>
+    <img src="/assets/img/BlueHost-FTP-Access.jpg" alt=""> 
+    <figcaption>FTP (c) BlueHost</figcaption>
 </figure>
 
 
