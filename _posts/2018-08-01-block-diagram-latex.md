@@ -8,7 +8,7 @@ We would see a simple example of drawing block diagram in latex
 
 #### Code Snippet
 
-{{ "{% highlight latex" }}%} <br><br>
+{{ "{% highlight bash" }}%}
 % Author: Marek Fiser, and Mohammad Abu Obaida
 \documentclass[tikz, border=10pt]{standalone}
 \usetikzlibrary{arrows}
