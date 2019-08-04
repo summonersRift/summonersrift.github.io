@@ -18,14 +18,14 @@ I will dive into the details and summarize key things to do from my experience i
 
 
 
-### (1,2) Online screen and Phone Interview preparations:
+### Online screen and Phone Interview
 What do I do? Do the folowing--
 
 [LEETCODE TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/)" from the beginning. I mentioned it in ALL CAPS, because this is the single most important resource in my opinion.
 - Solve Leetcode TOP INTERVIEW QUESTIONS(140 approx.), Do Easy, Medium, before starting to do Hard problems.
 - Solve in order of frequency on the site.
 
-### (3) Onsite Interview:
+### Onsite Interview
 What do I do?
 1. Still your best friend is -- [LEETCODE TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/). Revise it once. 
 1. Undersand and **implement** Basic data structures. 101: (Implement all of them ground up, for example a BST, Heap, etc.) 101: String, LinkedLists, Tree, Trie, Graph, Sorting, Serching, Dynamic and Recursive programming etc.
@@ -90,34 +90,6 @@ Learn how to answer on a whiteboard during your interview, by [Doug Arcuri](http
 - (A famous joke), if you are going for Microsoft, make sure u know how to reverse a linked list! We all know it takes much more than that.
 
 
-
-
-#### The company Cloud:
-A brief list of top tech companies to work for in the US. Following is a laundry list of big tech companies in US, in no porticular order.
-
-- Big4: Google, Amazon, Facebook, Microsft
-- Twitter, Snapchat, LinkedIn
-- UBER / Lyft / Aurora / Tesla
-- Netflix, Twitch, RIOT Games
-- VM Ware, Cisco, Dell, HP
-- Apple, Samsung, Samsung Research US
-- Chipmakers: Intel, AMD, Qualcomm, NVIDIA
-- Fintech: Bloomberg LP, Two-Sigma, Tableau
-- Few Others
-  - eBay, Paypal, Square, Walmart-Labs
-  - Citrix- / Ultimate-software
-  - Oracle, IBM, Salesforce-CRM, Digital-Ocean-cloud, SAP
-- High growth Companies
-  - Hubspot, Rackspace, Snowflakes, WeWork
-  - Palantir, Spotify
-  - Zillow, Airbnb
-  - Box, Dropbox, Medium, Quora
-- Settled-in the business
-  - Adobe, Alibaba, Baidu, Deloitte, Epic, Fitbit, Yahoo, Yelp
-_At the application stage, keep solving leetcode problems_
-
-
-
 #### Failed Onsite??
 - Were they looking for a particular skill set/language proficiency?
   - You don't get hired, if you don't know it. 
@@ -126,9 +98,6 @@ _At the application stage, keep solving leetcode problems_
   - The process itself is the biggest test.
 - Made Mistakes?  
   - Try again.
-
-
-
 
 
 
