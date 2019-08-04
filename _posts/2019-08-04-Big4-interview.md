@@ -11,26 +11,47 @@ Generally there are 3 interviews before landing an offer. (Excluding phone conve
 I will dive into the details and summarize key things to do from my experience interviewing at Amazon, Apple, Bloomberg, Facebook, Google, Samsung, etc. Fortunately, <b>big 4 </b> companies have similar interview structure. 
 
 
-## (1,2) Online screen and Phone Interview preparations:
+### (1,2) Online screen and Phone Interview preparations:
 What do I do? Do the folowing--
 
 [LEETCODE TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/)" from the beginning. I mentioned it in ALL CAPS, because this is the single most important resource in my opinion.
 - Solve Leetcode TOP INTERVIEW QUESTIONS(140 approx.), Do Easy, Medium, before starting to do Hard problems.
 - Solve in order of frequency on the site.
 
-## (3) Onsite Interview:
+### (3) Onsite Interview:
 What do I do?
 1. Still your best friend is -- [LEETCODE TOP INTERVIEW QUESTIONS](https://leetcode.com/problemset/top-interview-questions/). Revise it once. 
 1. Undersand and **implement** Basic data structures. 101: (Implement all of them ground up, for example a BST, Heap, etc.) 101: String, LinkedLists, Tree, Trie, Graph, Sorting, Serching, Dynamic and Recursive programming etc.
 1. https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/
+1. System Design -- Grokking the system design interview on educative.
 
 
-## My favorite books:
+#### System Design 
+- Time to learn system design.
+  1. Design twitter, tinyurl, messenger,... [EDICATIVE.IO - Grokking the system design Interview](https://www.educative.io/collection/5668639101419520/5649050225344512)
+  1. [GoF Design Patterns](http://java-design-patterns.com/patterns/)
+  1. Focus on building scalable, load balanced system
+  1. Low latency applications
+    1. Caching, CDN
+  1. Failure tolerant systems
+  1. Partitioning, Replication
+  1. Integrate design pattern on small components
+- Company wise Problem Solving
+  1. Top leetcode problems in last 2 years
+  1. Glassdoor reported problems ordered by date(latest/most recent)
+  
+
+Learn how to answer on a whiteboard during your interview, by [Doug Arcuri](https://medium.freecodecamp.org/how-to-organize-your-thoughts-on-the-whiteboard-and-crush-your-technical-interview-b668de4e6941)
+
+![Organizing thought on white board...](https://cdn-images-1.medium.com/max/1600/1*V1fHAZ0qczSzvL1q-4p-AQ.png)
+
+
+#### My favorite books:
 - Elements of Programming Interviews in Java/C++/Python by Adnan Aziz et.al. Get the book in the lanaugage you are most comfortable in.
 - Cracking the Coding Interview by Gayle McDowell Laakmann
 
 
-### Basics (I handpicked these from 100 or so topics)
+#### Basics (I handpicked these from 100 or so topics)
 - Anagrams and palindromes. Check whether a linked list is a palindrome
 - String Search, KMP or Boyer Moore Search
 - String reversal without affecting whitespace, special characters
@@ -63,28 +84,8 @@ What do I do?
 
 
 
-## System Design 
-- Time to learn system design.
-  1. Design twitter, tinyurl, messenger,... [EDICATIVE.IO - Grokking the system design Interview](https://www.educative.io/collection/5668639101419520/5649050225344512)
-  1. [GoF Design Patterns](http://java-design-patterns.com/patterns/)
-  1. Focus on building scalable, load balanced system
-  1. Low latency applications
-    1. Caching, CDN
-  1. Failure tolerant systems
-  1. Partitioning, Replication
-  1. Integrate design pattern on small components
-- Company wise Problem Solving
-  1. Top leetcode problems in last 2 years
-  1. Glassdoor reported problems ordered by date(latest/most recent)
-  
 
-Learn how to answer on a whiteboard during your interview, by [Doug Arcuri](https://medium.freecodecamp.org/how-to-organize-your-thoughts-on-the-whiteboard-and-crush-your-technical-interview-b668de4e6941)
-
-![Organizing thought on white board...](https://cdn-images-1.medium.com/max/1600/1*V1fHAZ0qczSzvL1q-4p-AQ.png)
-
-
-
-## The company Cloud:
+#### The company Cloud:
 A brief list of top tech companies to work for in the US. Following is a laundry list of big tech companies in US, in no porticular order.
 
 - Big4: Google, Amazon, Facebook, Microsft
@@ -110,7 +111,7 @@ _At the application stage, keep solving leetcode problems_
 
 
 
-### Failed Onsite??
+#### Failed Onsite??
 - Were they looking for a particular skill set/language proficiency?
   - You don't get hired, if you don't know it. 
   - GET OVER IT. 
@@ -125,4 +126,4 @@ _At the application stage, keep solving leetcode problems_
 
 
 
-## PhoneInterview-OnsiteInterview-Fail-Repeat-Offer
+### PhoneInterview-OnsiteInterview-Fail-Repeat-Offer
