@@ -1,6 +1,11 @@
 ---
 published: true
 ---
+<figure>
+    <img src="/assets/img/top-tech-companies-wordcloud.png" alt="">
+    <figcaption>Top tech companies</figcaption>
+</figure>
+
 I get asked this all the time, how do one prepare for a Big4 (Amzon, Facebook, Google, Microsoft(alphabetically)) interview? Typically, people contacts me when they have an interview scheduled. So here is a brief guide to help you out in your journey.
 
 Generally there are 3 interviews before landing an offer. (Excluding phone conversation with recruiter)
@@ -9,6 +14,8 @@ Generally there are 3 interviews before landing an offer. (Excluding phone conve
 3. Onsite 2/3 coding and 1/2 system design rounds.
 
 I will dive into the details and summarize key things to do from my experience interviewing at Amazon, Apple, Bloomberg, Facebook, Google, Samsung, etc. Fortunately, <b>big 4 </b> companies have similar interview structure. 
+
+
 
 
 ### (1,2) Online screen and Phone Interview preparations:
