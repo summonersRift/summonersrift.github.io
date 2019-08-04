@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 I get asked this all the time, how do one prepare for a Big4 (Amzon, Facebook, Google, Microsoft(alphabetically)) interview? Typically, people contacts me when they have an interview scheduled. So here is a brief guide to help you out in your journey.
 
