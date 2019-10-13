@@ -17,8 +17,10 @@ published: true
 
 #### Step 2: Getting Ip address from command line
 
-{{ "{% highlight bash" }}%} <br><br>
+{{ "{% highlight bash" }}%} 
+
 dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
+
 {{ "{% endhighlight" }}%}
 
 
