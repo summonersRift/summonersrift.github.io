@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 <p class="intro"><span class="dropcap">I</span>n this post I will discuss how I setup ssh to home pc so that I can access it from anywhere else (office, cafe, blah, blah!!)</p>
