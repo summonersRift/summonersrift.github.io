@@ -1,0 +1,29 @@
+---
+published: false
+---
+
+<p class="intro"><span class="dropcap">I</span>n this post I will discuss how I setup ssh to home pc so that I can access it from anywhere else (office, cafe, blah, blah!!)</p>
+
+
+### Overview
+
+| Step | Description |
+| --- | --- |
+| Step1  | Setup Desktop: Install openssh-server and start it up, so that you can ssh to it locally from another computer in the same network|
+| Step2  | PUBLIC_IP: From any computer in your home network, find out what is your public ip by goign to whatismyip.com |
+| Step3 | Port forwarding: All traffic destined to port 22(default for ssh) should go to DESKTOP_IP:22 (an example figure given below)|
+| Step4 | SSH from anywhere to PUBLIC_IP which will take you to DESKTOP_IP or your desktop|
+
+
+#### Step 2: Getting Ip address from command line
+
+{{ "{% highlight bash" }}%} <br><br>
+dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
+{{ "{% endhighlight" }}%}
+
+
+#### Step 3: Port forwarding
+<figure>
+	<img src="{{ '/assets/img/ssh-setup-tp-link.png' | prepend: site.baseurl }}" alt=""> 
+	<figcaption>SSH forwarding on TP-link router (FYI: My building has wiring built in, doesnt need modem) </figcaption>
+</figure>
