@@ -15,6 +15,23 @@ published: true
 | Step4 | SSH from anywhere to PUBLIC_IP which will take you to DESKTOP_IP or your desktop|
 
 
+#### Step 1: Setup Desktop
+
+{% highlight bash %}
+#install openssh-server on linux
+sudo apt update
+sudo apt upgrade
+sudo apt install openssh-server
+
+
+#Test if ssh is running by following systemctl command:
+sudo systemctl status ssh
+
+#If not running, use the following to start ssh
+sudo systemctl enable ssh
+sudo systemctl start ssh
+{% endhighlight %}
+
 #### Step 2: Getting Ip address from command line
 
 <pre>
@@ -30,3 +47,10 @@ Usually you can do it by going to 192.168.0.1 or the admin page of your router/m
 	<img src="{{ '/assets/img/ssh-setup-tp-link.png' | prepend: site.baseurl }}" alt=""> 
 	<figcaption>SSH forwarding on TP-link router (FYI: My building has wiring built in, doesnt need modem) </figcaption>
 </figure>
+
+#### Step4: SSH to PUBLIC IP you got from step-2
+
+{% highlight bash %}
+ssh user@PUBLIC_IP
+{% endhighlight %}
+
