@@ -14,7 +14,8 @@ do
   d=`date -u`
   freemem=`awk '/^Mem/ {print $4}' <(free -h)`;
   freeswap=`awk '/^Swap/ {print $4}' <(free -h)`;
-  echo "$d FreeMem=$freemem, FreeSwap=$freeswap" >> /tmp/1.txt;
+  offender=`ps aux --sort=-%mem | awk 'NR<3 {print $0}'|awk '/ / {print$4" "$11}'|awk 'FNR>1 {print $0}'`
+  echo "$d FreeMem=$freemem, FreeSwap=$freeswap; TopOffender(%mem proc)=($offender)" >> /tmp/1.txt;
   sleep 3; 
 done
 
