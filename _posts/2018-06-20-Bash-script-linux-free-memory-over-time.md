@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## Linux free memory/swap for a period of time
 
