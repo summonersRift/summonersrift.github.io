@@ -44,12 +44,11 @@ FreeMem=8.8G, FreeSwap=30G
 {% endhighlight %}
 
 #### Output of sample bash commands
+{% highlight bash%}
 obaida@mars:~$ free -h
               total        used        free      shared  buff/cache   available
 Mem:            15G        1.8G        8.8G        179M        4.9G         13G
 Swap:           30G          0B         30G
-{{ "{% endhighlight" }}%}
-
 
 obaida@mars:~$ free -m
               total        used        free      shared  buff/cache   available
