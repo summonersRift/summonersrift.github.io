@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## So you want to get into software engineering...
 Few things to get you better prepared--
