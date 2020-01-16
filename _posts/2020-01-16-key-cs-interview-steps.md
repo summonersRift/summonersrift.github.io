@@ -4,7 +4,7 @@ published: true
 ## So you want to get into software engineering...
 Few things to get you better prepared--
 
-1. Learn about the process and what you need to do to shine through the process. Knowing the track makes a difference, just search or read proples's stories on Glassdoor/careercup.
+1. Learn about the process and what you need to do to shine through the process. Knowing the track makes a difference, just search or read proples's stories on Glassdoor/careercup. Where would you like to play in a track you do best or you know very well?
 2. Polishing resume, 1 page is better, spend few $ on LinkedIn to get a professional review your resume. Your friends and seniors have an idea but they are not an expert on resume writing.
 3. Large companies might ban you for a period if you fail onsite say 6 months or a year. So save the big ones until you are fully prepared and taken several onsites.
 4. Even if you are banned, there might recruiters willing to interview, so keep applying.
