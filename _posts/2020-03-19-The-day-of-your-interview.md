@@ -3,7 +3,7 @@ published: true
 ---
 
 <figure>
-    <img src="/assets/img/tech-logos.jpg" alt="">
+    <img src="/assets/img/interview.png" alt="">
 </figure>
 
 Today is the day of your interview. Here are several things to get you through the day.
