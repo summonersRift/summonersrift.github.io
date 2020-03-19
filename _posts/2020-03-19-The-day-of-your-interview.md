@@ -2,11 +2,13 @@
 published: true
 ---
 
-![Interview Image]({{site.baseurl}}/_posts/interview.png)
+<figure>
+    <img src="/assets/img/tech-logos.jpg" alt="">
+</figure>
 
 Today is the day of your interview. Here are several things to get you through the day.
-1. Keep your composure.
-1. Greet your interviewer.
+1. Keep your composure. Take a deep breath if you are stressed.
+1. Greet your interviewer. Put on a smile.
 1. Listen and let them finish before you jump in.
 1. Ask questions as you go.
 1. Think loud if you are thinking of a solution they might be interested in.
@@ -16,5 +18,7 @@ Today is the day of your interview. Here are several things to get you through t
 1. There will be a lot of questions about your experience try to answer them using STAR or SAR method in light of the companies principles. Such as "think different", "be you/instinctive" philosophy at Apple.
 1. Thank your interviewer for taking their time interviewing you and greet them bye regardless of the interview outcome.
 
+
 All the best
+
 Obaida
